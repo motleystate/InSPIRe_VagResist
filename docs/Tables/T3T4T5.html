@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>t3t4t5 – VagResist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-78803f1cb364580a08140d96844d444c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">VagResist</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-figures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Figures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-figures">    
+        <li>
+    <a class="dropdown-item" href="../Figures/S1S5S6S11.html">
+ <span class="dropdown-text">S1-S6-S7-S12: Descriptive analysis of the vaginal microbiome (species, ARGs and MGEs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S3S12.html">
+ <span class="dropdown-text">S3-S4: Cross-validation of ARGs detection and distribution across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S2S7.html">
+ <span class="dropdown-text">S2-S8: Longitudinal analysis of α-diversity metrics for ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S4S8S9.html">
+ <span class="dropdown-text">S5-S9-S10: Species-ARGs correlation analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S10.html">
+ <span class="dropdown-text">S11: Conceptual validation of the PRDI</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-tables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Tables</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-tables">    
+        <li>
+    <a class="dropdown-item" href="../Tables/T1T8T9.html">
+ <span class="dropdown-text">T1-T8-T9: Descriptive statistics of patients involved in the InSPIRe study</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T2T6T7.html">
+ <span class="dropdown-text">T2-T6-T7: Sp-ARGs count table &amp; SparCC correlation matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T3T4T5.html">
+ <span class="dropdown-text">T3-T4-T5: Differential abundance analysis of species, ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T10T11T12T13T14.html">
+ <span class="dropdown-text">T10-T11-T12-T13-T14: Differential abundance analysis of species, ARGs and MGEs across clinical groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistical-reports" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Statistical Reports</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistical-reports">    
+        <li>
+    <a class="dropdown-item" href="../Reports/R1R2.html">
+ <span class="dropdown-text">R1-R2: α-diversity comparison across CSTs (InSPIRe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R9R10.html">
+ <span class="dropdown-text">R3-R4: α-diversity comparison across CSTs (External Dataset)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R3.html">
+ <span class="dropdown-text">R5: β-diversity comparison across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R4R5.html">
+ <span class="dropdown-text">R6-R7: GLMMs for α-diversity across pregnancy outcome groups (univariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R6R7.html">
+ <span class="dropdown-text">R8-R9: GLMMs for α-diversity across pregnancy outcome groups (multivariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R8.html">
+ <span class="dropdown-text">R10: β-diversity comparison across pregnancy outcome groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../data.html"> 
+<span class="menu-text">Download Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../consortium.html"> 
+<span class="menu-text">InSPIRe Consortium</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<details>
+<summary>
+Supplementary Table 3
+</summary>
+<p><a href="T3.csv" class="btn btn-primary" style="background-color:#007784" download=""> Download Table S3 (CSV) </a></p>
+<section id="supplementary-table-3-differential-abundance-of-species-across-csts." class="level3">
+<h3 class="anchored" data-anchor-id="supplementary-table-3-differential-abundance-of-species-across-csts.">Supplementary Table 3: Differential abundance of species across CSTs.</h3>
+<div id="671084db" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<!--| quarto-html-table-processing: none -->
+<table id="itables_f695011f_5f1a_434d_ad69_4ed5036b8d28"><tbody><tr>
+    <td style="vertical-align:middle; text-align:left">
+    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+    Loading ITables v2.6.2 from the internet...
+    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+    </tr></tbody></table>
+<link href="https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.css" rel="stylesheet">
+<script type="module">
+    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.js';
+
+    document.querySelectorAll("#itables_f695011f_5f1a_434d_ad69_4ed5036b8d28:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        let dt_args = {"scrollX": true, "pageLength": 10, "layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "0", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>feature</th>\n      <th>variable</th>\n      <th>level</th>\n      <th>estimate</th>\n      <th>std.error</th>\n      <th>p.value</th>\n      <th>q.value</th>\n      <th>method</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"Lactobacillus_crispatus\", \"CST\", \"IV\", -9.019862, 0.181208, 0.0, 0.0, \"LM_CLR\"], [\"Lactobacillus_crispatus\", \"CST\", \"III\", -8.8216, 0.177327, 0.0, 0.0, \"LM_CLR\"], [\"Lactobacillus_iners\", \"CST\", \"III\", 7.962027, 0.196477, 4.272647e-258, 7.46289e-256, \"LM_CLR\"], [\"Lactobacillus_amylovorus\", \"CST\", \"IV\", -4.36356, 0.123283, 9.450048e-212, 1.237956e-209, \"LM_CLR\"], [\"Lactobacillus_helveticus\", \"CST\", \"IV\", -4.505587, 0.136105, 8.86688e-191, 9.29249e-189, \"LM_CLR\"], [\"Lactobacillus_amylovorus\", \"CST\", \"III\", -3.923054, 0.120556, 3.730917e-183, 3.258334e-181, \"LM_CLR\"], [\"Lactobacillus_helveticus\", \"CST\", \"III\", -3.823577, 0.133373, 1.782199e-149, 1.334103e-147, \"LM_CLR\"], [\"Lactobacillus_crispatus\", \"CST\", \"II\", -7.471064, 0.278803, 4.313232e-134, 2.825167e-132, \"LM_CLR\"], [\"Gardnerella_vaginalis\", \"CST\", \"IV\", 5.807852, 0.232084, 4.220266e-120, 2.457133e-118, \"LM_CLR\"], [\"Aerococcus_christensenii\", \"CST\", \"III\", 3.529559, 0.141517, 2.287387e-118, 1.198591e-116, \"LM_CLR\"], [\"Gardnerella_piotii\", \"CST\", \"IV\", 4.535494, 0.184781, 3.605487e-116, 1.717523e-114, \"LM_CLR\"], [\"Lactobacillus_amylolyticus\", \"CST\", \"III\", -2.403765, 0.09976, 1.540604e-111, 6.727303e-110, \"LM_CLR\"], [\"Gardnerella_leopoldii\", \"CST\", \"IV\", 4.758087, 0.198548, 1.971241e-111, 7.945619e-110, \"LM_CLR\"], [\"Lactobacillus_kitasatonis\", \"CST\", \"IV\", -2.767742, 0.119111, 1.209357e-105, 4.526451e-104, \"LM_CLR\"], [\"Mageeibacillus_indolicus\", \"CST\", \"IV\", 2.950515, 0.128704, 7.003709e-103, 2.446629e-101, \"LM_CLR\"], [\"Lactobacillus_kitasatonis\", \"CST\", \"III\", -2.692996, 0.117456, 1.11514e-102, 3.652084e-101, \"LM_CLR\"], [\"Lactobacillus_amylolyticus\", \"CST\", \"IV\", -2.25874, 0.101865, 3.078387e-97, 9.488674e-96, \"LM_CLR\"], [\"Aerococcus_christensenii\", \"CST\", \"IV\", 3.200021, 0.144673, 8.437619e-97, 2.456285e-95, \"LM_CLR\"], [\"Lactobacillus_crispatus\", \"CST\", \"V\", -6.823509, 0.310734, 1.168173e-95, 3.221697e-94, \"LM_CLR\"], [\"Lactobacillus_gasseri\", \"CST\", \"II\", 5.502981, 0.28306, 4.651662e-77, 1.218735e-75, \"LM_CLR\"], [\"Mageeibacillus_indolicus\", \"CST\", \"III\", 2.426545, 0.125366, 6.484331e-76, 1.617995e-74, \"LM_CLR\"], [\"Lactobacillus_acidophilus\", \"CST\", \"IV\", -2.119914, 0.111271, 2.530529e-74, 6.027261e-73, \"LM_CLR\"], [\"Lactobacillus_acidophilus\", \"CST\", \"III\", -2.081078, 0.109197, 4.810201e-74, 1.095889e-72, \"LM_CLR\"], [\"Limosilactobacillus_coleohominis\", \"CST\", \"IV\", -2.500948, 0.137857, 4.809941e-68, 1.05017e-66, \"LM_CLR\"], [\"Atopobium_deltae\", \"CST\", \"IV\", 2.240131, 0.125293, 3.355891e-66, 7.033948e-65, \"LM_CLR\"], [\"Lactobacillus_amylovorus\", \"CST\", \"V\", -3.751087, 0.211453, 2.243623e-65, 4.521763e-64, \"LM_CLR\"], [\"Lactobacillus_kefiranofaciens\", \"CST\", \"III\", -2.500459, 0.145547, 1.073808e-61, 2.083982e-60, \"LM_CLR\"], [\"Lactobacillus_kefiranofaciens\", \"CST\", \"IV\", -2.267852, 0.144574, 3.221832e-52, 6.029429e-51, \"LM_CLR\"], [\"Lactobacillus_hominis\", \"CST\", \"III\", -1.74932, 0.113703, 2.454667e-50, 4.43533e-49, \"LM_CLR\"], [\"Prevotella_intermedia\", \"CST\", \"IV\", 1.311984, 0.085815, 8.28378e-50, 1.4469e-48, \"LM_CLR\"], [\"Lactobacillus_amylovorus\", \"CST\", \"II\", -2.865323, 0.189597, 9.315178e-49, 1.574566e-47, \"LM_CLR\"], [\"Limosilactobacillus_reuteri\", \"CST\", \"IV\", -1.884197, 0.125722, 3.867225e-48, 6.33258e-47, \"LM_CLR\"], [\"Lactobacillus_taiwanensis\", \"CST\", \"II\", 2.509667, 0.169286, 4.68124e-47, 7.433242e-46, \"LM_CLR\"], [\"Lactobacillus_paragasseri\", \"CST\", \"II\", 3.828381, 0.264537, 3.815016e-45, 5.879614e-44, \"LM_CLR\"], [\"Prevotella_bivia\", \"CST\", \"IV\", 2.650709, 0.183453, 5.884933e-45, 8.810586e-44, \"LM_CLR\"], [\"Streptococcus_pyogenes\", \"CST\", \"III\", 1.649179, 0.117402, 1.585181e-42, 2.30732e-41, \"LM_CLR\"], [\"Streptococcus_pyogenes\", \"CST\", \"IV\", 1.679496, 0.121411, 1.840492e-41, 2.606535e-40, \"LM_CLR\"], [\"Gardnerella_vaginalis\", \"CST\", \"III\", 3.144769, 0.22899, 5.824721e-41, 8.031984e-40, \"LM_CLR\"], [\"Limosilactobacillus_coleohominis\", \"CST\", \"III\", -1.861028, 0.137587, 6.943244e-40, 9.328871e-39, \"LM_CLR\"], [\"Lactobacillus_delbrueckii\", \"CST\", \"IV\", -1.327557, 0.098592, 1.487749e-39, 1.948951e-38, \"LM_CLR\"], [\"Lactobacillus_jensenii\", \"CST\", \"V\", 4.530449, 0.340844, 1.44208e-38, 1.843048e-37, \"LM_CLR\"], [\"Lactobacillus_amylolyticus\", \"CST\", \"V\", -2.304097, 0.174637, 3.929214e-38, 4.902162e-37, \"LM_CLR\"], [\"Prevotella_disiens\", \"CST\", \"IV\", 1.870144, 0.145432, 2.573232e-36, 3.135753e-35, \"LM_CLR\"], [\"Lactobacillus_taiwanensis\", \"CST\", \"III\", -1.382466, 0.10752, 2.93259e-36, 3.492448e-35, \"LM_CLR\"], [\"Dialister_micraerophilus\", \"CST\", \"IV\", 1.854051, 0.145305, 7.889114e-36, 9.186435e-35, \"LM_CLR\"], [\"Streptococcus_anginosus\", \"CST\", \"IV\", 2.029454, 0.163516, 4.977635e-34, 5.670176e-33, \"LM_CLR\"], [\"Limosilactobacillus_reuteri\", \"CST\", \"III\", -1.534056, 0.12374, 5.776114e-34, 6.439752e-33, \"LM_CLR\"], [\"Megasphaera_Veillonellaceae.bacterium.DNF00626\", \"CST\", \"III\", 1.725529, 0.140445, 2.137153e-33, 2.333058e-32, \"LM_CLR\"], [\"Prevotella_buccalis\", \"CST\", \"IV\", 1.853882, 0.151852, 5.108344e-33, 5.4628e-32, \"LM_CLR\"], [\"Lactobacillus_johnsonii\", \"CST\", \"II\", 2.597018, 0.214535, 1.533527e-32, 1.607137e-31, \"LM_CLR\"], [\"Lactobacillus_delbrueckii\", \"CST\", \"III\", -1.159199, 0.096166, 3.028755e-32, 3.111897e-31, \"LM_CLR\"], [\"Lactobacillus_helveticus\", \"CST\", \"II\", -2.483502, 0.209583, 2.731283e-31, 2.752293e-30, \"LM_CLR\"], [\"Prevotella_colorans\", \"CST\", \"IV\", 1.746214, 0.14905, 1.194888e-30, 1.181361e-29, \"LM_CLR\"], [\"Lactobacillus_kitasatonis\", \"CST\", \"V\", -2.358299, 0.203884, 5.618925e-30, 5.452438e-29, \"LM_CLR\"], [\"Prevotella_timonensis\", \"CST\", \"IV\", 1.960557, 0.175327, 3.753403e-28, 3.575969e-27, \"LM_CLR\"], [\"Megasphaera_Veillonellaceae.bacterium.DNF00626\", \"CST\", \"IV\", 1.597944, 0.143329, 5.077284e-28, 4.750887e-27, \"LM_CLR\"], [\"Lactobacillus_acidophilus\", \"CST\", \"V\", -2.123652, 0.190657, 5.5766e-28, 5.126559e-27, \"LM_CLR\"], [\"Lactobacillus_hominis\", \"CST\", \"IV\", -1.265182, 0.115707, 4.755334e-27, 4.296198e-26, \"LM_CLR\"], [\"Limosilactobacillus_coleohominis\", \"CST\", \"II\", -2.334683, 0.214381, 7.459367e-27, 6.624929e-26, \"LM_CLR\"], [\"Streptococcus_agalactiae\", \"CST\", \"IV\", 1.8131, 0.167103, 1.213027e-26, 1.059377e-25, \"LM_CLR\"], [\"Peptoniphilus_harei\", \"CST\", \"IV\", 1.20392, 0.111948, 3.458269e-26, 2.97071e-25, \"LM_CLR\"], [\"Lactobacillus_paragasseri\", \"CST\", \"III\", -1.777554, 0.169024, 3.555271e-25, 3.004777e-24, \"LM_CLR\"], [\"Peptoniphilus_duerdenii\", \"CST\", \"IV\", 1.298582, 0.125559, 2.081619e-24, 1.731379e-23, \"LM_CLR\"], [\"Peptoniphilus_sp..HMSC062D09\", \"CST\", \"IV\", 1.213062, 0.117808, 3.456682e-24, 2.830159e-23, \"LM_CLR\"], [\"Lactobacillus_jensenii\", \"CST\", \"IV\", -2.048095, 0.199614, 4.600309e-24, 3.708557e-23, \"LM_CLR\"], [\"Lactobacillus_amylolyticus\", \"CST\", \"II\", -1.593857, 0.156801, 1.156383e-23, 9.180984e-23, \"LM_CLR\"], [\"Streptococcus_agalactiae\", \"CST\", \"III\", 1.641881, 0.162245, 1.948291e-23, 1.523738e-22, \"LM_CLR\"], [\"Atopobium_deltae\", \"CST\", \"III\", 1.225896, 0.122045, 3.940439e-23, 3.036456e-22, \"LM_CLR\"], [\"Lactobacillus_johnsonii\", \"CST\", \"IV\", -1.395646, 0.139276, 4.457172e-23, 3.384867e-22, \"LM_CLR\"], [\"Limosilactobacillus_vaginalis\", \"CST\", \"IV\", -1.785088, 0.180941, 2.065412e-22, 1.546109e-21, \"LM_CLR\"], [\"Streptococcus_suis\", \"CST\", \"IV\", 1.042683, 0.107676, 1.164948e-21, 8.597646e-21, \"LM_CLR\"], [\"Streptococcus_anginosus\", \"CST\", \"III\", 1.5133, 0.158326, 3.908842e-21, 2.844768e-20, \"LM_CLR\"], [\"Ezakiella_coagulans\", \"CST\", \"III\", 1.194357, 0.131369, 2.579305e-19, 1.851447e-18, \"LM_CLR\"], [\"Enterococcus_faecalis\", \"CST\", \"III\", 1.730447, 0.195957, 2.575305e-18, 1.823595e-17, \"LM_CLR\"], [\"Streptococcus_suis\", \"CST\", \"III\", 0.909671, 0.104195, 5.890561e-18, 4.115538e-17, \"LM_CLR\"], [\"Peptoniphilus_coxii\", \"CST\", \"IV\", 1.057426, 0.121271, 6.137677e-18, 4.231767e-17, \"LM_CLR\"], [\"Streptococcus_agalactiae\", \"CST\", \"II\", 2.170245, 0.255755, 4.425445e-17, 3.011602e-16, \"LM_CLR\"], [\"Limosilactobacillus_reuteri\", \"CST\", \"V\", -1.814327, 0.215278, 6.735522e-17, 4.524889e-16, \"LM_CLR\"], [\"Gardnerella_piotii\", \"CST\", \"III\", 1.438097, 0.182319, 5.179721e-15, 3.435663e-14, \"LM_CLR\"], [\"Anaerococcus_hydrogenalis\", \"CST\", \"IV\", 0.943157, 0.119847, 6.041699e-15, 3.957313e-14, \"LM_CLR\"], [\"Prevotella_nigrescens\", \"CST\", \"IV\", 0.511407, 0.065399, 9.131227e-15, 5.907115e-14, \"LM_CLR\"], [\"Ezakiella_coagulans\", \"CST\", \"IV\", 1.050326, 0.135215, 1.307065e-14, 8.352462e-14, \"LM_CLR\"], [\"Enterococcus_faecium\", \"CST\", \"III\", 0.772152, 0.100569, 2.540236e-14, 1.603715e-13, \"LM_CLR\"], [\"Peptoniphilus_sp..SAHP1\", \"CST\", \"IV\", 1.122378, 0.147858, 5.049482e-14, 3.149915e-13, \"LM_CLR\"], [\"Anaerococcus_lactolyticus\", \"CST\", \"IV\", 1.00154, 0.132466, 6.243935e-14, 3.849203e-13, \"LM_CLR\"], [\"Peptoniphilus_duerdenii\", \"CST\", \"III\", 0.911999, 0.121618, 1.022619e-13, 6.230838e-13, \"LM_CLR\"], [\"Gardnerella_leopoldii\", \"CST\", \"III\", 1.457249, 0.195346, 1.326231e-13, 7.987871e-13, \"LM_CLR\"], [\"Lactobacillus_helveticus\", \"CST\", \"V\", -1.735452, 0.233298, 1.515459e-13, 9.023868e-13, \"LM_CLR\"], [\"Lactobacillus_kitasatonis\", \"CST\", \"II\", -1.352537, 0.184075, 2.966975e-13, 1.746848e-12, \"LM_CLR\"], [\"Burkholderia_sp..SRS.W.2.2016\", \"CST\", \"IV\", -0.388393, 0.054969, 2.290117e-12, 1.333357e-11, \"LM_CLR\"], [\"Lactobacillus_acidophilus\", \"CST\", \"II\", -1.210588, 0.17149, 2.340819e-12, 1.3479e-11, \"LM_CLR\"], [\"Lactobacillus_hominis\", \"CST\", \"II\", 1.252561, 0.178466, 3.109836e-12, 1.771254e-11, \"LM_CLR\"], [\"Lactobacillus_gasseri\", \"CST\", \"III\", -1.269477, 0.181022, 3.237642e-12, 1.82422e-11, \"LM_CLR\"], [\"Lactobacillus_taiwanensis\", \"CST\", \"IV\", -0.769684, 0.110297, 4.106714e-12, 2.289275e-11, \"LM_CLR\"], [\"Streptomyces_oceani\", \"CST\", \"IV\", -0.401191, 0.059133, 1.566699e-11, 8.641583e-11, \"LM_CLR\"], [\"Lactobacillus_gasseri\", \"CST\", \"IV\", -1.217564, 0.182687, 3.439145e-11, 1.8772e-10, \"LM_CLR\"], [\"Fusobacterium_nucleatum\", \"CST\", \"IV\", 0.767031, 0.115767, 4.511756e-11, 2.437278e-10, \"LM_CLR\"], [\"Lactobacillus_kefiranofaciens\", \"CST\", \"II\", -1.484012, 0.22576, 6.299994e-11, 3.368568e-10, \"LM_CLR\"], [\"Bradyrhizobium_macuxiense\", \"CST\", \"IV\", -0.464904, 0.070742, 6.545341e-11, 3.464403e-10, \"LM_CLR\"], [\"Limosilactobacillus_vaginalis\", \"CST\", \"III\", -1.201401, 0.183052, 6.732045e-11, 3.527592e-10, \"LM_CLR\"], [\"Finegoldia_magna\", \"CST\", \"IV\", 0.951503, 0.145031, 6.984594e-11, 3.588164e-10, \"LM_CLR\"], [\"Stenotrophomonas_panacihumi\", \"CST\", \"IV\", -0.348102, 0.053055, 6.945329e-11, 3.588164e-10, \"LM_CLR\"], [\"Peptoniphilus_lacrimalis\", \"CST\", \"IV\", 0.8564, 0.132091, 1.144569e-10, 5.822855e-10, \"LM_CLR\"], [\"Lactobacillus_paragasseri\", \"CST\", \"IV\", -1.104336, 0.170906, 1.3042e-10, 6.57116e-10, \"LM_CLR\"], [\"Streptococcus_anginosus\", \"CST\", \"II\", 1.591049, 0.249723, 2.387326e-10, 1.191389e-09, \"LM_CLR\"], [\"Peptoniphilus_sp..HMSC062D09\", \"CST\", \"III\", 0.710096, 0.113671, 5.298379e-10, 2.619199e-09, \"LM_CLR\"], [\"Saccharomyces_kudriavzevii\", \"CST\", \"IV\", -0.454629, 0.07488, 1.519319e-09, 7.440405e-09, \"LM_CLR\"], [\"Lactobacillus_iners\", \"CST\", \"IV\", 1.208651, 0.19918, 1.550467e-09, 7.522635e-09, \"LM_CLR\"], [\"Anaerococcus_hydrogenalis\", \"CST\", \"III\", 0.701157, 0.115877, 1.761958e-09, 8.47033e-09, \"LM_CLR\"], [\"Candida_orthopsilosis\", \"CST\", \"IV\", -0.391246, 0.065254, 2.406625e-09, 1.146429e-08, \"LM_CLR\"], [\"Bradyrhizobium_pachyrhizi\", \"CST\", \"IV\", -0.349809, 0.059277, 4.314223e-09, 2.036624e-08, \"LM_CLR\"], [\"Streptomyces_turgidiscabies\", \"CST\", \"IV\", -0.343329, 0.058244, 4.466001e-09, 2.08945e-08, \"LM_CLR\"], [\"Burkholderia_pseudomallei\", \"CST\", \"IV\", -0.387107, 0.066254, 6.002878e-09, 2.783636e-08, \"LM_CLR\"], [\"Saccharomyces_paradoxus\", \"CST\", \"IV\", -0.359311, 0.061922, 7.77416e-09, 3.573386e-08, \"LM_CLR\"], [\"Streptomyces_sp..NA02536\", \"CST\", \"IV\", -0.40046, 0.069407, 9.426324e-09, 4.295125e-08, \"LM_CLR\"], [\"Anaerococcus_prevotii\", \"CST\", \"IV\", 0.608779, 0.107666, 1.815611e-08, 8.201553e-08, \"LM_CLR\"], [\"Fusobacterium_nucleatum\", \"CST\", \"V\", 1.115749, 0.199356, 2.498979e-08, 1.119201e-07, \"LM_CLR\"], [\"Streptomyces_sp..GQFP\", \"CST\", \"IV\", -0.323343, 0.057865, 2.64571e-08, 1.174875e-07, \"LM_CLR\"], [\"Anaerococcus_lactolyticus\", \"CST\", \"III\", 0.71256, 0.12855, 3.42258e-08, 1.507086e-07, \"LM_CLR\"], [\"Limosilactobacillus_fermentum\", \"CST\", \"IV\", -0.632998, 0.115854, 5.266804e-08, 2.299838e-07, \"LM_CLR\"], [\"Psychrobacter_pasteurii\", \"CST\", \"IV\", -0.320085, 0.059026, 6.596158e-08, 2.856518e-07, \"LM_CLR\"], [\"Cupriavidus_sp..USMAA2.4\", \"CST\", \"IV\", -0.352488, 0.06502, 6.731319e-08, 2.891157e-07, \"LM_CLR\"], [\"Lactobacillus_kefiranofaciens\", \"CST\", \"V\", -1.336188, 0.246915, 7.051843e-08, 3.0042e-07, \"LM_CLR\"], [\"Lactobacillus_iners\", \"CST\", \"V\", 1.826198, 0.340918, 9.476275e-08, 4.00449e-07, \"LM_CLR\"], [\"Streptomyces_varsoviensis\", \"CST\", \"IV\", -0.36112, 0.06897, 1.818968e-07, 7.625115e-07, \"LM_CLR\"], [\"Stenotrophomonas_acidaminiphila\", \"CST\", \"IV\", -0.326428, 0.062514, 1.974085e-07, 8.209685e-07, \"LM_CLR\"], [\"Limosilactobacillus_fermentum\", \"CST\", \"III\", -0.58464, 0.113257, 2.708761e-07, 1.117631e-06, \"LM_CLR\"], [\"Variovorax_sp..WDL1\", \"CST\", \"IV\", -0.31864, 0.061883, 2.89914e-07, 1.186835e-06, \"LM_CLR\"], [\"Lactobacillus_johnsonii\", \"CST\", \"III\", -0.696675, 0.136555, 3.711671e-07, 1.507686e-06, \"LM_CLR\"], [\"Peptoniphilus_sp..SAHP1\", \"CST\", \"III\", 0.720886, 0.142922, 5.044055e-07, 2.033142e-06, \"LM_CLR\"], [\"Pseudomonas_tolaasii\", \"CST\", \"IV\", -0.346315, 0.068752, 5.207218e-07, 2.082887e-06, \"LM_CLR\"], [\"Porphyromonas_sp..oral.taxon.278\", \"CST\", \"IV\", -0.522136, 0.105708, 8.503951e-07, 3.375811e-06, \"LM_CLR\"], [\"Pyramidobacter_sp..C12.8\", \"CST\", \"IV\", -0.273961, 0.055976, 1.07633e-06, 4.240578e-06, \"LM_CLR\"], [\"Bradyrhizobium_sp..WSM1253\", \"CST\", \"IV\", -0.379737, 0.077631, 1.088e-06, 4.254567e-06, \"LM_CLR\"], [\"Lactobacillus_taiwanensis\", \"CST\", \"V\", -0.919826, 0.189396, 1.289855e-06, 5.006547e-06, \"LM_CLR\"], [\"Bradyrhizobium_erythrophlei\", \"CST\", \"IV\", -0.311797, 0.064412, 1.400508e-06, 5.396075e-06, \"LM_CLR\"], [\"Levilactobacillus_spicheri\", \"CST\", \"IV\", -0.382921, 0.0797, 1.669559e-06, 6.385759e-06, \"LM_CLR\"], [\"Treponema_socranskii\", \"CST\", \"IV\", -0.289867, 0.060771, 2.002481e-06, 7.603625e-06, \"LM_CLR\"], [\"Lactobacillus_hominis\", \"CST\", \"V\", -0.94399, 0.198194, 2.048453e-06, 7.722225e-06, \"LM_CLR\"], [\"Lactobacillus_delbrueckii\", \"CST\", \"V\", -0.803322, 0.169258, 2.22501e-06, 8.327895e-06, \"LM_CLR\"], [\"Saccharomyces_eubayanus\", \"CST\", \"IV\", -0.290121, 0.061693, 2.757921e-06, 1.02493e-05, \"LM_CLR\"], [\"Candida_viswanathii\", \"CST\", \"IV\", -0.441662, 0.094886, 3.463324e-06, 1.278015e-05, \"LM_CLR\"], [\"Cupriavidus_taiwanensis\", \"CST\", \"IV\", -0.285437, 0.061417, 3.617436e-06, 1.32555e-05, \"LM_CLR\"], [\"Paracoccus_jeotgali\", \"CST\", \"IV\", -0.312997, 0.067663, 4.019589e-06, 1.462684e-05, \"LM_CLR\"], [\"Pseudomonas_sp..2822.17\", \"CST\", \"IV\", -0.360464, 0.078308, 4.461925e-06, 1.612447e-05, \"LM_CLR\"], [\"Streptomyces_anulatus\", \"CST\", \"IV\", -0.288754, 0.063682, 6.150018e-06, 2.207267e-05, \"LM_CLR\"], [\"Candida_maltosa\", \"CST\", \"IV\", -0.332788, 0.073594, 6.495862e-06, 2.315532e-05, \"LM_CLR\"], [\"Gardnerella_piotii\", \"CST\", \"II\", 1.288213, 0.285653, 6.882617e-06, 2.420464e-05, \"LM_CLR\"], [\"Limosilactobacillus_coleohominis\", \"CST\", \"V\", -1.062753, 0.235603, 6.84912e-06, 2.420464e-05, \"LM_CLR\"], [\"Candida_parapsilosis\", \"CST\", \"IV\", -0.287652, 0.064031, 7.551167e-06, 2.637874e-05, \"LM_CLR\"], [\"Delftia_acidovorans\", \"CST\", \"IV\", -0.38532, 0.085876, 7.704424e-06, 2.673588e-05, \"LM_CLR\"], [\"Lactobacillus_paragasseri\", \"CST\", \"V\", -1.291293, 0.292401, 1.059682e-05, 3.653115e-05, \"LM_CLR\"], [\"Salmonella_enterica\", \"CST\", \"IV\", 0.483532, 0.109553, 1.076516e-05, 3.686892e-05, \"LM_CLR\"], [\"Clostridium_perfringens\", \"CST\", \"II\", -0.663183, 0.150481, 1.112675e-05, 3.785985e-05, \"LM_CLR\"], [\"Peptoniphilus_coxii\", \"CST\", \"III\", 0.514886, 0.117362, 1.217643e-05, 4.116419e-05, \"LM_CLR\"], [\"Streptococcus_anginosus\", \"CST\", \"V\", 1.205626, 0.281897, 1.989583e-05, 6.682958e-05, \"LM_CLR\"], [\"Streptococcus_pneumoniae\", \"CST\", \"III\", 0.40324, 0.094379, 2.025465e-05, 6.760151e-05, \"LM_CLR\"], [\"Aerococcus_christensenii\", \"CST\", \"V\", 1.058238, 0.248115, 2.093831e-05, 6.944099e-05, \"LM_CLR\"], [\"Pseudomonas_sp..ERMR1.02\", \"CST\", \"IV\", -0.419999, 0.098714, 2.192106e-05, 7.2243e-05, \"LM_CLR\"], [\"Limosilactobacillus_reuteri\", \"CST\", \"II\", -0.81377, 0.194087, 2.881215e-05, 9.435979e-05, \"LM_CLR\"], [\"Candida_tropicalis\", \"CST\", \"IV\", -0.374844, 0.089496, 2.934375e-05, 9.550387e-05, \"LM_CLR\"], [\"Mageeibacillus_indolicus\", \"CST\", \"V\", 0.912311, 0.221079, 3.837521e-05, 0.0001241272, \"LM_CLR\"], [\"Fusobacterium_nucleatum\", \"CST\", \"III\", 0.45663, 0.112258, 4.958066e-05, 0.0001593881, \"LM_CLR\"], [\"Streptomyces_caelestis\", \"CST\", \"IV\", -0.480798, 0.118563, 5.205705e-05, 0.0001663286, \"LM_CLR\"], [\"Lactiplantibacillus_plantarum\", \"CST\", \"II\", 0.678413, 0.167335, 5.245427e-05, 0.000166582, \"LM_CLR\"], [\"Bacillus_dafuensis\", \"CST\", \"IV\", -0.376226, 0.093322, 5.755893e-05, 0.000181692, \"LM_CLR\"], [\"Gardnerella_leopoldii\", \"CST\", \"II\", 1.217926, 0.306451, 7.321937e-05, 0.0002297422, \"LM_CLR\"], [\"Pseudomonas_sp..BBP2017\", \"CST\", \"IV\", -0.248182, 0.063128, 8.761807e-05, 0.0002732849, \"LM_CLR\"], [\"Streptococcus_pyogenes\", \"CST\", \"II\", 0.722089, 0.185208, 0.0001003412, 0.0003111171, \"LM_CLR\"], [\"Streptomyces_gancidicus\", \"CST\", \"IV\", -0.476899, 0.123146, 0.0001112071, 0.0003427796, \"LM_CLR\"], [\"Peptoniphilus_harei\", \"CST\", \"III\", 0.416946, 0.108146, 0.0001198244, 0.0003671811, \"LM_CLR\"], [\"Lactobacillus_jensenii\", \"CST\", \"III\", -0.766525, 0.201618, 0.0001480263, 0.0004509638, \"LM_CLR\"], [\"Dialister_micraerophilus\", \"CST\", \"II\", 0.840891, 0.222641, 0.0001638904, 0.0004964078, \"LM_CLR\"], [\"Gardnerella_piotii\", \"CST\", \"V\", 1.184293, 0.316259, 0.0001858535, 0.0005596969, \"LM_CLR\"], [\"Finegoldia_magna\", \"CST\", \"III\", 0.52017, 0.140001, 0.0002093562, 0.0006268723, \"LM_CLR\"], [\"Gardnerella_vaginalis\", \"CST\", \"V\", 1.461103, 0.397221, 0.0002411426, 0.0007179472, \"LM_CLR\"], [\"Escherichia_coli\", \"CST\", \"IV\", 0.619919, 0.169758, 0.0002677853, 0.0007927657, \"LM_CLR\"], [\"Streptococcus_suis\", \"CST\", \"II\", 0.594031, 0.164359, 0.000309833, 0.0009120926, \"LM_CLR\"], [\"Mageeibacillus_indolicus\", \"CST\", \"II\", 0.704701, 0.197435, 0.0003672114, 0.001074965, \"LM_CLR\"], [\"Dialister_micraerophilus\", \"CST\", \"III\", 0.501188, 0.141297, 0.0003996176, 0.001163331, \"LM_CLR\"], [\"Salmonella_enterica\", \"CST\", \"III\", 0.373457, 0.105599, 0.0004160402, 0.001204448, \"LM_CLR\"], [\"Candida_dubliniensis\", \"CST\", \"IV\", -0.367322, 0.105538, 0.0005115528, 0.001472822, \"LM_CLR\"], [\"Staphylococcus_hominis\", \"CST\", \"IV\", -0.476396, 0.137289, 0.0005334622, 0.001527509, \"LM_CLR\"], [\"Limosilactobacillus_fermentum\", \"CST\", \"II\", 0.608977, 0.178138, 0.0006430277, 0.001831231, \"LM_CLR\"], [\"Gardnerella_vaginalis\", \"CST\", \"II\", 1.211256, 0.358778, 0.0007499401, 0.002124155, \"LM_CLR\"], [\"Acidaminococcus_sp..CAG.542\", \"CST\", \"IV\", -0.338197, 0.100299, 0.00076113, 0.002144259, \"LM_CLR\"], [\"Anaerococcus_prevotii\", \"CST\", \"III\", 0.345067, 0.103981, 0.0009238879, 0.002588862, \"LM_CLR\"], [\"Clostridium_perfringens\", \"CST\", \"III\", -0.305387, 0.095388, 0.001392293, 0.003880646, \"LM_CLR\"], [\"Streptococcus_agalactiae\", \"CST\", \"V\", 0.914885, 0.28752, 0.001486073, 0.004120117, \"LM_CLR\"], [\"Bacillus_thuringiensis\", \"CST\", \"II\", -0.384934, 0.122439, 0.001696393, 0.004678473, \"LM_CLR\"], [\"Candida_albicans\", \"CST\", \"III\", 0.380425, 0.121765, 0.001814571, 0.004962059, \"LM_CLR\"], [\"Dialister_micraerophilus\", \"CST\", \"V\", 0.780066, 0.249799, 0.001818159, 0.004962059, \"LM_CLR\"], [\"Gardnerella_leopoldii\", \"CST\", \"V\", 1.056542, 0.340005, 0.001914421, 0.005197704, \"LM_CLR\"], [\"Streptococcus_pyogenes\", \"CST\", \"V\", 0.635775, 0.209557, 0.002446935, 0.006609246, \"LM_CLR\"], [\"Bacteroides_fragilis\", \"CST\", \"IV\", 0.196149, 0.064892, 0.002541042, 0.006828235, \"LM_CLR\"], [\"Trichomonas_vaginalis\", \"CST\", \"IV\", -0.192075, 0.064279, 0.002841905, 0.007597745, \"LM_CLR\"], [\"Aerococcus_christensenii\", \"CST\", \"II\", 0.652213, 0.222535, 0.003421563, 0.00910101, \"LM_CLR\"], [\"Staphylococcus_aureus\", \"CST\", \"IV\", -0.345368, 0.123279, 0.005136518, 0.01359361, \"LM_CLR\"], [\"Limosilactobacillus_vaginalis\", \"CST\", \"V\", -0.853897, 0.30893, 0.005765715, 0.01518208, \"LM_CLR\"], [\"Prevotella_bivia\", \"CST\", \"III\", 0.486721, 0.178227, 0.006378365, 0.01671132, \"LM_CLR\"], [\"Staphylococcus_haemolyticus\", \"CST\", \"III\", 0.425351, 0.157528, 0.007003492, 0.01825786, \"LM_CLR\"], [\"Streptomyces_griseorubens\", \"CST\", \"IV\", -0.328271, 0.122452, 0.007406241, 0.01921223, \"LM_CLR\"], [\"Bacillus_mycoides\", \"CST\", \"V\", 0.299433, 0.114354, 0.008904702, 0.02298554, \"LM_CLR\"], [\"Anaerococcus_hydrogenalis\", \"CST\", \"V\", 0.536741, 0.206877, 0.009546162, 0.02452053, \"LM_CLR\"], [\"Lactiplantibacillus_plantarum\", \"CST\", \"V\", 0.474117, 0.187964, 0.01173645, 0.02999952, \"LM_CLR\"], [\"Streptomyces_lividans\", \"CST\", \"IV\", -0.299453, 0.119118, 0.01202789, 0.03059521, \"LM_CLR\"], [\"Prevotella_intermedia\", \"CST\", \"III\", 0.20683, 0.083191, 0.01300282, 0.03291535, \"LM_CLR\"], [\"Bradyrhizobium_sp..Gha\", \"CST\", \"V\", 0.362789, 0.146175, 0.01315411, 0.03313824, \"LM_CLR\"], [\"Bradyrhizobium_pachyrhizi\", \"CST\", \"V\", 0.254602, 0.102954, 0.01348765, 0.03381593, \"LM_CLR\"], [\"Bacillus_cereus\", \"CST\", \"IV\", 0.15688, 0.06362, 0.01376802, 0.03435448, \"LM_CLR\"], [\"Bacillus_mycoides\", \"CST\", \"II\", -0.240829, 0.099788, 0.01591635, 0.03952685, \"LM_CLR\"], [\"Atopobium_deltae\", \"CST\", \"II\", 0.462734, 0.192204, 0.01616013, 0.03994297, \"LM_CLR\"], [\"Escherichia_coli\", \"CST\", \"III\", 0.389657, 0.164063, 0.01765502, 0.04323006, \"LM_CLR\"], [\"Peptoniphilus_lacrimalis\", \"CST\", \"III\", 0.30465, 0.128218, 0.01760668, 0.04323006, \"LM_CLR\"], [\"Bradyrhizobium_diazoefficiens\", \"CST\", \"V\", 0.419752, 0.17756, 0.01817647, 0.04414888, \"LM_CLR\"], [\"Citrobacter_freundii\", \"CST\", \"IV\", 0.244842, 0.103583, 0.01819877, 0.04414888, \"LM_CLR\"], [\"Stenotrophomonas_acidaminiphila\", \"CST\", \"II\", -0.222553, 0.095299, 0.01963806, 0.04742094, \"LM_CLR\"], [\"Enterococcus_faecalis\", \"CST\", \"IV\", 0.456483, 0.202796, 0.02451035, 0.05891478, \"LM_CLR\"], [\"Atopobium_deltae\", \"CST\", \"V\", 0.482456, 0.215219, 0.02509386, 0.06004194, \"LM_CLR\"], [\"Bradyrhizobium_sp..BTAi1\", \"CST\", \"V\", 0.416452, 0.185975, 0.02524967, 0.06014013, \"LM_CLR\"], [\"Variovorax_paradoxus\", \"CST\", \"V\", 0.33059, 0.148171, 0.02578766, 0.06114358, \"LM_CLR\"], [\"Bradyrhizobium_arachidis\", \"CST\", \"V\", 0.335643, 0.15388, 0.02928938, 0.06913349, \"LM_CLR\"], [\"Bradyrhizobium_sp..Gha\", \"CST\", \"IV\", -0.178761, 0.084966, 0.03551976, 0.08309087, \"LM_CLR\"], [\"Streptomyces_anulatus\", \"CST\", \"II\", -0.20471, 0.097223, 0.03538212, 0.08309087, \"LM_CLR\"], [\"Streptomyces_oceani\", \"CST\", \"II\", -0.187388, 0.090088, 0.0376657, 0.08771924, \"LM_CLR\"], [\"Lactobacillus_jensenii\", \"CST\", \"II\", -0.64595, 0.312178, 0.0386626, 0.08964249, \"LM_CLR\"], [\"Saccharomyces_kudriavzevii\", \"CST\", \"III\", -0.146133, 0.071966, 0.04243189, 0.0979485, \"LM_CLR\"], [\"Pseudomonas_sp..2822.17\", \"CST\", \"II\", -0.24011, 0.118784, 0.04339983, 0.09974347, \"LM_CLR\"], [\"Staphylococcus_hominis\", \"CST\", \"III\", -0.265949, 0.132176, 0.04437844, 0.1015472, \"LM_CLR\"], [\"Streptococcus_suis\", \"CST\", \"V\", 0.370627, 0.185728, 0.04612742, 0.1050903, \"LM_CLR\"], [\"Clostridium_perfringens\", \"CST\", \"V\", -0.338724, 0.170296, 0.04684143, 0.106255, \"LM_CLR\"], [\"Bacillus_mycoides\", \"CST\", \"IV\", 0.128988, 0.065781, 0.05005557, 0.1130566, \"LM_CLR\"], [\"Paracoccus_jeotgali\", \"CST\", \"III\", -0.12717, 0.065042, 0.0507342, 0.1140975, \"LM_CLR\"], [\"Clostridium_botulinum\", \"CST\", \"II\", -0.2578, 0.132922, 0.05260394, 0.1177968, \"LM_CLR\"], [\"Burkholderia_sp..SRS.W.2.2016\", \"CST\", \"II\", -0.161016, 0.083508, 0.05400424, 0.120418, \"LM_CLR\"], [\"Bradyrhizobium_sp..WSM1253\", \"CST\", \"II\", -0.227741, 0.118268, 0.05431126, 0.1205894, \"LM_CLR\"], [\"Streptomyces_sp..NA02536\", \"CST\", \"II\", -0.202245, 0.105231, 0.05479649, 0.1211534, \"LM_CLR\"], [\"Cupriavidus_sp..USMAA2.4\", \"CST\", \"III\", -0.118928, 0.062712, 0.0580771, 0.1278672, \"LM_CLR\"], [\"Ezakiella_coagulans\", \"CST\", \"V\", 0.438586, 0.232566, 0.05946613, 0.1302446, \"LM_CLR\"], [\"Limosilactobacillus_fermentum\", \"CST\", \"V\", -0.373767, 0.198729, 0.06015114, 0.1302446, \"LM_CLR\"], [\"Streptomyces_oceani\", \"CST\", \"III\", -0.107605, 0.057102, 0.05967364, 0.1302446, \"LM_CLR\"], [\"Variovorax_paradoxus\", \"CST\", \"IV\", -0.162007, 0.086073, 0.05996274, 0.1302446, \"LM_CLR\"], [\"Delftia_acidovorans\", \"CST\", \"III\", -0.152286, 0.082795, 0.06605265, 0.1418508, \"LM_CLR\"], [\"Proteus_mirabilis\", \"CST\", \"IV\", -0.147707, 0.080273, 0.0659219, 0.1418508, \"LM_CLR\"], [\"Stenotrophomonas_maltophilia\", \"CST\", \"III\", 0.138237, 0.075767, 0.06825363, 0.1459792, \"LM_CLR\"], [\"Corynebacterium_tuberculostearicum\", \"CST\", \"II\", -0.36996, 0.203866, 0.06975116, 0.1485756, \"LM_CLR\"], [\"Burkholderia_sp..SRS.W.2.2016\", \"CST\", \"III\", -0.094171, 0.052948, 0.07548865, 0.1595002, \"LM_CLR\"], [\"Prevotella_buccalis\", \"CST\", \"III\", 0.261656, 0.147025, 0.07530372, 0.1595002, \"LM_CLR\"], [\"Citrobacter_freundii\", \"CST\", \"V\", 0.318229, 0.179897, 0.0770643, 0.1596342, \"LM_CLR\"], [\"Cupriavidus_sp..USMAA2.4\", \"CST\", \"II\", -0.17497, 0.098934, 0.07714937, 0.1596342, \"LM_CLR\"], [\"Lactobacillus_gasseri\", \"CST\", \"V\", 0.55158, 0.312472, 0.07768456, 0.1596342, \"LM_CLR\"], [\"Prevotella_disiens\", \"CST\", \"III\", 0.250105, 0.140978, 0.07622553, 0.1596342, \"LM_CLR\"], [\"Psychrobacter_pasteurii\", \"CST\", \"III\", -0.100751, 0.056729, 0.07588663, 0.1596342, \"LM_CLR\"], [\"Staphylococcus_aureus\", \"CST\", \"III\", 0.209306, 0.118481, 0.07745578, 0.1596342, \"LM_CLR\"], [\"Streptomyces_turgidiscabies\", \"CST\", \"II\", -0.156883, 0.088741, 0.07725674, 0.1596342, \"LM_CLR\"], [\"Trichomonas_vaginalis\", \"CST\", \"V\", 0.19475, 0.11209, 0.08246602, 0.1687976, \"LM_CLR\"], [\"Pseudomonas_sp..2822.17\", \"CST\", \"III\", -0.128236, 0.075347, 0.0889528, 0.1813668, \"LM_CLR\"], [\"Porphyromonas_sp..oral.taxon.278\", \"CST\", \"III\", -0.169682, 0.101595, 0.09504208, 0.1915464, \"LM_CLR\"], [\"Salmonella_enterica\", \"CST\", \"V\", 0.317356, 0.189831, 0.09473287, 0.1915464, \"LM_CLR\"], [\"Trichomonas_vaginalis\", \"CST\", \"II\", -0.162791, 0.09731, 0.09450388, 0.1915464, \"LM_CLR\"], [\"Enterobacter_hormaechei\", \"CST\", \"V\", 0.280304, 0.170617, 0.1005721, 0.2019148, \"LM_CLR\"], [\"Bacillus_dafuensis\", \"CST\", \"III\", -0.146132, 0.08969, 0.1034109, 0.2068218, \"LM_CLR\"], [\"Ralstonia_pickettii\", \"CST\", \"V\", 0.351104, 0.217453, 0.1065589, 0.2123075, \"LM_CLR\"], [\"Clostridium_botulinum\", \"CST\", \"IV\", 0.138465, 0.08713, 0.1121937, 0.2226875, \"LM_CLR\"], [\"Streptomyces_lividans\", \"CST\", \"III\", -0.18223, 0.114834, 0.1127218, 0.2228913, \"LM_CLR\"], [\"Cutibacterium_acnes\", \"CST\", \"V\", 0.336837, 0.212676, 0.1134, 0.2233895, \"LM_CLR\"], [\"Enterococcus_faecium\", \"CST\", \"II\", 0.247714, 0.158412, 0.1180428, 0.2316646, \"LM_CLR\"], [\"Klebsiella_pneumoniae\", \"CST\", \"II\", 0.324094, 0.208765, 0.1207591, 0.2361111, \"LM_CLR\"], [\"Streptococcus_pneumoniae\", \"CST\", \"IV\", 0.15197, 0.098201, 0.1218965, 0.2374489, \"LM_CLR\"], [\"Streptomyces_varsoviensis\", \"CST\", \"III\", -0.101738, 0.066286, 0.124989, 0.2425712, \"LM_CLR\"], [\"Pyramidobacter_sp..C12.8\", \"CST\", \"II\", -0.128977, 0.085114, 0.129875, 0.2511236, \"LM_CLR\"], [\"Cupriavidus_taiwanensis\", \"CST\", \"III\", -0.088311, 0.059123, 0.1354526, 0.2599896, \"LM_CLR\"], [\"Prevotella_timonensis\", \"CST\", \"III\", 0.25476, 0.17036, 0.1349809, 0.2599896, \"LM_CLR\"], [\"Pseudomonas_aeruginosa\", \"CST\", \"II\", -0.211698, 0.142836, 0.1384996, 0.2648678, \"LM_CLR\"], [\"Bradyrhizobium_arachidis\", \"CST\", \"II\", -0.20246, 0.137097, 0.1399119, 0.2665958, \"LM_CLR\"], [\"Bacillus_thuringiensis\", \"CST\", \"IV\", -0.116423, 0.080517, 0.1483694, 0.2816869, \"LM_CLR\"], [\"Burkholderia_pseudomallei\", \"CST\", \"III\", -0.091643, 0.063676, 0.150254, 0.2842349, \"LM_CLR\"], [\"Prevotella_timonensis\", \"CST\", \"II\", 0.385005, 0.268493, 0.151759, 0.2860494, \"LM_CLR\"], [\"Lawsonella_clevelandensis\", \"CST\", \"IV\", 0.175932, 0.123141, 0.1532664, 0.2870961, \"LM_CLR\"], [\"Pseudomonas_sp..BBP2017\", \"CST\", \"II\", -0.137308, 0.096139, 0.1534102, 0.2870961, \"LM_CLR\"], [\"Staphylococcus_haemolyticus\", \"CST\", \"V\", 0.401332, 0.283514, 0.1570722, 0.2929034, \"LM_CLR\"], [\"Ralstonia_insidiosa\", \"CST\", \"V\", 0.355068, 0.251643, 0.1584291, 0.294386, \"LM_CLR\"], [\"Levilactobacillus_spicheri\", \"CST\", \"III\", -0.107876, 0.076598, 0.1591935, 0.2947611, \"LM_CLR\"], [\"Bradyrhizobium_macuxiense\", \"CST\", \"III\", -0.094962, 0.068191, 0.1639298, 0.302462, \"LM_CLR\"], [\"Ralstonia_solanacearum\", \"CST\", \"V\", 0.21771, 0.157003, 0.1657041, 0.304663, \"LM_CLR\"], [\"Pasteurella_multocida\", \"CST\", \"IV\", -0.076834, 0.056113, 0.1710846, 0.3134557, \"LM_CLR\"], [\"Stenotrophomonas_acidaminiphila\", \"CST\", \"V\", 0.147632, 0.107979, 0.1717143, 0.3135132, \"LM_CLR\"], [\"Pseudomonas_sp..BBP2017\", \"CST\", \"V\", 0.148923, 0.109164, 0.1726662, 0.3141565, \"LM_CLR\"], [\"Variovorax_sp..WDL1\", \"CST\", \"V\", 0.143731, 0.106824, 0.1786253, 0.3238742, \"LM_CLR\"], [\"Prevotella_colorans\", \"CST\", \"III\", 0.194566, 0.14486, 0.1794038, 0.3241642, \"LM_CLR\"], [\"Bradyrhizobium_erythrophlei\", \"CST\", \"V\", 0.148215, 0.110876, 0.1814592, 0.3267513, \"LM_CLR\"], [\"Enterococcus_faecalis\", \"CST\", \"II\", 0.406062, 0.309148, 0.1891993, 0.3383632, \"LM_CLR\"], [\"Pseudomonas_sp..ERMR1.02\", \"CST\", \"III\", -0.124716, 0.094872, 0.1888064, 0.3383632, \"LM_CLR\"], [\"Klebsiella_pneumoniae\", \"CST\", \"V\", 0.312875, 0.23883, 0.190348, 0.3392597, \"LM_CLR\"], [\"Bradyrhizobium_sp..Gha\", \"CST\", \"II\", -0.169962, 0.130065, 0.1914653, 0.3400944, \"LM_CLR\"], [\"Bacillus_thuringiensis\", \"CST\", \"V\", -0.180531, 0.1395, 0.1957802, 0.3442577, \"LM_CLR\"], [\"Psychrobacter_pasteurii\", \"CST\", \"II\", -0.11566, 0.089357, 0.1956925, 0.3442577, \"LM_CLR\"], [\"Saccharomyces_eubayanus\", \"CST\", \"II\", -0.122069, 0.094188, 0.1951386, 0.3442577, \"LM_CLR\"], [\"Anaerococcus_hydrogenalis\", \"CST\", \"II\", 0.23456, 0.182803, 0.1996183, 0.3498327, \"LM_CLR\"], [\"Acidaminococcus_sp..CAG.542\", \"CST\", \"III\", -0.122409, 0.096396, 0.204287, 0.3568213, \"LM_CLR\"], [\"Pseudomonas_tolaasii\", \"CST\", \"III\", -0.083207, 0.066238, 0.20922, 0.3632926, \"LM_CLR\"], [\"Streptomyces_gancidicus\", \"CST\", \"III\", -0.148615, 0.118353, 0.2093785, 0.3632926, \"LM_CLR\"], [\"Burkholderia_sp..SRS.W.2.2016\", \"CST\", \"V\", -0.117585, 0.095361, 0.217711, 0.3765035, \"LM_CLR\"], [\"Lactobacillus_iners\", \"CST\", \"II\", -0.376086, 0.30787, 0.2220184, 0.3826897, \"LM_CLR\"], [\"Finegoldia_magna\", \"CST\", \"V\", 0.305756, 0.250797, 0.2229436, 0.3830245, \"LM_CLR\"], [\"Streptomyces_anulatus\", \"CST\", \"III\", -0.074836, 0.061636, 0.2248537, 0.3850437, \"LM_CLR\"], [\"Lactobacillus_johnsonii\", \"CST\", \"V\", -0.289247, 0.238699, 0.2257494, 0.3853182, \"LM_CLR\"], [\"Bradyrhizobium_erythrophlei\", \"CST\", \"II\", -0.118552, 0.098533, 0.2290705, 0.38559, \"LM_CLR\"], [\"Clostridium_sp..N3C\", \"CST\", \"II\", -0.143099, 0.118349, 0.2267858, 0.38559, \"LM_CLR\"], [\"Enterococcus_faecalis\", \"CST\", \"V\", 0.420978, 0.350286, 0.2295879, 0.38559, \"LM_CLR\"], [\"Pasteurella_multocida\", \"CST\", \"II\", -0.103018, 0.085432, 0.2280382, 0.38559, \"LM_CLR\"], [\"Peptoniphilus_harei\", \"CST\", \"V\", 0.232533, 0.193418, 0.2294253, 0.38559, \"LM_CLR\"], [\"Bacteroides_fragilis\", \"CST\", \"III\", 0.075036, 0.06255, 0.230449, 0.3857995, \"LM_CLR\"], [\"Streptomyces_anulatus\", \"CST\", \"V\", 0.130845, 0.109824, 0.2336403, 0.3898965, \"LM_CLR\"], [\"Streptomyces_caelestis\", \"CST\", \"III\", -0.133064, 0.113949, 0.2430498, 0.4043114, \"LM_CLR\"], [\"Candida_albicans\", \"CST\", \"V\", -0.251529, 0.216499, 0.2454628, 0.4044733, \"LM_CLR\"], [\"Citrobacter_freundii\", \"CST\", \"III\", 0.115997, 0.099716, 0.2448788, 0.4044733, \"LM_CLR\"], [\"Streptococcus_pneumoniae\", \"CST\", \"II\", 0.173098, 0.148662, 0.2444165, 0.4044733, \"LM_CLR\"], [\"Variovorax_sp..WDL1\", \"CST\", \"II\", -0.109343, 0.094389, 0.2468468, 0.4054788, \"LM_CLR\"], [\"Streptomyces_turgidiscabies\", \"CST\", \"III\", -0.064952, 0.056248, 0.2483586, 0.4066872, \"LM_CLR\"], [\"Staphylococcus_haemolyticus\", \"CST\", \"IV\", 0.187911, 0.163499, 0.2505909, 0.4090643, \"LM_CLR\"], [\"Candida_orthopsilosis\", \"CST\", \"III\", -0.07195, 0.062714, 0.2514084, 0.4091243, \"LM_CLR\"], [\"Staphylococcus_hominis\", \"CST\", \"II\", -0.237629, 0.208431, 0.2544249, 0.4127512, \"LM_CLR\"], [\"Klebsiella_pneumoniae\", \"CST\", \"III\", 0.150541, 0.132392, 0.2556727, 0.4134954, \"LM_CLR\"], [\"Bradyrhizobium_pachyrhizi\", \"CST\", \"II\", -0.101813, 0.089978, 0.2579926, 0.4159635, \"LM_CLR\"], [\"Streptomyces_sp..NA02536\", \"CST\", \"III\", -0.075037, 0.066762, 0.2612025, 0.4198469, \"LM_CLR\"], [\"Peptoniphilus_sp..SAHP1\", \"CST\", \"II\", 0.25268, 0.225474, 0.2625874, 0.4207822, \"LM_CLR\"], [\"Bradyrhizobium_sp..BTAi1\", \"CST\", \"II\", -0.187252, 0.168291, 0.2659914, 0.4248694, \"LM_CLR\"], [\"Megasphaera_Veillonellaceae.bacterium.DNF00626\", \"CST\", \"V\", 0.272925, 0.245685, 0.2667596, 0.4248694, \"LM_CLR\"], [\"Porphyromonas_sp..oral.taxon.278\", \"CST\", \"V\", -0.20245, 0.184334, 0.2722183, 0.4322497, \"LM_CLR\"], [\"Candida_viswanathii\", \"CST\", \"III\", -0.098941, 0.091193, 0.2780723, 0.4402112, \"LM_CLR\"], [\"Bradyrhizobium_erythrophlei\", \"CST\", \"III\", -0.067018, 0.062496, 0.2837064, 0.4468862, \"LM_CLR\"], [\"Fusobacterium_nucleatum\", \"CST\", \"II\", 0.189705, 0.177011, 0.2839944, 0.4468862, \"LM_CLR\"], [\"Candida_orthopsilosis\", \"CST\", \"II\", -0.105379, 0.098785, 0.2862129, 0.4476882, \"LM_CLR\"], [\"Treponema_socranskii\", \"CST\", \"III\", -0.062423, 0.058449, 0.285687, 0.4476882, \"LM_CLR\"], [\"Proteus_mirabilis\", \"CST\", \"III\", 0.082019, 0.077664, 0.2910846, 0.4539533, \"LM_CLR\"], [\"Candida_parapsilosis\", \"CST\", \"V\", -0.116779, 0.111574, 0.2954044, 0.4593232, \"LM_CLR\"], [\"Prevotella_nigrescens\", \"CST\", \"II\", 0.103444, 0.099307, 0.2977251, 0.461562, \"LM_CLR\"], [\"Variovorax_sp..770b2\", \"CST\", \"V\", 0.109146, 0.106936, 0.3075441, 0.4753779, \"LM_CLR\"], [\"Prevotella_intermedia\", \"CST\", \"V\", 0.150103, 0.147805, 0.3099734, 0.4777238, \"LM_CLR\"], [\"Stenotrophomonas_panacihumi\", \"CST\", \"II\", -0.080685, 0.08077, 0.3179612, 0.4885972, \"LM_CLR\"], [\"Stenotrophomonas_maltophilia\", \"CST\", \"IV\", -0.078393, 0.078637, 0.3189481, 0.4886808, \"LM_CLR\"], [\"Limosilactobacillus_vaginalis\", \"CST\", \"II\", -0.28056, 0.283181, 0.3219349, 0.4918188, \"LM_CLR\"], [\"Clostridium_botulinum\", \"CST\", \"V\", -0.146046, 0.150377, 0.3315735, 0.5050713, \"LM_CLR\"], [\"Peptoniphilus_sp..HMSC062D09\", \"CST\", \"V\", 0.197269, 0.203837, 0.333281, 0.5062007, \"LM_CLR\"], [\"Anaerococcus_prevotii\", \"CST\", \"V\", 0.179169, 0.186076, 0.3357302, 0.5084469, \"LM_CLR\"], [\"Staphylococcus_haemolyticus\", \"CST\", \"II\", 0.238566, 0.248466, 0.337125, 0.509088, \"LM_CLR\"], [\"Lactiplantibacillus_plantarum\", \"CST\", \"IV\", 0.1027, 0.109282, 0.3474565, 0.5231816, \"LM_CLR\"], [\"Variovorax_sp..770b2\", \"CST\", \"II\", -0.087804, 0.094455, 0.3527136, 0.5295758, \"LM_CLR\"], [\"Bacillus_cereus\", \"CST\", \"III\", -0.056578, 0.061176, 0.3551897, 0.5304424, \"LM_CLR\"], [\"Ralstonia_solanacearum\", \"CST\", \"II\", -0.130021, 0.14063, 0.3553155, 0.5304424, \"LM_CLR\"], [\"Candida_albicans\", \"CST\", \"IV\", -0.115662, 0.125658, 0.357465, 0.5321354, \"LM_CLR\"], [\"Ralstonia_pickettii\", \"CST\", \"II\", -0.181425, 0.198361, 0.360504, 0.5351391, \"LM_CLR\"], [\"Ralstonia_insidiosa\", \"CST\", \"III\", -0.137675, 0.151748, 0.3643818, 0.5393674, \"LM_CLR\"], [\"Ralstonia_insidiosa\", \"CST\", \"II\", -0.210141, 0.232523, 0.366251, 0.540607, \"LM_CLR\"], [\"Burkholderia_pseudomallei\", \"CST\", \"II\", -0.09042, 0.1003, 0.3674343, 0.5408303, \"LM_CLR\"], [\"Bradyrhizobium_macuxiense\", \"CST\", \"II\", -0.096671, 0.107567, 0.3689413, 0.5415273, \"LM_CLR\"], [\"Stenotrophomonas_panacihumi\", \"CST\", \"V\", 0.081986, 0.091785, 0.3718419, 0.5442602, \"LM_CLR\"], [\"Salmonella_enterica\", \"CST\", \"II\", 0.147205, 0.166575, 0.3769718, 0.5502318, \"LM_CLR\"], [\"Prevotella_bivia\", \"CST\", \"II\", 0.246514, 0.280904, 0.3802913, 0.5535351, \"LM_CLR\"], [\"Peptoniphilus_duerdenii\", \"CST\", \"V\", 0.188663, 0.216396, 0.3834041, 0.5549827, \"LM_CLR\"], [\"Streptomyces_lividans\", \"CST\", \"II\", -0.158082, 0.181148, 0.3829673, 0.5549827, \"LM_CLR\"], [\"Variovorax_sp..770b2\", \"CST\", \"IV\", 0.0538, 0.061937, 0.385167, 0.5559986, \"LM_CLR\"], [\"Escherichia_coli\", \"CST\", \"II\", 0.219988, 0.258828, 0.3954776, 0.5693139, \"LM_CLR\"], [\"Cupriavidus_taiwanensis\", \"CST\", \"II\", -0.077776, 0.093228, 0.4042645, 0.5803687, \"LM_CLR\"], [\"Saccharomyces_paradoxus\", \"CST\", \"III\", -0.048747, 0.059573, 0.4133216, 0.5917501, \"LM_CLR\"], [\"Bacteroides_fragilis\", \"CST\", \"II\", -0.07956, 0.098668, 0.4201568, 0.5998969, \"LM_CLR\"], [\"Anaerococcus_lactolyticus\", \"CST\", \"II\", 0.162108, 0.202666, 0.4238867, 0.601942, \"LM_CLR\"], [\"Lawsonella_clevelandensis\", \"CST\", \"II\", -0.14976, 0.187118, 0.4236223, 0.601942, \"LM_CLR\"], [\"Pseudomonas_sp..BBP2017\", \"CST\", \"III\", 0.048493, 0.060938, 0.4262741, 0.6036964, \"LM_CLR\"], [\"Saccharomyces_kudriavzevii\", \"CST\", \"II\", -0.089168, 0.113357, 0.4316044, 0.6095977, \"LM_CLR\"], [\"Bradyrhizobium_arachidis\", \"CST\", \"IV\", -0.069924, 0.089495, 0.434716, 0.6107003, \"LM_CLR\"], [\"Citrobacter_freundii\", \"CST\", \"II\", -0.12304, 0.157237, 0.4340213, 0.6107003, \"LM_CLR\"], [\"Prevotella_intermedia\", \"CST\", \"II\", 0.10218, 0.131186, 0.4361441, 0.6110682, \"LM_CLR\"], [\"Candida_parapsilosis\", \"CST\", \"II\", -0.075181, 0.096982, 0.4383444, 0.6125132, \"LM_CLR\"], [\"Prevotella_buccalis\", \"CST\", \"II\", 0.175701, 0.2319, 0.4487566, 0.6253948, \"LM_CLR\"], [\"Pseudomonas_sp..2822.17\", \"CST\", \"V\", 0.100863, 0.136142, 0.4588695, 0.6377921, \"LM_CLR\"], [\"Cutibacterium_acnes\", \"CST\", \"II\", -0.13529, 0.184632, 0.463795, 0.6429327, \"LM_CLR\"], [\"Streptomyces_gancidicus\", \"CST\", \"V\", -0.153104, 0.21474, 0.4759481, 0.6580391, \"LM_CLR\"], [\"Prevotella_bivia\", \"CST\", \"V\", 0.222256, 0.315541, 0.4812897, 0.6636732, \"LM_CLR\"], [\"Saccharomyces_paradoxus\", \"CST\", \"II\", -0.065004, 0.093909, 0.4889097, 0.6724112, \"LM_CLR\"], [\"Variovorax_sp..770b2\", \"CST\", \"III\", 0.041165, 0.059873, 0.4918311, 0.6746584, \"LM_CLR\"], [\"Bradyrhizobium_sp..WSM1253\", \"CST\", \"III\", -0.050677, 0.074964, 0.4991176, 0.6828659, \"LM_CLR\"], [\"Enterococcus_faecium\", \"CST\", \"V\", 0.120029, 0.182473, 0.5107493, 0.6969599, \"LM_CLR\"], [\"Prevotella_nigrescens\", \"CST\", \"III\", 0.041197, 0.062972, 0.5130693, 0.6983073, \"LM_CLR\"], [\"Pasteurella_multocida\", \"CST\", \"V\", -0.062825, 0.097069, 0.5175697, 0.7008358, \"LM_CLR\"], [\"Streptomyces_varsoviensis\", \"CST\", \"V\", -0.077835, 0.12027, 0.517602, 0.7008358, \"LM_CLR\"], [\"Staphylococcus_epidermidis\", \"CST\", \"V\", 0.171656, 0.270655, 0.5260132, 0.7101033, \"LM_CLR\"], [\"Streptomyces_varsoviensis\", \"CST\", \"II\", -0.066037, 0.104411, 0.5271569, 0.7101033, \"LM_CLR\"], [\"Candida_maltosa\", \"CST\", \"II\", -0.069691, 0.111411, 0.5316971, 0.7143828, \"LM_CLR\"], [\"Paracoccus_jeotgali\", \"CST\", \"II\", -0.062321, 0.102469, 0.543151, 0.7262621, \"LM_CLR\"], [\"Peptoniphilus_coxii\", \"CST\", \"V\", 0.127006, 0.209157, 0.5437731, 0.7262621, \"LM_CLR\"], [\"Variovorax_paradoxus\", \"CST\", \"II\", -0.079765, 0.131659, 0.5446965, 0.7262621, \"LM_CLR\"], [\"Lawsonella_clevelandensis\", \"CST\", \"III\", -0.071554, 0.118635, 0.5464945, 0.7268099, \"LM_CLR\"], [\"Stenotrophomonas_acidaminiphila\", \"CST\", \"III\", -0.035586, 0.060406, 0.555857, 0.7363367, \"LM_CLR\"], [\"Variovorax_sp..WDL1\", \"CST\", \"III\", -0.035194, 0.059832, 0.5564682, 0.7363367, \"LM_CLR\"], [\"Bacillus_dafuensis\", \"CST\", \"V\", -0.093523, 0.162735, 0.565564, 0.740059, \"LM_CLR\"], [\"Candida_orthopsilosis\", \"CST\", \"V\", -0.066162, 0.113789, 0.5610062, 0.740059, \"LM_CLR\"], [\"Corynebacterium_tuberculostearicum\", \"CST\", \"V\", -0.135519, 0.234038, 0.5626282, 0.740059, \"LM_CLR\"], [\"Peptoniphilus_coxii\", \"CST\", \"II\", -0.106336, 0.185127, 0.5657738, 0.740059, \"LM_CLR\"], [\"Streptomyces_caelestis\", \"CST\", \"V\", -0.11858, 0.206749, 0.5663429, 0.740059, \"LM_CLR\"], [\"Bacillus_cereus\", \"CST\", \"II\", -0.054861, 0.096404, 0.56939, 0.7410521, \"LM_CLR\"], [\"Candida_maltosa\", \"CST\", \"V\", -0.072658, 0.128334, 0.5713455, 0.7410521, \"LM_CLR\"], [\"Pseudomonas_tolaasii\", \"CST\", \"II\", -0.059162, 0.104475, 0.5712759, 0.7410521, \"LM_CLR\"], [\"Ralstonia_solanacearum\", \"CST\", \"III\", 0.049343, 0.089384, 0.580993, 0.7483948, \"LM_CLR\"], [\"Streptomyces_sp..NA02536\", \"CST\", \"V\", -0.066921, 0.120756, 0.5795216, 0.7483948, \"LM_CLR\"], [\"Treponema_socranskii\", \"CST\", \"II\", -0.050815, 0.092121, 0.5812913, 0.7483948, \"LM_CLR\"], [\"Candida_dubliniensis\", \"CST\", \"III\", -0.054055, 0.101431, 0.5941445, 0.7630679, \"LM_CLR\"], [\"Pasteurella_multocida\", \"CST\", \"III\", 0.028482, 0.054151, 0.5989727, 0.7655163, \"LM_CLR\"], [\"Saccharomyces_eubayanus\", \"CST\", \"III\", 0.031435, 0.059712, 0.5986433, 0.7655163, \"LM_CLR\"], [\"Lawsonella_clevelandensis\", \"CST\", \"V\", 0.110335, 0.213555, 0.6054564, 0.7700465, \"LM_CLR\"], [\"Saccharomyces_eubayanus\", \"CST\", \"V\", -0.054991, 0.106389, 0.6052956, 0.7700465, \"LM_CLR\"], [\"Ezakiella_coagulans\", \"CST\", \"II\", -0.10625, 0.207048, 0.6078991, 0.7712812, \"LM_CLR\"], [\"Candida_albicans\", \"CST\", \"II\", 0.095964, 0.19203, 0.6173278, 0.7794693, \"LM_CLR\"], [\"Ralstonia_pickettii\", \"CST\", \"III\", -0.063951, 0.127593, 0.6162821, 0.7794693, \"LM_CLR\"], [\"Paracoccus_jeotgali\", \"CST\", \"V\", -0.058574, 0.117927, 0.6194606, 0.7802821, \"LM_CLR\"], [\"Streptococcus_pneumoniae\", \"CST\", \"V\", 0.083908, 0.171242, 0.6241933, 0.784358, \"LM_CLR\"], [\"Bacillus_mycoides\", \"CST\", \"III\", 0.03028, 0.063296, 0.6324442, 0.7855664, \"LM_CLR\"], [\"Candida_parapsilosis\", \"CST\", \"III\", 0.029639, 0.061555, 0.6302326, 0.7855664, \"LM_CLR\"], [\"Staphylococcus_epidermidis\", \"CST\", \"III\", 0.072228, 0.149855, 0.6298825, 0.7855664, \"LM_CLR\"], [\"Streptomyces_griseorubens\", \"CST\", \"III\", 0.0565, 0.117687, 0.6312177, 0.7855664, \"LM_CLR\"], [\"Streptomyces_turgidiscabies\", \"CST\", \"V\", 0.048127, 0.100667, 0.6326508, 0.7855664, \"LM_CLR\"], [\"Bradyrhizobium_diazoefficiens\", \"CST\", \"II\", -0.075451, 0.159791, 0.6368467, 0.788907, \"LM_CLR\"], [\"Bradyrhizobium_sp..BTAi1\", \"CST\", \"IV\", -0.049511, 0.108706, 0.6488328, 0.7991675, \"LM_CLR\"], [\"Pyramidobacter_sp..C12.8\", \"CST\", \"III\", -0.024711, 0.053957, 0.6470321, 0.7991675, \"LM_CLR\"], [\"Staphylococcus_aureus\", \"CST\", \"II\", 0.084774, 0.186627, 0.6497049, 0.7991675, \"LM_CLR\"], [\"Lactiplantibacillus_plantarum\", \"CST\", \"III\", -0.047585, 0.106171, 0.6540674, 0.8026495, \"LM_CLR\"], [\"Clostridium_sp..N3C\", \"CST\", \"V\", 0.06019, 0.135813, 0.6576853, 0.8052035, \"LM_CLR\"], [\"Anaerococcus_prevotii\", \"CST\", \"II\", -0.071406, 0.164047, 0.6634149, 0.8068801, \"LM_CLR\"], [\"Peptoniphilus_duerdenii\", \"CST\", \"II\", -0.083424, 0.191814, 0.6636743, 0.8068801, \"LM_CLR\"], [\"Stenotrophomonas_maltophilia\", \"CST\", \"V\", 0.059878, 0.136352, 0.6606109, 0.8068801, \"LM_CLR\"], [\"Peptoniphilus_sp..SAHP1\", \"CST\", \"V\", 0.110261, 0.255299, 0.6658716, 0.8076775, \"LM_CLR\"], [\"Enterobacter_hormaechei\", \"CST\", \"III\", 0.040066, 0.094921, 0.6730043, 0.814444, \"LM_CLR\"], [\"Candida_viswanathii\", \"CST\", \"II\", -0.059302, 0.143643, 0.6797668, 0.8207323, \"LM_CLR\"], [\"Porphyromonas_sp..oral.taxon.278\", \"CST\", \"II\", 0.064507, 0.160027, 0.6869199, 0.8274621, \"LM_CLR\"], [\"Prevotella_colorans\", \"CST\", \"V\", 0.10137, 0.256311, 0.6925214, 0.8322963, \"LM_CLR\"], [\"Corynebacterium_tuberculostearicum\", \"CST\", \"IV\", -0.052502, 0.134485, 0.6962972, 0.8342019, \"LM_CLR\"], [\"Cupriavidus_sp..USMAA2.4\", \"CST\", \"V\", 0.04379, 0.11256, 0.6972909, 0.8342019, \"LM_CLR\"], [\"Bacillus_dafuensis\", \"CST\", \"II\", -0.052439, 0.141276, 0.7105448, 0.8359358, \"LM_CLR\"], [\"Bradyrhizobium_pachyrhizi\", \"CST\", \"III\", 0.021104, 0.057062, 0.7115475, 0.8359358, \"LM_CLR\"], [\"Candida_dubliniensis\", \"CST\", \"V\", -0.069577, 0.184037, 0.7054287, 0.8359358, \"LM_CLR\"], [\"Candida_viswanathii\", \"CST\", \"V\", -0.06214, 0.165461, 0.7072892, 0.8359358, \"LM_CLR\"], [\"Prevotella_buccalis\", \"CST\", \"V\", 0.097504, 0.261798, 0.7096077, 0.8359358, \"LM_CLR\"], [\"Prevotella_nigrescens\", \"CST\", \"V\", 0.042198, 0.113527, 0.7101577, 0.8359358, \"LM_CLR\"], [\"Pseudomonas_aeruginosa\", \"CST\", \"IV\", -0.034599, 0.093936, 0.7126755, 0.8359358, \"LM_CLR\"], [\"Streptomyces_oceani\", \"CST\", \"V\", -0.038869, 0.102212, 0.7037834, 0.8359358, \"LM_CLR\"], [\"Variovorax_paradoxus\", \"CST\", \"III\", 0.03071, 0.083506, 0.7130979, 0.8359358, \"LM_CLR\"], [\"Bradyrhizobium_sp..WSM1253\", \"CST\", \"V\", 0.049006, 0.13419, 0.7150016, 0.8362966, \"LM_CLR\"], [\"Bacillus_cereus\", \"CST\", \"V\", 0.03904, 0.110777, 0.7245617, 0.8445991, \"LM_CLR\"], [\"Enterobacter_hormaechei\", \"CST\", \"IV\", -0.034603, 0.098471, 0.7253237, 0.8445991, \"LM_CLR\"], [\"Bacteroides_fragilis\", \"CST\", \"V\", 0.038139, 0.112445, 0.7345092, 0.8452872, \"LM_CLR\"], [\"Clostridium_sp..N3C\", \"CST\", \"IV\", 0.026625, 0.07806, 0.7330801, 0.8452872, \"LM_CLR\"], [\"Clostridium_sp..N3C\", \"CST\", \"III\", -0.025227, 0.075085, 0.7369252, 0.8452872, \"LM_CLR\"], [\"Cutibacterium_acnes\", \"CST\", \"IV\", -0.04211, 0.121962, 0.729926, 0.8452872, \"LM_CLR\"], [\"Peptoniphilus_sp..HMSC062D09\", \"CST\", \"II\", -0.061874, 0.17933, 0.730116, 0.8452872, \"LM_CLR\"], [\"Stenotrophomonas_panacihumi\", \"CST\", \"III\", -0.017333, 0.051197, 0.7349843, 0.8452872, \"LM_CLR\"], [\"Treponema_socranskii\", \"CST\", \"V\", -0.035494, 0.10576, 0.7372066, 0.8452872, \"LM_CLR\"], [\"Acidaminococcus_sp..CAG.542\", \"CST\", \"V\", -0.056506, 0.174901, 0.7466754, 0.8454606, \"LM_CLR\"], [\"Bradyrhizobium_diazoefficiens\", \"CST\", \"IV\", 0.033359, 0.103643, 0.7475904, 0.8454606, \"LM_CLR\"], [\"Escherichia_coli\", \"CST\", \"V\", -0.094073, 0.293165, 0.7483316, 0.8454606, \"LM_CLR\"], [\"Prevotella_colorans\", \"CST\", \"II\", 0.073549, 0.228291, 0.7473587, 0.8454606, \"LM_CLR\"], [\"Pseudomonas_sp..ERMR1.02\", \"CST\", \"V\", -0.056659, 0.172136, 0.7420776, 0.8454606, \"LM_CLR\"], [\"Streptomyces_griseorubens\", \"CST\", \"II\", -0.060699, 0.185375, 0.7433726, 0.8454606, \"LM_CLR\"], [\"Streptomyces_sp..GQFP\", \"CST\", \"V\", 0.03202, 0.099918, 0.7486521, 0.8454606, \"LM_CLR\"], [\"Candida_tropicalis\", \"CST\", \"V\", -0.047095, 0.156062, 0.7628566, 0.8596492, \"LM_CLR\"], [\"Bradyrhizobium_sp..Gha\", \"CST\", \"III\", 0.023839, 0.082514, 0.7726851, 0.8656192, \"LM_CLR\"], [\"Enterobacter_hormaechei\", \"CST\", \"II\", -0.043337, 0.149732, 0.7722895, 0.8656192, \"LM_CLR\"], [\"Staphylococcus_epidermidis\", \"CST\", \"II\", -0.068128, 0.236261, 0.7731103, 0.8656192, \"LM_CLR\"], [\"Levilactobacillus_spicheri\", \"CST\", \"II\", -0.033809, 0.120655, 0.7793453, 0.8707398, \"LM_CLR\"], [\"Bradyrhizobium_macuxiense\", \"CST\", \"V\", 0.031558, 0.122577, 0.7968542, 0.8858072, \"LM_CLR\"], [\"Lactobacillus_delbrueckii\", \"CST\", \"II\", -0.038768, 0.151379, 0.7979027, 0.8858072, \"LM_CLR\"], [\"Streptomyces_griseorubens\", \"CST\", \"V\", -0.055366, 0.213531, 0.7954424, 0.8858072, \"LM_CLR\"], [\"Streptomyces_sp..GQFP\", \"CST\", \"II\", -0.022223, 0.088236, 0.8011782, 0.8875632, \"LM_CLR\"], [\"Bradyrhizobium_arachidis\", \"CST\", \"III\", -0.020635, 0.087, 0.8125446, 0.8882547, \"LM_CLR\"], [\"Bradyrhizobium_sp..BTAi1\", \"CST\", \"III\", -0.024386, 0.107545, 0.8206409, 0.8882547, \"LM_CLR\"], [\"Corynebacterium_tuberculostearicum\", \"CST\", \"III\", 0.030753, 0.129348, 0.8120995, 0.8882547, \"LM_CLR\"], [\"Peptoniphilus_lacrimalis\", \"CST\", \"V\", 0.054561, 0.227315, 0.8103392, 0.8882547, \"LM_CLR\"], [\"Pseudomonas_aeruginosa\", \"CST\", \"V\", -0.037548, 0.162762, 0.8175775, 0.8882547, \"LM_CLR\"], [\"Ralstonia_insidiosa\", \"CST\", \"IV\", -0.035985, 0.147519, 0.8073092, 0.8882547, \"LM_CLR\"], [\"Ralstonia_pickettii\", \"CST\", \"IV\", -0.028616, 0.127284, 0.8221442, 0.8882547, \"LM_CLR\"], [\"Ralstonia_solanacearum\", \"CST\", \"IV\", 0.021511, 0.091504, 0.8141663, 0.8882547, \"LM_CLR\"], [\"Saccharomyces_kudriavzevii\", \"CST\", \"V\", -0.030524, 0.130575, 0.8151882, 0.8882547, \"LM_CLR\"], [\"Saccharomyces_paradoxus\", \"CST\", \"V\", -0.024408, 0.107688, 0.8207207, 0.8882547, \"LM_CLR\"], [\"Streptomyces_lividans\", \"CST\", \"V\", 0.051204, 0.206363, 0.8040652, 0.8882547, \"LM_CLR\"], [\"Trichomonas_vaginalis\", \"CST\", \"III\", -0.013999, 0.061778, 0.8207545, 0.8882547, \"LM_CLR\"], [\"Staphylococcus_epidermidis\", \"CST\", \"IV\", 0.03435, 0.155723, 0.8254423, 0.889983, \"LM_CLR\"], [\"Enterococcus_faecium\", \"CST\", \"IV\", -0.022414, 0.104641, 0.8304123, 0.8935031, \"LM_CLR\"], [\"Bradyrhizobium_diazoefficiens\", \"CST\", \"III\", -0.020904, 0.101774, 0.8372855, 0.898046, \"LM_CLR\"], [\"Clostridium_botulinum\", \"CST\", \"III\", 0.017223, 0.084259, 0.838062, 0.898046, \"LM_CLR\"], [\"Candida_tropicalis\", \"CST\", \"III\", 0.016636, 0.086013, 0.846654, 0.9054014, \"LM_CLR\"], [\"Bacillus_thuringiensis\", \"CST\", \"III\", -0.01405, 0.077618, 0.8563785, 0.9083853, \"LM_CLR\"], [\"Delftia_acidovorans\", \"CST\", \"II\", -0.023678, 0.130609, 0.8561627, 0.9083853, \"LM_CLR\"], [\"Pseudomonas_sp..ERMR1.02\", \"CST\", \"II\", 0.027435, 0.149438, 0.8543581, 0.9083853, \"LM_CLR\"], [\"Streptomyces_sp..GQFP\", \"CST\", \"III\", -0.010177, 0.05593, 0.8556336, 0.9083853, \"LM_CLR\"], [\"Staphylococcus_aureus\", \"CST\", \"V\", -0.037347, 0.214973, 0.8620986, 0.9126054, \"LM_CLR\"], [\"Clostridium_perfringens\", \"CST\", \"IV\", 0.016746, 0.098655, 0.8652336, 0.9140774, \"LM_CLR\"], [\"Levilactobacillus_spicheri\", \"CST\", \"V\", -0.021617, 0.138981, 0.8764149, 0.9240269, \"LM_CLR\"], [\"Klebsiella_pneumoniae\", \"CST\", \"IV\", -0.020541, 0.137523, 0.8812816, 0.925434, \"LM_CLR\"], [\"Proteus_mirabilis\", \"CST\", \"II\", 0.018449, 0.122512, 0.8803149, 0.925434, \"LM_CLR\"], [\"Candida_maltosa\", \"CST\", \"III\", -0.009784, 0.07073, 0.8899962, 0.9269655, \"LM_CLR\"], [\"Prevotella_disiens\", \"CST\", \"II\", -0.030305, 0.222314, 0.8915851, 0.9269655, \"LM_CLR\"], [\"Prevotella_disiens\", \"CST\", \"V\", -0.034761, 0.250499, 0.8896473, 0.9269655, \"LM_CLR\"], [\"Prevotella_timonensis\", \"CST\", \"V\", 0.043115, 0.301535, 0.8863175, 0.9269655, \"LM_CLR\"], [\"Pyramidobacter_sp..C12.8\", \"CST\", \"V\", 0.013611, 0.096991, 0.8884101, 0.9269655, \"LM_CLR\"], [\"Staphylococcus_hominis\", \"CST\", \"V\", -0.029727, 0.238388, 0.9007748, 0.9346653, \"LM_CLR\"], [\"Candida_dubliniensis\", \"CST\", \"II\", 0.018654, 0.15977, 0.9070666, 0.9393338, \"LM_CLR\"], [\"Cutibacterium_acnes\", \"CST\", \"III\", -0.013327, 0.117215, 0.9094865, 0.9399821, \"LM_CLR\"], [\"Peptoniphilus_harei\", \"CST\", \"II\", -0.018017, 0.170616, 0.9159123, 0.9447599, \"LM_CLR\"], [\"Burkholderia_pseudomallei\", \"CST\", \"V\", 0.011524, 0.115534, 0.92056, 0.9476884, \"LM_CLR\"], [\"Anaerococcus_lactolyticus\", \"CST\", \"V\", -0.020344, 0.227994, 0.9289073, 0.9506785, \"LM_CLR\"], [\"Candida_tropicalis\", \"CST\", \"II\", -0.012259, 0.135483, 0.9279126, 0.9506785, \"LM_CLR\"], [\"Streptomyces_caelestis\", \"CST\", \"II\", 0.016143, 0.179487, 0.9283453, 0.9506785, \"LM_CLR\"], [\"Finegoldia_magna\", \"CST\", \"II\", 0.016021, 0.220874, 0.9421859, 0.9623887, \"LM_CLR\"], [\"Stenotrophomonas_maltophilia\", \"CST\", \"II\", -0.006391, 0.119508, 0.9573573, 0.9759829, \"LM_CLR\"], [\"Peptoniphilus_lacrimalis\", \"CST\", \"II\", 0.0086, 0.20213, 0.9660677, 0.9810455, \"LM_CLR\"], [\"Streptomyces_gancidicus\", \"CST\", \"II\", 0.007956, 0.186424, 0.9659632, 0.9810455, \"LM_CLR\"], [\"Acidaminococcus_sp..CAG.542\", \"CST\", \"II\", -0.005059, 0.151838, 0.9734233, 0.9825114, \"LM_CLR\"], [\"Delftia_acidovorans\", \"CST\", \"V\", -0.00466, 0.148754, 0.9750113, 0.9825114, \"LM_CLR\"], [\"Megasphaera_Veillonellaceae.bacterium.DNF00626\", \"CST\", \"II\", 0.007389, 0.2207, 0.9732965, 0.9825114, \"LM_CLR\"], [\"Pseudomonas_tolaasii\", \"CST\", \"V\", -0.004482, 0.119229, 0.970018, 0.9825114, \"LM_CLR\"], [\"Cupriavidus_taiwanensis\", \"CST\", \"V\", -0.000663, 0.106667, 0.9950436, 0.9996063, \"LM_CLR\"], [\"Proteus_mirabilis\", \"CST\", \"V\", 0.000467, 0.138482, 0.9973115, 0.9996063, \"LM_CLR\"], [\"Pseudomonas_aeruginosa\", \"CST\", \"III\", 5.5e-05, 0.090549, 0.9995148, 0.9996063, \"LM_CLR\"], [\"Psychrobacter_pasteurii\", \"CST\", \"V\", -5.1e-05, 0.102929, 0.9996063, 0.9996063, \"LM_CLR\"]]"};
+        new ITable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+Formula = abundance +(1|PATIENTID)<br> model = LMCLR
+</section></details>
+<p><br></p>
+<details>
+<summary>
+Supplementary Table 4
+</summary>
+<p><a href="T4.csv" class="btn btn-primary" style="background-color:#007784" download=""> Download Table S4 (CSV) </a></p>
+
+<section id="supplementary-table-4-differential-abundance-of-antibiotic-resistance-genes-args-across-csts." class="level3">
+<h3 class="anchored" data-anchor-id="supplementary-table-4-differential-abundance-of-antibiotic-resistance-genes-args-across-csts.">Supplementary Table 4: Differential abundance of Antibiotic Resistance Genes (ARGs) across CSTs.</h3>
+<div id="174597fd" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<!--| quarto-html-table-processing: none -->
+<table id="itables_1fa45196_163b_47dc_96e2_ca903d99610c"><tbody><tr>
+    <td style="vertical-align:middle; text-align:left">
+    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+    Loading ITables v2.6.2 from the internet...
+    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+    </tr></tbody></table>
+<link href="https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.css" rel="stylesheet">
+<script type="module">
+    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.js';
+
+    document.querySelectorAll("#itables_1fa45196_163b_47dc_96e2_ca903d99610c:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        let dt_args = {"scrollX": true, "pageLength": 10, "layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "0", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>feature</th>\n      <th>variable</th>\n      <th>level</th>\n      <th>estimate</th>\n      <th>std.error</th>\n      <th>p.value</th>\n      <th>q.value</th>\n      <th>method</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"lsa.C.\", \"CST\", \"III\", 1.923764, 0.056323, 1.091393e-255, 1.004081e-253, \"CPLM\"], [\"tet.M.\", \"CST\", \"III\", 1.246214, 0.048493, 1.2101e-145, 5.566459e-144, \"CPLM\"], [\"lsa.C.\", \"CST\", \"IV\", 1.450215, 0.061162, 2.77703e-124, 8.516224e-123, \"CPLM\"], [\"tet.Q.\", \"CST\", \"IV\", 1.133198, 0.071621, 2.187221e-56, 5.030607e-55, \"CPLM\"], [\"tet.M.\", \"CST\", \"IV\", 0.767455, 0.051306, 1.372645e-50, 2.525666e-49, \"CPLM\"], [\"msr.D.\", \"CST\", \"IV\", 0.999864, 0.068172, 1.051792e-48, 1.612748e-47, \"CPLM\"], [\"erm.B.\", \"CST\", \"III\", 2.198712, 0.167522, 2.369461e-39, 3.114148e-38, \"CPLM\"], [\"lsa.A.\", \"CST\", \"III\", 0.861036, 0.077839, 1.921776e-28, 2.210043e-27, \"CPLM\"], [\"cfxA3\", \"CST\", \"IV\", 3.137225, 0.305771, 1.066455e-24, 1.090155e-23, \"CPLM\"], [\"mef.A.\", \"CST\", \"IV\", 3.111368, 0.328121, 2.485286e-21, 2.286463e-20, \"CPLM\"], [\"msr.D.\", \"CST\", \"III\", 0.873724, 0.094544, 2.430803e-20, 2.033035e-19, \"CPLM\"], [\"aph.3...III\", \"CST\", \"III\", 2.094015, 0.248362, 3.418046e-17, 2.620502e-16, \"CPLM\"], [\"mef.A.\", \"CST\", \"III\", 2.948339, 0.365235, 6.890563e-16, 4.876398e-15, \"CPLM\"], [\"tet.Q.\", \"CST\", \"III\", 0.799171, 0.1013, 3.04339e-15, 1.999942e-14, \"CPLM\"], [\"blaZ\", \"CST\", \"III\", 0.575115, 0.073248, 4.106487e-15, 2.518645e-14, \"CPLM\"], [\"cfxA3\", \"CST\", \"III\", 2.634932, 0.362427, 3.58862e-13, 1.999373e-12, \"CPLM\"], [\"erm.A.\", \"CST\", \"III\", 2.056249, 0.282984, 3.694494e-13, 1.999373e-12, \"CPLM\"], [\"erm.A.\", \"CST\", \"IV\", 1.816129, 0.252581, 6.46522e-13, 3.304446e-12, \"CPLM\"], [\"erm.F.\", \"CST\", \"IV\", 2.411465, 0.337482, 8.968915e-13, 4.342843e-12, \"CPLM\"], [\"lsa.C.\", \"CST\", \"V\", 0.685788, 0.102867, 2.614837e-11, 1.202825e-10, \"CPLM\"], [\"ant.6..Ia\", \"CST\", \"III\", 1.976752, 0.298362, 3.46455e-11, 1.517803e-10, \"CPLM\"], [\"lsa.C.\", \"CST\", \"II\", 0.640877, 0.097377, 4.659655e-11, 1.948583e-10, \"CPLM\"], [\"tet.32.\", \"CST\", \"IV\", 4.436191, 0.698979, 2.200184e-10, 8.800737e-10, \"CPLM\"], [\"mph.C.\", \"CST\", \"III\", 2.02866, 0.3476, 5.340588e-09, 2.047226e-08, \"CPLM\"], [\"erm.B.\", \"CST\", \"IV\", 1.137801, 0.207167, 3.969488e-08, 1.460772e-07, \"CPLM\"], [\"erm.F.\", \"CST\", \"III\", 2.232133, 0.409416, 4.980804e-08, 1.762438e-07, \"CPLM\"], [\"aph.6..Id\", \"CST\", \"III\", 1.826117, 0.339763, 7.671702e-08, 2.614061e-07, \"CPLM\"], [\"aph.3....Ib\", \"CST\", \"III\", 1.761577, 0.344341, 3.124165e-07, 1.026511e-06, \"CPLM\"], [\"tet.32.\", \"CST\", \"III\", 3.852867, 0.756392, 3.510628e-07, 1.113716e-06, \"CPLM\"], [\"tet.O.\", \"CST\", \"IV\", 3.164779, 0.627231, 4.520095e-07, 1.386162e-06, \"CPLM\"], [\"blaTEM.1B\", \"CST\", \"IV\", 0.282588, 0.056463, 5.591523e-07, 1.65942e-06, \"CPLM\"], [\"sul2\", \"CST\", \"IV\", 0.397811, 0.081082, 9.282947e-07, 2.668847e-06, \"CPLM\"], [\"blaTEM.1B\", \"CST\", \"III\", 0.366523, 0.078595, 3.109739e-06, 8.669574e-06, \"CPLM\"], [\"aph.3...III\", \"CST\", \"IV\", 1.213789, 0.272082, 8.153195e-06, 2.206159e-05, \"CPLM\"], [\"tet.L.\", \"CST\", \"IV\", 2.443613, 0.555306, 1.080109e-05, 2.839144e-05, \"CPLM\"], [\"sul2\", \"CST\", \"III\", 0.48923, 0.113095, 1.519514e-05, 3.883202e-05, \"CPLM\"], [\"mef.A.\", \"CST\", \"II\", 1.941637, 0.452099, 1.749183e-05, 4.349319e-05, \"CPLM\"], [\"msr.D.\", \"CST\", \"II\", 0.403871, 0.095552, 2.371257e-05, 5.740938e-05, \"CPLM\"], [\"aph.3....Ib\", \"CST\", \"IV\", 1.331209, 0.318043, 2.843788e-05, 6.708424e-05, \"CPLM\"], [\"tet.M.\", \"CST\", \"II\", 0.324355, 0.07788, 3.116277e-05, 7.167437e-05, \"CPLM\"], [\"aph.6..Id\", \"CST\", \"IV\", 1.306912, 0.322427, 5.048879e-05, 0.0001132919, \"CPLM\"], [\"lsa.A.\", \"CST\", \"IV\", 0.248668, 0.06555, 0.0001485015, 0.000325289, \"CPLM\"], [\"tet.L.\", \"CST\", \"III\", 2.514157, 0.668793, 0.0001704278, 0.0003646363, \"CPLM\"], [\"tet.M.\", \"CST\", \"V\", 0.311367, 0.083063, 0.0001778666, 0.0003719029, \"CPLM\"], [\"tet.W.\", \"CST\", \"IV\", 2.887566, 0.786762, 0.0002423693, 0.0004955105, \"CPLM\"], [\"aph.3...III\", \"CST\", \"II\", 1.195417, 0.331902, 0.0003161293, 0.0006322586, \"CPLM\"], [\"tet.O.\", \"CST\", \"III\", 2.71505, 0.76775, 0.0004056609, 0.0007940596, \"CPLM\"], [\"ant.6..Ia\", \"CST\", \"II\", 1.241596, 0.371613, 0.0008344679, 0.001599397, \"CPLM\"], [\"erm.F.\", \"CST\", \"II\", 1.451104, 0.495323, 0.003393849, 0.006246558, \"CPLM\"], [\"erm.F.\", \"CST\", \"V\", 1.518737, 0.518425, 0.003394869, 0.006246558, \"CPLM\"], [\"erm.X.\", \"CST\", \"III\", 2.03589, 0.722089, 0.004810703, 0.008678131, \"CPLM\"], [\"erm.A.\", \"CST\", \"V\", 1.127081, 0.407115, 0.005632173, 0.009964614, \"CPLM\"], [\"tet.W.\", \"CST\", \"III\", 2.549926, 0.956135, 0.007655181, 0.01328824, \"CPLM\"], [\"mph.C.\", \"CST\", \"II\", 1.166262, 0.446438, 0.008991698, 0.01531919, \"CPLM\"], [\"erm.X.\", \"CST\", \"IV\", 1.559386, 0.607203, 0.01022442, 0.01710266, \"CPLM\"], [\"blaZ\", \"CST\", \"II\", 0.185878, 0.072653, 0.01051408, 0.01727314, \"CPLM\"], [\"ant.6..Ia\", \"CST\", \"IV\", 0.857148, 0.346741, 0.01343541, 0.02168522, \"CPLM\"], [\"aph.3....Ib\", \"CST\", \"II\", 1.006008, 0.431447, 0.01971621, 0.03127399, \"CPLM\"], [\"msr.D.\", \"CST\", \"V\", 0.237052, 0.104596, 0.02342885, 0.03653312, \"CPLM\"], [\"tet.L.\", \"CST\", \"II\", 1.624851, 0.757235, 0.03189143, 0.04890019, \"CPLM\"], [\"erm.X.\", \"CST\", \"II\", 1.603826, 0.764798, 0.03598843, 0.05427763, \"CPLM\"], [\"mef.A.\", \"CST\", \"V\", 1.224564, 0.612413, 0.04554654, 0.0665124, \"CPLM\"], [\"tet.O.\", \"CST\", \"II\", 1.736905, 0.86589, 0.04486498, 0.0665124, \"CPLM\"], [\"tet.W.\", \"CST\", \"II\", 1.94524, 0.988761, 0.04914271, 0.07064265, \"CPLM\"], [\"lsa.A.\", \"CST\", \"II\", 0.164483, 0.08834, 0.06261178, 0.08861975, \"CPLM\"], [\"aph.6..Id\", \"CST\", \"II\", 0.828731, 0.464447, 0.07436847, 0.1036651, \"CPLM\"], [\"tet.Q.\", \"CST\", \"II\", 0.172212, 0.104605, 0.09970172, 0.1369039, \"CPLM\"], [\"tet.W.\", \"CST\", \"V\", 1.750044, 1.072022, 0.1025805, 0.1387854, \"CPLM\"], [\"mph.C.\", \"CST\", \"IV\", 0.653945, 0.431891, 0.1299894, 0.1733192, \"CPLM\"], [\"sul2\", \"CST\", \"II\", 0.160617, 0.109067, 0.1408483, 0.1851149, \"CPLM\"], [\"cfxA3\", \"CST\", \"II\", 0.878548, 0.605177, 0.1465794, 0.1899338, \"CPLM\"], [\"tet.32.\", \"CST\", \"II\", 1.600596, 1.138001, 0.1595762, 0.2039029, \"CPLM\"], [\"blaZ\", \"CST\", \"IV\", 0.075293, 0.055817, 0.1773629, 0.2235259, \"CPLM\"], [\"aph.3...III\", \"CST\", \"V\", -0.916227, 0.911815, 0.3149746, 0.3915901, \"CPLM\"], [\"blaTEM.1B\", \"CST\", \"II\", 0.075155, 0.076551, 0.3262198, 0.400163, \"CPLM\"], [\"tet.L.\", \"CST\", \"V\", 0.908011, 1.017631, 0.3722433, 0.4506103, \"CPLM\"], [\"erm.B.\", \"CST\", \"II\", 0.309967, 0.367836, 0.399409, 0.4772159, \"CPLM\"], [\"erm.B.\", \"CST\", \"V\", 0.236925, 0.417462, 0.5703502, 0.6727208, \"CPLM\"], [\"lsa.A.\", \"CST\", \"V\", 0.050309, 0.095942, 0.6000209, 0.6987585, \"CPLM\"], [\"tet.O.\", \"CST\", \"V\", 0.61825, 1.315838, 0.6384601, 0.7342291, \"CPLM\"], [\"tet.Q.\", \"CST\", \"V\", 0.045855, 0.114134, 0.6878542, 0.7812665, \"CPLM\"], [\"mph.C.\", \"CST\", \"V\", 0.266506, 0.691747, 0.7000412, 0.7854121, \"CPLM\"], [\"blaTEM.1B\", \"CST\", \"V\", -0.029827, 0.083153, 0.7198226, 0.7978756, \"CPLM\"], [\"erm.X.\", \"CST\", \"V\", -0.351013, 1.587567, 0.8250137, 0.9035864, \"CPLM\"], [\"erm.A.\", \"CST\", \"II\", 0.10098, 0.57359, 0.8602548, 0.9310993, \"CPLM\"], [\"cfxA3\", \"CST\", \"V\", -0.124369, 1.001219, 0.901143, 0.9640134, \"CPLM\"], [\"blaZ\", \"CST\", \"V\", -0.006871, 0.079022, 0.9307114, 0.9842005, \"CPLM\"], [\"ant.6..Ia\", \"CST\", \"V\", -27.08033, 206142.814719, 0.9998952, 0.9998952, \"CPLM\"], [\"aph.3....Ib\", \"CST\", \"V\", -0.002405, 0.711644, 0.9973041, 0.9998952, \"CPLM\"], [\"aph.6..Id\", \"CST\", \"V\", -0.019981, 0.722632, 0.9779406, 0.9998952, \"CPLM\"], [\"sul2\", \"CST\", \"V\", -0.000469, 0.117193, 0.9968096, 0.9998952, \"CPLM\"], [\"tet.32.\", \"CST\", \"V\", -17.216645, 7091.679142, 0.998063, 0.9998952, \"CPLM\"]]"};
+        new ITable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+Formula = abundance +(1|PATIENTID)<br> model = CPLM
+</section></details>
+<p><br></p>
+<details>
+<summary>
+Supplementary Table 5
+</summary>
+<p><a href="T5.csv" class="btn btn-primary" style="background-color:#007784" download=""> Download Table S5 (CSV) </a></p>
+
+<section id="supplementary-table-5-differential-abundance-of-mobile-genetic-elements-mges-across-csts." class="level3">
+<h3 class="anchored" data-anchor-id="supplementary-table-5-differential-abundance-of-mobile-genetic-elements-mges-across-csts.">Supplementary Table 5: Differential abundance of Mobile Genetic Elements (MGEs) across CSTs.</h3>
+<div id="503e0aab" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<!--| quarto-html-table-processing: none -->
+<table id="itables_e941bf8c_e67b_406a_b5f2_b2dc0633f5d6"><tbody><tr>
+    <td style="vertical-align:middle; text-align:left">
+    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+    Loading ITables v2.6.2 from the internet...
+    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+    </tr></tbody></table>
+<link href="https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.css" rel="stylesheet">
+<script type="module">
+    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.js';
+
+    document.querySelectorAll("#itables_e941bf8c_e67b_406a_b5f2_b2dc0633f5d6:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        let dt_args = {"scrollX": true, "pageLength": 10, "layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "0", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>feature</th>\n      <th>variable</th>\n      <th>level</th>\n      <th>estimate</th>\n      <th>std.error</th>\n      <th>p.value</th>\n      <th>q.value</th>\n      <th>method</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"Tn916.orf6\", \"CST\", \"III\", 0.455605, 0.051484, 8.790074e-19, 2.42606e-16, \"CPLM\"], [\"Tn916.orf8\", \"CST\", \"III\", 0.43848, 0.051167, 1.039278e-17, 1.434203e-15, \"CPLM\"], [\"Tn916.orf6\", \"CST\", \"IV\", 0.443527, 0.055566, 1.439964e-15, 1.324767e-13, \"CPLM\"], [\"Tn916.orf17\", \"CST\", \"III\", 0.380435, 0.048197, 2.942944e-15, 2.030631e-13, \"CPLM\"], [\"Tn916.orf18\", \"CST\", \"III\", 0.359828, 0.047219, 2.527571e-14, 1.395219e-12, \"CPLM\"], [\"Tn916.orf9\", \"CST\", \"III\", 0.344267, 0.046269, 1.002775e-13, 4.612765e-12, \"CPLM\"], [\"Tn916.orf7\", \"CST\", \"III\", 0.342264, 0.04622, 1.310177e-13, 5.165839e-12, \"CPLM\"], [\"Tn916.orf19\", \"CST\", \"III\", 0.420481, 0.058037, 4.322576e-13, 1.491289e-11, \"CPLM\"], [\"Tn916.orf14\", \"CST\", \"III\", 0.314721, 0.044885, 2.354736e-12, 7.147418e-11, \"CPLM\"], [\"Tn916.orf8\", \"CST\", \"IV\", 0.392573, 0.056095, 2.589644e-12, 7.147418e-11, \"CPLM\"], [\"Xis.Tn916\", \"CST\", \"III\", 0.534286, 0.077791, 6.499427e-12, 1.630765e-10, \"CPLM\"], [\"Tn916.orf20\", \"CST\", \"III\", 0.296256, 0.044049, 1.748424e-11, 4.021376e-10, \"CPLM\"], [\"Tn916.orf5\", \"CST\", \"III\", 0.369137, 0.055463, 2.823168e-11, 5.993802e-10, \"CPLM\"], [\"Tn916.orf13\", \"CST\", \"III\", 0.283332, 0.042703, 3.247801e-11, 6.402808e-10, \"CPLM\"], [\"Tn916.orf13\", \"CST\", \"IV\", 0.29054, 0.045254, 1.361048e-10, 2.504328e-09, \"CPLM\"], [\"Tn916.orf9\", \"CST\", \"IV\", 0.3204, 0.050283, 1.86642e-10, 3.219574e-09, \"CPLM\"], [\"Tn916.orf7\", \"CST\", \"IV\", 0.307709, 0.050033, 7.744085e-10, 1.257275e-08, \"CPLM\"], [\"Int.Tn916\", \"CST\", \"III\", 0.26073, 0.042693, 1.014429e-09, 1.555457e-08, \"CPLM\"], [\"Tn916.orf15\", \"CST\", \"III\", 0.250591, 0.041281, 1.276606e-09, 1.854438e-08, \"CPLM\"], [\"Tn916.orf17\", \"CST\", \"IV\", 0.319804, 0.053543, 2.33182e-09, 3.217912e-08, \"CPLM\"], [\"Tn916.orf18\", \"CST\", \"IV\", 0.295597, 0.052244, 1.531093e-08, 2.012294e-07, \"CPLM\"], [\"Tn916.orf16\", \"CST\", \"III\", 0.22661, 0.040109, 1.605878e-08, 2.014647e-07, \"CPLM\"], [\"Tn916.orf19\", \"CST\", \"IV\", 0.353713, 0.064467, 4.095215e-08, 4.914258e-07, \"CPLM\"], [\"Xis.Tn916\", \"CST\", \"IV\", 0.46809, 0.085994, 5.231319e-08, 6.016017e-07, \"CPLM\"], [\"Tn916.orf14\", \"CST\", \"IV\", 0.257424, 0.049079, 1.561897e-07, 1.724335e-06, \"CPLM\"], [\"Tn916.orf5\", \"CST\", \"IV\", 0.319544, 0.061424, 1.968947e-07, 2.090113e-06, \"CPLM\"], [\"Tn916.orf20\", \"CST\", \"IV\", 0.238668, 0.048362, 8.014648e-07, 8.192751e-06, \"CPLM\"], [\"Int.Tn916\", \"CST\", \"IV\", 0.219657, 0.046241, 2.03142e-06, 2.0024e-05, \"CPLM\"], [\"Tn916.orf8\", \"CST\", \"II\", 0.40367, 0.089007, 5.753857e-06, 5.476084e-05, \"CPLM\"], [\"Tn916.orf15\", \"CST\", \"IV\", 0.195129, 0.045037, 1.473555e-05, 0.0001322457, \"CPLM\"], [\"Tn916.orf6\", \"CST\", \"II\", 0.39564, 0.091354, 1.485369e-05, 0.0001322457, \"CPLM\"], [\"int3\", \"CST\", \"II\", 1.708959, 0.407962, 2.801687e-05, 0.0002416455, \"CPLM\"], [\"Tn916.orf16\", \"CST\", \"IV\", 0.180211, 0.043404, 3.2971e-05, 0.0002757575, \"CPLM\"], [\"tnpAB\", \"CST\", \"IV\", 1.337797, 0.323325, 3.509183e-05, 0.0002848631, \"CPLM\"], [\"Col.MG828.\", \"CST\", \"II\", 1.071563, 0.264772, 5.185239e-05, 0.0003902962, \"CPLM\"], [\"tnpAB\", \"CST\", \"II\", 1.666767, 0.410751, 4.952623e-05, 0.0003902962, \"CPLM\"], [\"tnpAIS1\", \"CST\", \"II\", 1.90557, 0.471092, 5.232232e-05, 0.0003902962, \"CPLM\"], [\"Tn916.orf6\", \"CST\", \"V\", 0.387311, 0.095991, 5.463755e-05, 0.0003968411, \"CPLM\"], [\"Tn916.orf9\", \"CST\", \"II\", 0.316345, 0.079373, 6.732101e-05, 0.0004764256, \"CPLM\"], [\"int3\", \"CST\", \"IV\", 1.302509, 0.331411, 8.487784e-05, 0.0005856571, \"CPLM\"], [\"Tn916.orf7\", \"CST\", \"II\", 0.317216, 0.081562, 0.0001005467, 0.0006768512, \"CPLM\"], [\"ISSfl3\", \"CST\", \"IV\", 1.066233, 0.275149, 0.0001065777, 0.0007003675, \"CPLM\"], [\"tnpA\", \"CST\", \"II\", 0.090294, 0.023657, 0.000135158, 0.0008675255, \"CPLM\"], [\"ColRNAI\", \"CST\", \"IV\", 0.911558, 0.246297, 0.0002147097, 0.001346815, \"CPLM\"], [\"IS679\", \"CST\", \"IV\", 0.879354, 0.242491, 0.0002874646, 0.001763116, \"CPLM\"], [\"ISCR1\", \"CST\", \"IV\", 0.815617, 0.229506, 0.0003797172, 0.002278303, \"CPLM\"], [\"IS621\", \"CST\", \"IV\", 0.664728, 0.189114, 0.0004398155, 0.002582747, \"CPLM\"], [\"Tn916.orf13\", \"CST\", \"II\", 0.250857, 0.072023, 0.0004958194, 0.002840049, \"CPLM\"], [\"Tn916.orf8\", \"CST\", \"V\", 0.338445, 0.097425, 0.0005129219, 0.002840049, \"CPLM\"], [\"rep22\", \"CST\", \"IV\", 0.990399, 0.285163, 0.0005145017, 0.002840049, \"CPLM\"], [\"Col.MG828.\", \"CST\", \"IV\", 0.556635, 0.163472, 0.0006614769, 0.003579757, \"CPLM\"], [\"rep13\", \"CST\", \"II\", 1.108198, 0.327737, 0.0007212676, 0.003828266, \"CPLM\"], [\"istB1\", \"CST\", \"V\", 1.510151, 0.451466, 0.0008228368, 0.004284961, \"CPLM\"], [\"ISCR1\", \"CST\", \"II\", 1.089985, 0.339225, 0.001312827, 0.006588003, \"CPLM\"], [\"tnpA4\", \"CST\", \"IV\", 0.685773, 0.213182, 0.001296066, 0.006588003, \"CPLM\"], [\"tnpA7\", \"CST\", \"IV\", 0.826435, 0.258495, 0.001388171, 0.006841698, \"CPLM\"], [\"Col156\", \"CST\", \"IV\", 0.892523, 0.280624, 0.001470245, 0.007119082, \"CPLM\"], [\"IncFIB.AP001918.\", \"CST\", \"IV\", 0.774739, 0.244078, 0.001502805, 0.007151279, \"CPLM\"], [\"istB1\", \"CST\", \"IV\", 1.183347, 0.373561, 0.001536239, 0.007186473, \"CPLM\"], [\"rep6\", \"CST\", \"III\", 0.718239, 0.22737, 0.001583638, 0.007284735, \"CPLM\"], [\"ColRNAI\", \"CST\", \"II\", 1.039757, 0.332317, 0.001755182, 0.007941478, \"CPLM\"], [\"IncFII\", \"CST\", \"IV\", 0.857441, 0.276355, 0.001917796, 0.00835016, \"CPLM\"], [\"int2\", \"CST\", \"IV\", 0.515908, 0.166431, 0.001936269, 0.00835016, \"CPLM\"], [\"rep9\", \"CST\", \"III\", 0.560479, 0.180371, 0.001887591, 0.00835016, \"CPLM\"], [\"Col.MG828.\", \"CST\", \"III\", 0.560517, 0.181912, 0.002061347, 0.008752796, \"CPLM\"], [\"tnpA4\", \"CST\", \"III\", 0.65193, 0.214966, 0.002423631, 0.01013518, \"CPLM\"], [\"Tn916.orf17\", \"CST\", \"II\", 0.286054, 0.094695, 0.002521272, 0.01038613, \"CPLM\"], [\"qacEdelta\", \"CST\", \"III\", 0.971205, 0.323113, 0.002649047, 0.01075202, \"CPLM\"], [\"tnpA.IS683\", \"CST\", \"II\", 1.413494, 0.471015, 0.002691365, 0.01076546, \"CPLM\"], [\"Tn916.orf18\", \"CST\", \"V\", 0.275114, 0.092091, 0.002813612, 0.01098295, \"CPLM\"], [\"tnpAIS1\", \"CST\", \"IV\", 1.236924, 0.414223, 0.002825325, 0.01098295, \"CPLM\"], [\"Int.Tn916\", \"CST\", \"II\", 0.220379, 0.074025, 0.002909922, 0.0111547, \"CPLM\"], [\"int3\", \"CST\", \"V\", 1.3936, 0.475589, 0.003386751, 0.0128047, \"CPLM\"], [\"Tn916.orf18\", \"CST\", \"II\", 0.261298, 0.090008, 0.003695495, 0.01336274, \"CPLM\"], [\"Tn916.orf7\", \"CST\", \"V\", 0.270463, 0.093253, 0.003728009, 0.01336274, \"CPLM\"], [\"rep5\", \"CST\", \"II\", 0.841036, 0.289859, 0.003713357, 0.01336274, \"CPLM\"], [\"tniA\", \"CST\", \"II\", 0.862909, 0.296385, 0.003597557, 0.01336274, \"CPLM\"], [\"tnpA10\", \"CST\", \"IV\", 1.130117, 0.401852, 0.004919306, 0.01740678, \"CPLM\"], [\"Xis.Tn916\", \"CST\", \"II\", 0.427359, 0.152347, 0.005029163, 0.01757024, \"CPLM\"], [\"IS679\", \"CST\", \"III\", 0.722395, 0.260215, 0.005500692, 0.01857784, \"CPLM\"], [\"Tn916.orf13\", \"CST\", \"V\", 0.229949, 0.082929, 0.005556792, 0.01857784, \"CPLM\"], [\"Tn916.orf14\", \"CST\", \"II\", 0.228549, 0.08221, 0.005435075, 0.01857784, \"CPLM\"], [\"rep19\", \"CST\", \"IV\", 0.833824, 0.3009, 0.005586815, 0.01857784, \"CPLM\"], [\"istB\", \"CST\", \"II\", 0.428096, 0.155007, 0.005748543, 0.01888807, \"CPLM\"], [\"IS91\", \"CST\", \"II\", 0.309067, 0.113038, 0.006253537, 0.01987749, \"CPLM\"], [\"rep8\", \"CST\", \"III\", 1.03281, 0.377829, 0.00626573, 0.01987749, \"CPLM\"], [\"tnpA.IS683\", \"CST\", \"IV\", 0.957595, 0.349973, 0.006215297, 0.01987749, \"CPLM\"], [\"IncFII.29.\", \"CST\", \"IV\", 1.007394, 0.372574, 0.006853552, 0.02149523, \"CPLM\"], [\"Tn916.orf17\", \"CST\", \"V\", 0.26603, 0.098635, 0.006994339, 0.02169031, \"CPLM\"], [\"rep7\", \"CST\", \"II\", 0.616253, 0.229921, 0.007356133, 0.02255881, \"CPLM\"], [\"intI1\", \"CST\", \"II\", 0.894288, 0.334434, 0.00749445, 0.02273042, \"CPLM\"], [\"Col156\", \"CST\", \"II\", 1.095672, 0.411094, 0.007692948, 0.02283068, \"CPLM\"], [\"IS91\", \"CST\", \"IV\", 0.215815, 0.080921, 0.007653138, 0.02283068, \"CPLM\"], [\"Tn916.orf5\", \"CST\", \"II\", 0.280506, 0.105987, 0.008130694, 0.0238731, \"CPLM\"], [\"ColRNAI\", \"CST\", \"III\", 0.709164, 0.26973, 0.008559628, 0.02486797, \"CPLM\"], [\"Tn916.orf15\", \"CST\", \"II\", 0.192509, 0.0735, 0.008814822, 0.02534261, \"CPLM\"], [\"istA2\", \"CST\", \"IV\", 0.741735, 0.286299, 0.009576154, 0.02724761, \"CPLM\"], [\"IS621\", \"CST\", \"III\", 0.532518, 0.206022, 0.009744692, 0.02744424, \"CPLM\"], [\"rep7\", \"CST\", \"IV\", 0.431145, 0.168921, 0.01069992, 0.02953177, \"CPLM\"], [\"repUS11\", \"CST\", \"III\", 0.708695, 0.277423, 0.0106321, 0.02953177, \"CPLM\"], [\"Tn916.orf19\", \"CST\", \"II\", 0.287942, 0.113179, 0.01095535, 0.02993738, \"CPLM\"], [\"istA2\", \"CST\", \"II\", 1.050175, 0.413849, 0.01116228, 0.03020382, \"CPLM\"], [\"tniA\", \"CST\", \"IV\", 0.585368, 0.23141, 0.01142022, 0.03060176, \"CPLM\"], [\"Tn916.orf19\", \"CST\", \"V\", 0.294615, 0.118032, 0.01255784, 0.03300918, \"CPLM\"], [\"tnpA.IS5.\", \"CST\", \"IV\", 0.85375, 0.341834, 0.01250529, 0.03300918, \"CPLM\"], [\"IS621\", \"CST\", \"II\", 0.735547, 0.296807, 0.01320471, 0.03352936, \"CPLM\"], [\"Rep7\", \"CST\", \"IV\", 1.005102, 0.405741, 0.01324167, 0.03352936, \"CPLM\"], [\"Tn916.orf9\", \"CST\", \"V\", 0.237038, 0.095584, 0.01314252, 0.03352936, \"CPLM\"], [\"tnpA4\", \"CST\", \"II\", 0.77382, 0.311561, 0.01300305, 0.03352936, \"CPLM\"], [\"Tn916.orf14\", \"CST\", \"V\", 0.225957, 0.091367, 0.01339618, 0.03361224, \"CPLM\"], [\"tniB\", \"CST\", \"IV\", 0.705144, 0.286192, 0.01374402, 0.03417431, \"CPLM\"], [\"IncFII\", \"CST\", \"III\", 0.724866, 0.295635, 0.01421063, 0.03501904, \"CPLM\"], [\"Xis.Tn916\", \"CST\", \"V\", 0.380683, 0.157222, 0.01546491, 0.0377727, \"CPLM\"], [\"Col156\", \"CST\", \"III\", 0.737798, 0.305781, 0.01582922, 0.03799014, \"CPLM\"], [\"tnpAB\", \"CST\", \"V\", 1.243781, 0.515085, 0.01574781, 0.03799014, \"CPLM\"], [\"rep9\", \"CST\", \"II\", 0.641573, 0.268535, 0.01688685, 0.03983566, \"CPLM\"], [\"tnpA\", \"CST\", \"III\", -0.038878, 0.016262, 0.01681708, 0.03983566, \"CPLM\"], [\"Tn916.orf16\", \"CST\", \"II\", 0.166993, 0.070149, 0.01728701, 0.04043403, \"CPLM\"], [\"Int.Tn916\", \"CST\", \"V\", 0.202512, 0.085221, 0.01748676, 0.04055754, \"CPLM\"], [\"IncFII.29.\", \"CST\", \"III\", 0.92085, 0.388071, 0.01764938, 0.04059357, \"CPLM\"], [\"rep11\", \"CST\", \"IV\", 0.739617, 0.312353, 0.01788998, 0.04080689, \"CPLM\"], [\"int3\", \"CST\", \"III\", 0.951377, 0.405428, 0.01894546, 0.04251177, \"CPLM\"], [\"rep5\", \"CST\", \"IV\", 0.562327, 0.239333, 0.01879576, 0.04251177, \"CPLM\"], [\"Tn916.orf20\", \"CST\", \"II\", 0.193853, 0.082929, 0.01940908, 0.04320085, \"CPLM\"], [\"tnpA10\", \"CST\", \"III\", 0.983077, 0.4215, 0.01968348, 0.04324508, \"CPLM\"], [\"tnpAIS1\", \"CST\", \"III\", 1.04187, 0.446922, 0.01974232, 0.04324508, \"CPLM\"], [\"ISSfl3\", \"CST\", \"III\", 0.737036, 0.317183, 0.02014187, 0.04377288, \"CPLM\"], [\"Tn916.orf20\", \"CST\", \"V\", 0.207322, 0.09003, 0.02128894, 0.04590427, \"CPLM\"], [\"int2\", \"CST\", \"III\", 0.407032, 0.178731, 0.02276564, 0.04865797, \"CPLM\"], [\"istB\", \"CST\", \"V\", 0.374705, 0.164721, 0.02291861, 0.04865797, \"CPLM\"], [\"tnpA7\", \"CST\", \"II\", 0.845891, 0.376026, 0.0244774, 0.0515707, \"CPLM\"], [\"IncFII\", \"CST\", \"II\", 0.964123, 0.43008, 0.02497906, 0.05222894, \"CPLM\"], [\"intI1\", \"CST\", \"III\", 0.53313, 0.238592, 0.02545166, 0.05242466, \"CPLM\"], [\"rep22\", \"CST\", \"II\", 1.060322, 0.474531, 0.02545255, 0.05242466, \"CPLM\"], [\"istA2\", \"CST\", \"III\", 0.662038, 0.296736, 0.02567694, 0.05249507, \"CPLM\"], [\"rep8\", \"CST\", \"IV\", 0.856055, 0.392077, 0.02900738, 0.05886793, \"CPLM\"], [\"rep10\", \"CST\", \"II\", 1.002371, 0.460243, 0.02941207, 0.05897274, \"CPLM\"], [\"tnpA3\", \"CST\", \"II\", 1.083727, 0.497825, 0.02948637, 0.05897274, \"CPLM\"], [\"tniA\", \"CST\", \"III\", 0.52793, 0.24314, 0.02990804, 0.05938575, \"CPLM\"], [\"int2\", \"CST\", \"II\", 0.567429, 0.263881, 0.03152975, 0.06128317, \"CPLM\"], [\"rep10\", \"CST\", \"IV\", 0.62706, 0.291598, 0.03152132, 0.06128317, \"CPLM\"], [\"rep11\", \"CST\", \"III\", 0.728682, 0.338503, 0.03134561, 0.06128317, \"CPLM\"], [\"IncFIB.AP001918.\", \"CST\", \"III\", 0.583781, 0.27237, 0.03208559, 0.06192742, \"CPLM\"], [\"tnpAIS1\", \"CST\", \"V\", 1.337243, 0.627857, 0.03318377, 0.06360223, \"CPLM\"], [\"Tn916.orf5\", \"CST\", \"V\", 0.252434, 0.119786, 0.03508517, 0.06641266, \"CPLM\"], [\"qacEdelta\", \"CST\", \"II\", 1.126287, 0.534586, 0.03513134, 0.06641266, \"CPLM\"], [\"ISCR1\", \"CST\", \"III\", 0.567463, 0.270757, 0.03609625, 0.06777255, \"CPLM\"], [\"ISCau1\", \"CST\", \"III\", 0.873398, 0.418344, 0.03682018, 0.06844408, \"CPLM\"], [\"tniB\", \"CST\", \"III\", 0.621412, 0.297851, 0.03694989, 0.06844408, \"CPLM\"], [\"Tn916.orf15\", \"CST\", \"V\", 0.174888, 0.084043, 0.03744079, 0.06889106, \"CPLM\"], [\"rep7\", \"CST\", \"III\", 0.352172, 0.172569, 0.04127475, 0.07494625, \"CPLM\"], [\"repUS12\", \"CST\", \"IV\", 0.70247, 0.344198, 0.04126194, 0.07494625, \"CPLM\"], [\"ISCau1\", \"CST\", \"IV\", 0.833304, 0.409415, 0.04181513, 0.07543122, \"CPLM\"], [\"IncFIB.AP001918.\", \"CST\", \"II\", 0.830506, 0.410573, 0.04309389, 0.0763953, \"CPLM\"], [\"Tn916.orf16\", \"CST\", \"V\", 0.164515, 0.081364, 0.04317995, 0.0763953, \"CPLM\"], [\"rep20\", \"CST\", \"IV\", 0.333648, 0.164702, 0.04278906, 0.0763953, \"CPLM\"], [\"tnpA\", \"CST\", \"IV\", 0.032546, 0.016165, 0.04407952, 0.07749011, \"CPLM\"], [\"ISCau1\", \"CST\", \"V\", 1.164928, 0.57953, 0.04441796, 0.07759088, \"CPLM\"], [\"tnpA1\", \"CST\", \"IV\", 0.498897, 0.248578, 0.04474883, 0.07767722, \"CPLM\"], [\"rep2\", \"CST\", \"III\", 0.695329, 0.347189, 0.04520488, 0.07797841, \"CPLM\"], [\"rep5\", \"CST\", \"III\", 0.493995, 0.247409, 0.04586021, 0.0786175, \"CPLM\"], [\"tniB\", \"CST\", \"II\", 0.917775, 0.460687, 0.04635053, 0.07896758, \"CPLM\"], [\"tnpA5\", \"CST\", \"II\", 0.723701, 0.36703, 0.04863553, 0.08235218, \"CPLM\"], [\"istB1\", \"CST\", \"II\", 1.277058, 0.655567, 0.05141228, 0.08641784, \"CPLM\"], [\"tnpA3\", \"CST\", \"IV\", 0.695981, 0.357659, 0.05166284, 0.08641784, \"CPLM\"], [\"tniB\", \"CST\", \"V\", 0.840577, 0.434888, 0.05325352, 0.08854199, \"CPLM\"], [\"tnpA7\", \"CST\", \"III\", 0.569282, 0.29557, 0.05409862, 0.0894085, \"CPLM\"], [\"istB\", \"CST\", \"IV\", 0.213158, 0.112405, 0.05791527, 0.09435719, \"CPLM\"], [\"qacEdelta\", \"CST\", \"IV\", 0.715327, 0.377271, 0.05795227, 0.09435719, \"CPLM\"], [\"rep13\", \"CST\", \"III\", 0.527685, 0.27883, 0.05842453, 0.09435719, \"CPLM\"], [\"rep6\", \"CST\", \"II\", 0.731788, 0.386733, 0.05846043, 0.09435719, \"CPLM\"], [\"ColRNAI\", \"CST\", \"V\", 0.786779, 0.4173, 0.05937495, 0.09472535, \"CPLM\"], [\"rep9\", \"CST\", \"IV\", 0.393581, 0.208696, 0.05930753, 0.09472535, \"CPLM\"], [\"tniA\", \"CST\", \"V\", 0.638399, 0.343903, 0.06340575, 0.1005746, \"CPLM\"], [\"istB\", \"CST\", \"III\", 0.203246, 0.110136, 0.06497803, 0.1024796, \"CPLM\"], [\"rep22\", \"CST\", \"III\", 0.606525, 0.329311, 0.06550483, 0.1027235, \"CPLM\"], [\"rep20\", \"CST\", \"III\", 0.290497, 0.160139, 0.06967307, 0.1086428, \"CPLM\"], [\"tnpA7\", \"CST\", \"V\", 0.786603, 0.436047, 0.07124057, 0.1104629, \"CPLM\"], [\"intI1\", \"CST\", \"IV\", 0.462384, 0.257978, 0.07307942, 0.1126811, \"CPLM\"], [\"tnpA.IS5.\", \"CST\", \"III\", 0.660184, 0.374363, 0.07781818, 0.1193212, \"CPLM\"], [\"IncFIA\", \"CST\", \"III\", 0.750778, 0.426504, 0.07835579, 0.1194818, \"CPLM\"], [\"IS679\", \"CST\", \"II\", 0.755201, 0.433609, 0.08156746, 0.1223512, \"CPLM\"], [\"IncFII.29.\", \"CST\", \"II\", 1.148987, 0.659067, 0.08127177, 0.1223512, \"CPLM\"], [\"tnpA1\", \"CST\", \"II\", 0.677866, 0.388464, 0.08098668, 0.1223512, \"CPLM\"], [\"rep2\", \"CST\", \"IV\", 0.636866, 0.368454, 0.08390155, 0.125172, \"CPLM\"], [\"tnpA.IS5.\", \"CST\", \"II\", 0.933531, 0.545099, 0.08678841, 0.1287828, \"CPLM\"], [\"tnpA\", \"CST\", \"V\", 0.046795, 0.02738, 0.08742677, 0.1290363, \"CPLM\"], [\"istA\", \"CST\", \"II\", 0.419519, 0.245965, 0.08808187, 0.1293117, \"CPLM\"], [\"IncFIA\", \"CST\", \"IV\", 0.736895, 0.433364, 0.08905491, 0.1300484, \"CPLM\"], [\"rep5\", \"CST\", \"V\", 0.606709, 0.359573, 0.09154501, 0.1329812, \"CPLM\"], [\"rep13\", \"CST\", \"IV\", 0.486688, 0.288967, 0.09213723, 0.1331407, \"CPLM\"], [\"rep19\", \"CST\", \"II\", 0.834101, 0.49692, 0.09324131, 0.1340344, \"CPLM\"], [\"rep20\", \"CST\", \"II\", 0.463604, 0.277251, 0.09449603, 0.1351342, \"CPLM\"], [\"tnpA5\", \"CST\", \"III\", 0.424481, 0.260167, 0.1027692, 0.1462078, \"CPLM\"], [\"istA3\", \"CST\", \"II\", 0.794682, 0.489068, 0.1041858, 0.147463, \"CPLM\"], [\"tnpA.IS683\", \"CST\", \"III\", 0.664603, 0.410122, 0.1051248, 0.1480329, \"CPLM\"], [\"istB1\", \"CST\", \"III\", 0.728565, 0.457513, 0.1112844, 0.1559111, \"CPLM\"], [\"IS91\", \"CST\", \"V\", 0.234094, 0.147933, 0.1135502, 0.1582821, \"CPLM\"], [\"ISCau1\", \"CST\", \"II\", 1.158997, 0.745257, 0.1199072, 0.1663034, \"CPLM\"], [\"repUS11\", \"CST\", \"V\", 0.692229, 0.451355, 0.1251114, 0.1726538, \"CPLM\"], [\"tnpA.1\", \"CST\", \"IV\", 0.546094, 0.357259, 0.126372, 0.1735257, \"CPLM\"], [\"Rep7\", \"CST\", \"III\", 0.697589, 0.460824, 0.13008, 0.1777331, \"CPLM\"], [\"repUS22\", \"CST\", \"II\", 0.938095, 0.63474, 0.1394292, 0.1884394, \"CPLM\"], [\"tnpA.1\", \"CST\", \"V\", 0.706142, 0.47844, 0.1399641, 0.1884394, \"CPLM\"], [\"tnpA2\", \"CST\", \"IV\", 0.561655, 0.379462, 0.1388369, 0.1884394, \"CPLM\"], [\"istA3\", \"CST\", \"III\", 0.470468, 0.319762, 0.1412074, 0.1891905, \"CPLM\"], [\"rep20\", \"CST\", \"V\", 0.395695, 0.270152, 0.1429986, 0.1906649, \"CPLM\"], [\"repUS12\", \"CST\", \"II\", 0.891902, 0.614173, 0.1464462, 0.1943228, \"CPLM\"], [\"rep9\", \"CST\", \"V\", 0.489618, 0.339333, 0.1490536, 0.195899, \"CPLM\"], [\"repUS22\", \"CST\", \"III\", 0.538918, 0.373328, 0.1488652, 0.195899, \"CPLM\"], [\"repUS11\", \"CST\", \"IV\", 0.456644, 0.322278, 0.1565054, 0.2047179, \"CPLM\"], [\"tnpA10\", \"CST\", \"V\", 0.94983, 0.672001, 0.1575277, 0.2050832, \"CPLM\"], [\"IS679\", \"CST\", \"V\", 0.658925, 0.468097, 0.1592294, 0.205925, \"CPLM\"], [\"rep10\", \"CST\", \"V\", 0.62449, 0.444099, 0.1596665, 0.205925, \"CPLM\"], [\"intI1\", \"CST\", \"V\", 0.562909, 0.403071, 0.1625482, 0.2086666, \"CPLM\"], [\"IS91\", \"CST\", \"III\", 0.121229, 0.087933, 0.1680026, 0.2146699, \"CPLM\"], [\"istA\", \"CST\", \"IV\", 0.22857, 0.166578, 0.1700169, 0.2162427, \"CPLM\"], [\"rep21\", \"CST\", \"II\", 0.341627, 0.253291, 0.1774159, 0.2246183, \"CPLM\"], [\"rep7\", \"CST\", \"V\", 0.402509, 0.301686, 0.1821388, 0.2291809, \"CPLM\"], [\"tnpA.1\", \"CST\", \"III\", 0.48535, 0.364228, 0.1826804, 0.2291809, \"CPLM\"], [\"ISSfl3\", \"CST\", \"II\", 0.746862, 0.564838, 0.186082, 0.232392, \"CPLM\"], [\"rep2\", \"CST\", \"II\", 0.839964, 0.640308, 0.1895829, 0.2356977, \"CPLM\"], [\"tnpA2\", \"CST\", \"III\", -1.042082, 0.808633, 0.1975039, 0.2444443, \"CPLM\"], [\"repUS22\", \"CST\", \"IV\", 0.500452, 0.391225, 0.2008294, 0.2474505, \"CPLM\"], [\"rep13\", \"CST\", \"V\", 0.583328, 0.457542, 0.2023379, 0.2482012, \"CPLM\"], [\"istA\", \"CST\", \"V\", 0.310331, 0.248128, 0.2110481, 0.2577402, \"CPLM\"], [\"istA2\", \"CST\", \"V\", 0.630484, 0.52478, 0.2295863, 0.2791446, \"CPLM\"], [\"Rep7\", \"CST\", \"V\", 0.867945, 0.727995, 0.2331669, 0.2822546, \"CPLM\"], [\"IS621\", \"CST\", \"V\", 0.449394, 0.394875, 0.2550927, 0.3062996, \"CPLM\"], [\"tnpA3\", \"CST\", \"III\", 0.434025, 0.381496, 0.2552497, 0.3062996, \"CPLM\"], [\"rep6\", \"CST\", \"IV\", 0.332428, 0.298214, 0.2649669, 0.3165838, \"CPLM\"], [\"tnpAB\", \"CST\", \"III\", 0.531403, 0.48371, 0.2719433, 0.3235188, \"CPLM\"], [\"Rep7\", \"CST\", \"II\", 0.849247, 0.784503, 0.2790173, 0.3305098, \"CPLM\"], [\"tnpA5\", \"CST\", \"V\", -1.074764, 1.026007, 0.2948595, 0.347783, \"CPLM\"], [\"rep10\", \"CST\", \"III\", 0.318917, 0.319108, 0.3176, 0.373011, \"CPLM\"], [\"rep21\", \"CST\", \"IV\", 0.173192, 0.175878, 0.3247572, 0.3798007, \"CPLM\"], [\"tnpA.IS5.\", \"CST\", \"V\", -1.994415, 2.048111, 0.3301645, 0.3844953, \"CPLM\"], [\"rep8\", \"CST\", \"II\", 0.789459, 0.81359, 0.3318773, 0.3848661, \"CPLM\"], [\"rep11\", \"CST\", \"II\", 0.671742, 0.709209, 0.3435519, 0.3966484, \"CPLM\"], [\"rep19\", \"CST\", \"V\", 0.544356, 0.57634, 0.3449117, 0.3966484, \"CPLM\"], [\"tnpA2\", \"CST\", \"II\", 0.643086, 0.694164, 0.3542285, 0.4056725, \"CPLM\"], [\"tnpA10\", \"CST\", \"II\", 0.747224, 0.82047, 0.3624394, 0.4133606, \"CPLM\"], [\"rep19\", \"CST\", \"III\", 0.352665, 0.395107, 0.3720819, 0.4226116, \"CPLM\"], [\"repUS12\", \"CST\", \"III\", 0.327157, 0.395389, 0.4079935, 0.4615008, \"CPLM\"], [\"Col.MG828.\", \"CST\", \"V\", -0.318029, 0.385854, 0.4098145, 0.4616686, \"CPLM\"], [\"istA3\", \"CST\", \"IV\", 0.291395, 0.357685, 0.4152613, 0.4656767, \"CPLM\"], [\"rep6\", \"CST\", \"V\", 0.407952, 0.502355, 0.4167469, 0.4656767, \"CPLM\"], [\"ISCR1\", \"CST\", \"V\", 0.406371, 0.519589, 0.4341558, 0.4831734, \"CPLM\"], [\"IncFIA\", \"CST\", \"II\", 0.667695, 0.890007, 0.4531266, 0.5020374, \"CPLM\"], [\"tnpA2\", \"CST\", \"V\", 0.485163, 0.649022, 0.454744, 0.5020374, \"CPLM\"], [\"istA3\", \"CST\", \"V\", 0.411551, 0.561926, 0.4639279, 0.5101358, \"CPLM\"], [\"tnpA.1\", \"CST\", \"II\", 0.534694, 0.755344, 0.4790189, 0.5246397, \"CPLM\"], [\"tnpA1\", \"CST\", \"III\", 0.208573, 0.29634, 0.4815382, 0.5253144, \"CPLM\"], [\"istA\", \"CST\", \"III\", 0.124224, 0.182168, 0.4952884, 0.5381874, \"CPLM\"], [\"tnpA4\", \"CST\", \"V\", 0.309131, 0.480825, 0.5202772, 0.5631236, \"CPLM\"], [\"int2\", \"CST\", \"V\", 0.234076, 0.392763, 0.551193, 0.594255, \"CPLM\"], [\"rep2\", \"CST\", \"V\", 0.398056, 0.717213, 0.5788923, 0.6205761, \"CPLM\"], [\"tnpA1\", \"CST\", \"V\", 0.263138, 0.475637, 0.5801037, 0.6205761, \"CPLM\"], [\"repUS11\", \"CST\", \"II\", 0.339867, 0.637148, 0.5937437, 0.6327153, \"CPLM\"], [\"IncFIA\", \"CST\", \"V\", -0.632233, 1.300373, 0.6268303, 0.6654045, \"CPLM\"], [\"IncFII.29.\", \"CST\", \"V\", -0.627596, 1.330958, 0.6372575, 0.6718392, \"CPLM\"], [\"tnpA5\", \"CST\", \"IV\", 0.132446, 0.281302, 0.6377604, 0.6718392, \"CPLM\"], [\"rep21\", \"CST\", \"III\", 0.076126, 0.166816, 0.6481421, 0.6801796, \"CPLM\"], [\"rep21\", \"CST\", \"V\", 0.123489, 0.311838, 0.692103, 0.7235622, \"CPLM\"], [\"IncFII\", \"CST\", \"V\", 0.265154, 0.697958, 0.7040196, 0.7332431, \"CPLM\"], [\"tnpA3\", \"CST\", \"V\", -0.340986, 1.031455, 0.740956, 0.7688115, \"CPLM\"], [\"qacEdelta\", \"CST\", \"V\", -0.326796, 1.082638, 0.7627654, 0.7884766, \"CPLM\"], [\"tnpA.IS683\", \"CST\", \"V\", -0.28727, 1.113106, 0.7963452, 0.8201167, \"CPLM\"], [\"repUS22\", \"CST\", \"V\", 0.185465, 0.781439, 0.8123943, 0.8335347, \"CPLM\"], [\"rep8\", \"CST\", \"V\", 0.098848, 0.993404, 0.9207383, 0.9411991, \"CPLM\"], [\"rep11\", \"CST\", \"V\", 0.060436, 0.789463, 0.9389786, 0.956303, \"CPLM\"], [\"rep22\", \"CST\", \"V\", -0.027971, 0.862711, 0.9741355, 0.986851, \"CPLM\"], [\"repUS12\", \"CST\", \"V\", -0.02679, 0.895152, 0.9761244, 0.986851, \"CPLM\"], [\"Col156\", \"CST\", \"V\", -19.365558, 9127.243386, 0.9983071, 0.9983071, \"CPLM\"], [\"ISSfl3\", \"CST\", \"V\", -0.001771, 0.802586, 0.9982396, 0.9983071, \"CPLM\"], [\"IncFIB.AP001918.\", \"CST\", \"V\", -20.632032, 8415.630163, 0.9980439, 0.9983071, \"CPLM\"]]"};
+        new ITable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+Formula = abundance +(1|PATIENTID) <br> model = CPLM
+</section></details>
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

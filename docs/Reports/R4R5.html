@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>r4r5 – VagResist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-78803f1cb364580a08140d96844d444c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">VagResist</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-figures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Figures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-figures">    
+        <li>
+    <a class="dropdown-item" href="../Figures/S1S5S6S11.html">
+ <span class="dropdown-text">S1-S6-S7-S12: Descriptive analysis of the vaginal microbiome (species, ARGs and MGEs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S3S12.html">
+ <span class="dropdown-text">S3-S4: Cross-validation of ARGs detection and distribution across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S2S7.html">
+ <span class="dropdown-text">S2-S8: Longitudinal analysis of α-diversity metrics for ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S4S8S9.html">
+ <span class="dropdown-text">S5-S9-S10: Species-ARGs correlation analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S10.html">
+ <span class="dropdown-text">S11: Conceptual validation of the PRDI</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-tables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Tables</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-tables">    
+        <li>
+    <a class="dropdown-item" href="../Tables/T1T8T9.html">
+ <span class="dropdown-text">T1-T8-T9: Descriptive statistics of patients involved in the InSPIRe study</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T2T6T7.html">
+ <span class="dropdown-text">T2-T6-T7: Sp-ARGs count table &amp; SparCC correlation matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T3T4T5.html">
+ <span class="dropdown-text">T3-T4-T5: Differential abundance analysis of species, ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T10T11T12T13T14.html">
+ <span class="dropdown-text">T10-T11-T12-T13-T14: Differential abundance analysis of species, ARGs and MGEs across clinical groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistical-reports" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Statistical Reports</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistical-reports">    
+        <li>
+    <a class="dropdown-item" href="../Reports/R1R2.html">
+ <span class="dropdown-text">R1-R2: α-diversity comparison across CSTs (InSPIRe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R9R10.html">
+ <span class="dropdown-text">R3-R4: α-diversity comparison across CSTs (External Dataset)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R3.html">
+ <span class="dropdown-text">R5: β-diversity comparison across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R4R5.html">
+ <span class="dropdown-text">R6-R7: GLMMs for α-diversity across pregnancy outcome groups (univariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R6R7.html">
+ <span class="dropdown-text">R8-R9: GLMMs for α-diversity across pregnancy outcome groups (multivariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R8.html">
+ <span class="dropdown-text">R10: β-diversity comparison across pregnancy outcome groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../data.html"> 
+<span class="menu-text">Download Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../consortium.html"> 
+<span class="menu-text">InSPIRe Consortium</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>
+Significance codes:<br> *** p &lt; 0.001, ** p &lt; 0.01, * p &lt; 0.05, . p &lt; 0.1
+</p>
+<details>
+<summary>
+<strong>Report 4</strong>
+</summary>
+<h2 id="report-4-univariate-log-transformed-gaussian-mixed-effects-models-of-species-α-diversity-across-pregnancy-outcomes-groups-a-d." class="anchored">
+Report 4: Univariate Log-transformed Gaussian mixed-effects models of species α-diversity across pregnancy outcome groups (A-D).
+</h2>
+<p>
+<strong>Model estimates</strong>
+</p>
+<p>
+Family: gaussian<br> Formula: diversity_metric ~ pregnancy outcome group (A-D) + (1 | patient)
+</p>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)<br> </u>Number of observations: 1957; groups: PATIENT, 1547<br> Dispersion estimate for gaussian family (sigma^2): 0.138
+</p>
+<table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 16%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+0.825
+</td>
+<td>
+0.020
+</td>
+<td>
+41.25
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+-0.034
+</td>
+<td>
+0.032
+</td>
+<td>
+-1.07
+</td>
+<td>
+0.286
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.007
+</td>
+<td>
+0.030
+</td>
+<td>
+0.24
+</td>
+<td>
+0.809
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.181
+</td>
+<td>
+0.030
+</td>
+<td>
+6.01
+</td>
+<td>
+1.86e-09 (***)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates
+</p>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+0.034
+</td>
+<td>
+0.032
+</td>
+<td>
+1.07
+</td>
+<td>
+0.710
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.007
+</td>
+<td>
+0.030
+</td>
+<td>
+-0.24
+</td>
+<td>
+0.995
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.181
+</td>
+<td>
+0.030
+</td>
+<td>
+-6.01
+</td>
+<td>
+&lt; 0.0001 (***)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.041
+</td>
+<td>
+0.034
+</td>
+<td>
+-1.23
+</td>
+<td>
+0.610
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.215
+</td>
+<td>
+0.034
+</td>
+<td>
+-6.40
+</td>
+<td>
+&lt; 0.0001 (***)
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+-0.173
+</td>
+<td>
+0.032
+</td>
+<td>
+-5.43
+</td>
+<td>
+&lt; 0.0001 (***)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<u><br> Data: Phylogenetic Diversity (PD) by pregnancy outcome groups (A-D)</u><br> Family: gaussian<br> Number of observations: 1957; groups: PATIENT, 1547<br> Dispersion estimate for gaussian family (sigma^2): 0.178
+</p>
+<table>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+3.575
+</td>
+<td>
+0.022
+</td>
+<td>
+162.58
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.045
+</td>
+<td>
+0.035
+</td>
+<td>
+1.28
+</td>
+<td>
+0.200
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.145
+</td>
+<td>
+0.033
+</td>
+<td>
+4.36
+</td>
+<td>
+1.31e-05 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.221
+</td>
+<td>
+0.033
+</td>
+<td>
+6.68
+</td>
+<td>
+2.35e-11 (***)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates
+</p>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.045
+</td>
+<td>
+0.035
+</td>
+<td>
+-1.28
+</td>
+<td>
+0.575
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.145
+</td>
+<td>
+0.033
+</td>
+<td>
+-4.36
+</td>
+<td>
+0.0001 (***)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.221
+</td>
+<td>
+0.033
+</td>
+<td>
+-6.68
+</td>
+<td>
+&lt; 0.0001 (***)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.100
+</td>
+<td>
+0.037
+</td>
+<td>
+-2.72
+</td>
+<td>
+0.0337 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.176
+</td>
+<td>
+0.037
+</td>
+<td>
+-4.79
+</td>
+<td>
+&lt; 0.0001 (***)
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+-0.076
+</td>
+<td>
+0.035
+</td>
+<td>
+-2.17
+</td>
+<td>
+0.133
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+<strong>Report 5</strong>
+</summary>
+<h2 id="report-5-univariate-hurdle-mixed-effects-models-binomial-and-log-transformed-gaussian-assessing-args-and-mges-detection-and-diversity-across-pregnancy-outcome-groups-a-d." class="anchored">
+Report 5: Univariate Hurdle mixed-effects models (binomial and log-transformed Gaussian) assessing ARGs and MGEs detection and diversity across pregnancy outcome groups (A-D).
+</h2>
+<ol type="I">
+<li>
+<p>
+<strong>Model estimates</strong>
+</p>
+</li>
+</ol>
+<p>
+Formula: diversity_metric ~ outcome_group + (1 | patient)
+</p>
+<li>
+<p>
+<strong><span class="label-color">Antibiotic Resistance Genes (ARG)</span></strong>
+</p>
+</li>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)</u><strong><br> </strong>Part I. Family: binomial<br> Number of observations: 1947, groups: PATIENT, 1547
+</p>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 17%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+0.094
+</td>
+<td>
+0.100
+</td>
+<td>
+0.94
+</td>
+<td>
+0.346
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.038
+</td>
+<td>
+0.161
+</td>
+<td>
+0.24
+</td>
+<td>
+0.811
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.545
+</td>
+<td>
+0.154
+</td>
+<td>
+3.54
+</td>
+<td>
+0.000405 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.255
+</td>
+<td>
+0.150
+</td>
+<td>
+1.70
+</td>
+<td>
+0.089 (.)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+0.962
+</td>
+<td>
+0.155
+</td>
+<td>
+-0.239
+</td>
+<td>
+0.995
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.580
+</td>
+<td>
+0.089
+</td>
+<td>
+-3.537
+</td>
+<td>
+0.0023 (**)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.775
+</td>
+<td>
+0.116
+</td>
+<td>
+-1.701
+</td>
+<td>
+0.323
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.603
+</td>
+<td>
+0.104
+</td>
+<td>
+-2.939
+</td>
+<td>
+0.0173 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.805
+</td>
+<td>
+0.136
+</td>
+<td>
+-1.284
+</td>
+<td>
+0.573
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+1.336
+</td>
+<td>
+0.215
+</td>
+<td>
+1.801
+</td>
+<td>
+0.273
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Number of observations: 1097, groups: PATIENT, 928<br> Dispersion estimate for gaussian family (sigma^2): 0.117
+</p>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 18%">
+<col style="width: 19%">
+<col style="width: 15%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+0.560
+</td>
+<td>
+0.028
+</td>
+<td>
+19.86
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.098
+</td>
+<td>
+0.045
+</td>
+<td>
+2.20
+</td>
+<td>
+0.028 (*)
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.112
+</td>
+<td>
+0.040
+</td>
+<td>
+2.78
+</td>
+<td>
+0.0055 (**)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.130
+</td>
+<td>
+0.041
+</td>
+<td>
+3.18
+</td>
+<td>
+0.0015 (**)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<strong><br> </strong>Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.098
+</td>
+<td>
+0.045
+</td>
+<td>
+-2.20
+</td>
+<td>
+0.125
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.112
+</td>
+<td>
+0.041
+</td>
+<td>
+-2.78
+</td>
+<td>
+0.0286 (*)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.130
+</td>
+<td>
+0.041
+</td>
+<td>
+-3.18
+</td>
+<td>
+0.0082 (**)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.014
+</td>
+<td>
+0.045
+</td>
+<td>
+-0.31
+</td>
+<td>
+0.990
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.032
+</td>
+<td>
+0.046
+</td>
+<td>
+-0.70
+</td>
+<td>
+0.898
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+-0.018
+</td>
+<td>
+0.042
+</td>
+<td>
+-0.43
+</td>
+<td>
+0.973
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<u><br> Data: Phenotypic Resistance Diversity Index (PRDI) by pregnancy outcome groups (A-D)<br> </u>Part I. Family: binomial<br> Number of observations: 1947, groups: PATIENT, 1547
+</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+0.094
+</td>
+<td>
+0.100
+</td>
+<td>
+0.94
+</td>
+<td>
+0.346
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.038
+</td>
+<td>
+0.161
+</td>
+<td>
+0.24
+</td>
+<td>
+0.811
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.545
+</td>
+<td>
+0.154
+</td>
+<td>
+3.54
+</td>
+<td>
+0.00041 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.255
+</td>
+<td>
+0.150
+</td>
+<td>
+1.70
+</td>
+<td>
+0.089 (.)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+0.962
+</td>
+<td>
+0.155
+</td>
+<td>
+-0.24
+</td>
+<td>
+0.995
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.580
+</td>
+<td>
+0.089
+</td>
+<td>
+-3.54
+</td>
+<td>
+0.0023 (**)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.775
+</td>
+<td>
+0.116
+</td>
+<td>
+-1.70
+</td>
+<td>
+0.323
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.603
+</td>
+<td>
+0.104
+</td>
+<td>
+-2.94
+</td>
+<td>
+0.017 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.805
+</td>
+<td>
+0.136
+</td>
+<td>
+-1.28
+</td>
+<td>
+0.573
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+1.336
+</td>
+<td>
+0.215
+</td>
+<td>
+1.80
+</td>
+<td>
+0.273
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Number of observations: 1097, groups: PATIENT, 928<br> Dispersion estimate for gaussian family (sigma^2): 0.166
+</p>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+1.130
+</td>
+<td>
+0.029
+</td>
+<td>
+38.33
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.135
+</td>
+<td>
+0.047
+</td>
+<td>
+2.86
+</td>
+<td>
+0.0042 (**)
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.165
+</td>
+<td>
+0.042
+</td>
+<td>
+3.91
+</td>
+<td>
+9.29e-05 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.157
+</td>
+<td>
+0.043
+</td>
+<td>
+3.67
+</td>
+<td>
+0.00024 (***)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.135
+</td>
+<td>
+0.047
+</td>
+<td>
+-2.86
+</td>
+<td>
+0.022 (*)
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.165
+</td>
+<td>
+0.042
+</td>
+<td>
+-3.91
+</td>
+<td>
+0.0006 (***)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.157
+</td>
+<td>
+0.043
+</td>
+<td>
+-3.67
+</td>
+<td>
+0.0014 (**)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.031
+</td>
+<td>
+0.047
+</td>
+<td>
+-0.64
+</td>
+<td>
+0.918
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.023
+</td>
+<td>
+0.048
+</td>
+<td>
+-0.48
+</td>
+<td>
+0.964
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.008
+</td>
+<td>
+0.043
+</td>
+<td>
+0.18
+</td>
+<td>
+0.998
+</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<li>
+<p>
+<strong><span class="label-color">Mobile Genetic Element (MGE)</span></strong>
+</p>
+</li>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)</u><strong><br> </strong>Part I. Family: binomial<br> Number of observations: 1947, groups: PATIENT, 1547
+</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 18%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+<th>
+Significance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+0.203
+</td>
+<td>
+0.104
+</td>
+<td>
+1.95
+</td>
+<td>
+0.051 (.)
+</td>
+<td>
+·
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+-0.128
+</td>
+<td>
+0.167
+</td>
+<td>
+-0.77
+</td>
+<td>
+0.444
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.437
+</td>
+<td>
+0.160
+</td>
+<td>
+2.74
+</td>
+<td>
+0.0062 (**)
+</td>
+<td>
+**
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.513
+</td>
+<td>
+0.160
+</td>
+<td>
+3.21
+</td>
+<td>
+0.00135 (**)
+</td>
+<td>
+**
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 20%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+1.136
+</td>
+<td>
+0.190
+</td>
+<td>
+0.77
+</td>
+<td>
+0.8698
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.646
+</td>
+<td>
+0.103
+</td>
+<td>
+-2.74
+</td>
+<td>
+0.0316 (*)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.599
+</td>
+<td>
+0.0958
+</td>
+<td>
+-3.21
+</td>
+<td>
+0.0074 (**)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.569
+</td>
+<td>
+0.102
+</td>
+<td>
+-3.14
+</td>
+<td>
+0.0091 (**)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.527
+</td>
+<td>
+0.0949
+</td>
+<td>
+-3.56
+</td>
+<td>
+0.0021 (**)
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.927
+</td>
+<td>
+0.156
+</td>
+<td>
+-0.45
+</td>
+<td>
+0.969
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Number of observations:1133, groups: PATIENT, 959<br> Dispersion estimate for gaussian family (sigma^2): 0.166
+</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+1.031
+</td>
+<td>
+0.035
+</td>
+<td>
+29.21
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.0457
+</td>
+<td>
+0.0570
+</td>
+<td>
+0.80
+</td>
+<td>
+0.423
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.119
+</td>
+<td>
+0.0514
+</td>
+<td>
+2.32
+</td>
+<td>
+0.020 (*)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+-0.0728
+</td>
+<td>
+0.0506
+</td>
+<td>
+-1.44
+</td>
+<td>
+0.150
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 21%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.0457
+</td>
+<td>
+0.0570
+</td>
+<td>
+-0.80
+</td>
+<td>
+0.854
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.1193
+</td>
+<td>
+0.0514
+</td>
+<td>
+-2.32
+</td>
+<td>
+0.094
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.0728
+</td>
+<td>
+0.0506
+</td>
+<td>
+1.44
+</td>
+<td>
+0.475
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.0736
+</td>
+<td>
+0.0584
+</td>
+<td>
+-1.26
+</td>
+<td>
+0.589
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.1185
+</td>
+<td>
+0.0576
+</td>
+<td>
+2.06
+</td>
+<td>
+0.168
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.1921
+</td>
+<td>
+0.0521
+</td>
+<td>
+3.69
+</td>
+<td>
+<ol start="14">
+<li>
+<p>
+(**)
+</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+<strong>GLMMs Diagnostics</strong>
+</summary>
+<br><br> <strong>Model Diagnostic</strong>
+<p></p>
+<p>
+<img src="Fig_R3R4.png" style="width:15in; height:5in;" data-lightbox="">
+</p></details>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

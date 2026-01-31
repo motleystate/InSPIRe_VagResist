@@ -1,0 +1,3763 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>r6r7 – VagResist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-78803f1cb364580a08140d96844d444c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">VagResist</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-figures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Figures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-figures">    
+        <li>
+    <a class="dropdown-item" href="../Figures/S1S5S6S11.html">
+ <span class="dropdown-text">S1-S6-S7-S12: Descriptive analysis of the vaginal microbiome (species, ARGs and MGEs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S3S12.html">
+ <span class="dropdown-text">S3-S4: Cross-validation of ARGs detection and distribution across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S2S7.html">
+ <span class="dropdown-text">S2-S8: Longitudinal analysis of α-diversity metrics for ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S4S8S9.html">
+ <span class="dropdown-text">S5-S9-S10: Species-ARGs correlation analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Figures/S10.html">
+ <span class="dropdown-text">S11: Conceptual validation of the PRDI</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplementary-tables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplementary Tables</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplementary-tables">    
+        <li>
+    <a class="dropdown-item" href="../Tables/T1T8T9.html">
+ <span class="dropdown-text">T1-T8-T9: Descriptive statistics of patients involved in the InSPIRe study</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T2T6T7.html">
+ <span class="dropdown-text">T2-T6-T7: Sp-ARGs count table &amp; SparCC correlation matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T3T4T5.html">
+ <span class="dropdown-text">T3-T4-T5: Differential abundance analysis of species, ARGs and MGEs across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Tables/T10T11T12T13T14.html">
+ <span class="dropdown-text">T10-T11-T12-T13-T14: Differential abundance analysis of species, ARGs and MGEs across clinical groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistical-reports" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Statistical Reports</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistical-reports">    
+        <li>
+    <a class="dropdown-item" href="../Reports/R1R2.html">
+ <span class="dropdown-text">R1-R2: α-diversity comparison across CSTs (InSPIRe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R9R10.html">
+ <span class="dropdown-text">R3-R4: α-diversity comparison across CSTs (External Dataset)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R3.html">
+ <span class="dropdown-text">R5: β-diversity comparison across CSTs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R4R5.html">
+ <span class="dropdown-text">R6-R7: GLMMs for α-diversity across pregnancy outcome groups (univariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R6R7.html">
+ <span class="dropdown-text">R8-R9: GLMMs for α-diversity across pregnancy outcome groups (multivariate)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Reports/R8.html">
+ <span class="dropdown-text">R10: β-diversity comparison across pregnancy outcome groups</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../data.html"> 
+<span class="menu-text">Download Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../consortium.html"> 
+<span class="menu-text">InSPIRe Consortium</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>
+Significance codes:<br> *** p &lt; 0.001, ** p &lt; 0.01, * p &lt; 0.05, . p &lt; 0.1
+</p>
+<details>
+<summary>
+<strong>Report 6</strong>
+</summary>
+<h2 id="report-6-multivariate-log-transformed-gaussian-mixed-effects-models-of-species-α-diversity-across-pregnancy-outcome-groups-a-d." class="anchored">
+Report 6: Multivariate Log-transformed Gaussian mixed-effects models of species α-diversity across pregnancy outcome groups (A-D).
+</h2>
+<li>
+<p>
+<strong>Model estimates</strong>
+</p>
+</li>
+<p>
+Family: gaussian<br> Formula: diversity_metric ~ pregnancy outcome group (A-D) + antibiotic treatment during pregnancy + maternal age + body mass index (BMI) + cervical cerclage + intrauterine growth restriction (IUGR) + gestational diabetes + hypertensive disorders of pregnancy + (1 | patient)
+</p>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)</u><br> Number of observations: 1943; groups: PATIENT, 1533<br> Dispersion estimate for gaussian family (sigma^2): 0.136
+</p>
+<table>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+Pr(&gt;|z|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+(Intercept)
+</td>
+<td>
+0.675190
+</td>
+<td>
+0.094448
+</td>
+<td>
+7.149
+</td>
+<td>
+8.76e-13(***)
+</td>
+</tr>
+<tr>
+<td>
+Group B
+</td>
+<td>
+-0.048367
+</td>
+<td>
+0.034064
+</td>
+<td>
+-1.420
+</td>
+<td>
+0.155646
+</td>
+</tr>
+<tr>
+<td>
+Group C
+</td>
+<td>
+-0.003915
+</td>
+<td>
+0.030601
+</td>
+<td>
+-0.128
+</td>
+<td>
+0.898197
+</td>
+</tr>
+<tr>
+<td>
+Group D
+</td>
+<td>
+0.131271
+</td>
+<td>
+0.033168
+</td>
+<td>
+3.958
+</td>
+<td>
+7.56e-05(***)
+</td>
+</tr>
+<tr>
+<td>
+Antibiotic (Yes)
+</td>
+<td>
+0.053282
+</td>
+<td>
+0.025680
+</td>
+<td>
+2.075
+</td>
+<td>
+0.038000(*)
+</td>
+</tr>
+<tr>
+<td>
+Maternal age
+</td>
+<td>
+-0.002158
+</td>
+<td>
+0.002276
+</td>
+<td>
+-0.948
+</td>
+<td>
+0.343089
+</td>
+</tr>
+<tr>
+<td>
+BMI
+</td>
+<td>
+0.008488
+</td>
+<td>
+0.002242
+</td>
+<td>
+3.786
+</td>
+<td>
+0.000153(***)
+</td>
+</tr>
+<tr>
+<td>
+Cervical cerclage (Yes)
+</td>
+<td>
+0.158989
+</td>
+<td>
+0.048500
+</td>
+<td>
+3.278
+</td>
+<td>
+0.001045(**)
+</td>
+</tr>
+<tr>
+<td>
+IUGR (Yes)
+</td>
+<td>
+-0.006759
+</td>
+<td>
+0.047632
+</td>
+<td>
+-0.142
+</td>
+<td>
+0.887162
+</td>
+</tr>
+<tr>
+<td>
+Gestational diabetes (Yes)
+</td>
+<td>
+-0.003931
+</td>
+<td>
+0.030063
+</td>
+<td>
+-0.131
+</td>
+<td>
+0.895973
+</td>
+</tr>
+<tr>
+<td>
+Hypertensive disorders (Yes)
+</td>
+<td>
+0.034643
+</td>
+<td>
+0.067685
+</td>
+<td>
+0.512
+</td>
+<td>
+0.608772
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates
+</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr>
+<th>
+contrast
+</th>
+<th>
+estimate
+</th>
+<th>
+SE
+</th>
+<th>
+df
+</th>
+<th>
+t.ratio
+</th>
+<th>
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+A vs B
+</td>
+<td>
+0.04836675
+</td>
+<td>
+0.03406423
+</td>
+<td>
+1930
+</td>
+<td>
+1.420
+</td>
+<td>
+0.4870
+</td>
+</tr>
+<tr>
+<td>
+A vs C
+</td>
+<td>
+0.00391503
+</td>
+<td>
+0.03060054
+</td>
+<td>
+1930
+</td>
+<td>
+0.128
+</td>
+<td>
+0.9993
+</td>
+</tr>
+<tr>
+<td>
+A vs D
+</td>
+<td>
+-0.13127106
+</td>
+<td>
+0.03316786
+</td>
+<td>
+1930
+</td>
+<td>
+-3.958
+</td>
+<td>
+0.0005 (***)
+</td>
+</tr>
+<tr>
+<td>
+B vs C
+</td>
+<td>
+-0.04445172
+</td>
+<td>
+0.03570120
+</td>
+<td>
+1930
+</td>
+<td>
+-1.245
+</td>
+<td>
+0.5981
+</td>
+</tr>
+<tr>
+<td>
+B vs D
+</td>
+<td>
+-0.17963781
+</td>
+<td>
+0.03398566
+</td>
+<td>
+1930
+</td>
+<td>
+-5.286
+</td>
+<td>
+&lt;.0001 (***)
+</td>
+</tr>
+<tr>
+<td>
+C vs D
+</td>
+<td>
+-0.13518609
+</td>
+<td>
+0.03444635
+</td>
+<td>
+1930
+</td>
+<td>
+-3.925
+</td>
+<td>
+0.0005 (***)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<u>Data: Phylogenetic Diversity (PD) by pregnancy outcome groups (A-D)</u><br> Family: gaussian<br> Number of observations: 1943; groups: PATIENT, 1533<br> Dispersion estimate for gaussian family (sigma^2): 0.178
+</p>
+<table>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+Pr(&gt;|z|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+(Intercept)
+</td>
+<td>
+3.483004
+</td>
+<td>
+0.102402
+</td>
+<td>
+34.01
+</td>
+<td>
+&lt; 2e-16 (***)
+</td>
+</tr>
+<tr>
+<td>
+Group B
+</td>
+<td>
+0.087636
+</td>
+<td>
+0.037105
+</td>
+<td>
+2.36
+</td>
+<td>
+0.018185 (*)
+</td>
+</tr>
+<tr>
+<td>
+Group C
+</td>
+<td>
+0.134720
+</td>
+<td>
+0.033408
+</td>
+<td>
+4.03
+</td>
+<td>
+5.52e-05 (***)
+</td>
+</tr>
+<tr>
+<td>
+Group D
+</td>
+<td>
+0.234469
+</td>
+<td>
+0.036157
+</td>
+<td>
+6.48
+</td>
+<td>
+8.89e-11 (***)
+</td>
+</tr>
+<tr>
+<td>
+Antibiotic (Yes)
+</td>
+<td>
+-0.063485
+</td>
+<td>
+0.027868
+</td>
+<td>
+-2.28
+</td>
+<td>
+0.022723 (*)
+</td>
+</tr>
+<tr>
+<td>
+Maternal age
+</td>
+<td>
+-0.008379
+</td>
+<td>
+0.002467
+</td>
+<td>
+-3.40
+</td>
+<td>
+0.000682 (***)
+</td>
+</tr>
+<tr>
+<td>
+BMI
+</td>
+<td>
+0.015266
+</td>
+<td>
+0.002430
+</td>
+<td>
+6.28
+</td>
+<td>
+3.32e-10 (***)
+</td>
+</tr>
+<tr>
+<td>
+Cervical cerclage (Yes)
+</td>
+<td>
+0.081353
+</td>
+<td>
+0.052493
+</td>
+<td>
+1.55
+</td>
+<td>
+0.121193
+</td>
+</tr>
+<tr>
+<td>
+IUGR (Yes)
+</td>
+<td>
+0.021445
+</td>
+<td>
+0.051594
+</td>
+<td>
+0.42
+</td>
+<td>
+0.677659
+</td>
+</tr>
+<tr>
+<td>
+Gestational diabetes (Yes)
+</td>
+<td>
+0.005456
+</td>
+<td>
+0.032629
+</td>
+<td>
+0.17
+</td>
+<td>
+0.867201
+</td>
+</tr>
+<tr>
+<td>
+Hypertensive disorders (Yes)
+</td>
+<td>
+0.120878
+</td>
+<td>
+0.073219
+</td>
+<td>
+1.65
+</td>
+<td>
+0.098756
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> <em>p-value</em> adjustment: Tukey method for comparing a family of 4 estimates.
+</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr>
+<th>
+contrast
+</th>
+<th>
+estimate
+</th>
+<th>
+SE
+</th>
+<th>
+df
+</th>
+<th>
+t.ratio
+</th>
+<th>
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+A vs B
+</td>
+<td>
+-0.08763583
+</td>
+<td>
+0.03710515
+</td>
+<td>
+1930
+</td>
+<td>
+-2.362
+</td>
+<td>
+0.0849 (.)
+</td>
+</tr>
+<tr>
+<td>
+A vs C
+</td>
+<td>
+-0.13472018
+</td>
+<td>
+0.03340774
+</td>
+<td>
+1930
+</td>
+<td>
+-4.033
+</td>
+<td>
+0.0003 (***)
+</td>
+</tr>
+<tr>
+<td>
+A vs D
+</td>
+<td>
+-0.23446873
+</td>
+<td>
+0.03615738
+</td>
+<td>
+1930
+</td>
+<td>
+-6.485
+</td>
+<td>
+&lt;.0001 (***)
+</td>
+</tr>
+<tr>
+<td>
+B vs C
+</td>
+<td>
+-0.04708435
+</td>
+<td>
+0.03881563
+</td>
+<td>
+1930
+</td>
+<td>
+-1.213
+</td>
+<td>
+0.6186
+</td>
+</tr>
+<tr>
+<td>
+B vs D
+</td>
+<td>
+-0.14683290
+</td>
+<td>
+0.03696010
+</td>
+<td>
+1930
+</td>
+<td>
+-3.973
+</td>
+<td>
+0.0004 (***)
+</td>
+</tr>
+<tr>
+<td>
+C vs D
+</td>
+<td>
+-0.09974855
+</td>
+<td>
+0.03731957
+</td>
+<td>
+1930
+</td>
+<td>
+-2.673
+</td>
+<td>
+<ol start="380">
+<li>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+<strong>Report 7</strong>
+</summary>
+<h2 id="report-7-multivariate-hurdle-mixed-effects-models-binomial-and-log-transformed-gaussian-assessing-arg-and-mge-detection-and-diversity-across-pregnancy-outcome-groups-a-d." class="anchored">
+Report 7: Multivariate Hurdle mixed-effects models (binomial and log-transformed Gaussian) assessing ARG and MGE detection and diversity across pregnancy outcome groups (A-D).
+</h2>
+<p>
+<strong>Model estimates</strong>
+</p>
+<p>
+Formula: diversity_metric ~ outcome_group + antibiotic treatment + maternal age + body mass index (BMI) + cervical cerclage + intrauterine growth restriction (IUGR) + gestational diabetes + hypertensive disorders of pregnancy + (1 | patient)
+</p>
+<li>
+<p>
+<strong><span class="label-color"> Antibiotic Resistance Genes (ARG)</span></strong>
+</p>
+</li>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)</u><strong><br> </strong>Part I. Family: binomial<br> Number of observations: 1943, groups: PATIENT, 1533
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 12%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+-0.348
+</td>
+<td>
+0.483
+</td>
+<td>
+-0.72
+</td>
+<td>
+0.471
+</td>
+</tr>
+<tr>
+<th>
+Group B vs A
+</th>
+<td>
+-0.015
+</td>
+<td>
+0.174
+</td>
+<td>
+-0.08
+</td>
+<td>
+0.933
+</td>
+</tr>
+<tr>
+<th>
+Group C vs A
+</th>
+<td>
+0.483
+</td>
+<td>
+0.157
+</td>
+<td>
+3.07
+</td>
+<td>
+0.002 (**)
+</td>
+</tr>
+<tr>
+<th>
+Group D vs A
+</th>
+<td>
+0.034
+</td>
+<td>
+0.168
+</td>
+<td>
+0.20
+</td>
+<td>
+0.838
+</td>
+</tr>
+<tr>
+<th>
+Antibiotic (Yes)
+</th>
+<td>
+0.239
+</td>
+<td>
+0.132
+</td>
+<td>
+1.81
+</td>
+<td>
+0.070 (.)
+</td>
+</tr>
+<tr>
+<th>
+Maternal age
+</th>
+<td>
+-0.035
+</td>
+<td>
+0.012
+</td>
+<td>
+-2.97
+</td>
+<td>
+0.003 (**)
+</td>
+</tr>
+<tr>
+<th>
+BMI
+</th>
+<td>
+0.061
+</td>
+<td>
+0.012
+</td>
+<td>
+5.04
+</td>
+<td>
+&lt; 1e-6 (***)
+</td>
+</tr>
+<tr>
+<th>
+Cervical cerclage (Yes)
+</th>
+<td>
+0.713
+</td>
+<td>
+0.264
+</td>
+<td>
+2.70
+</td>
+<td>
+0.007 (**)
+</td>
+</tr>
+<tr>
+<th>
+IUGR (Yes)
+</th>
+<td>
+-0.024
+</td>
+<td>
+0.244
+</td>
+<td>
+-0.10
+</td>
+<td>
+0.923
+</td>
+</tr>
+<tr>
+<th>
+Gestational diabetes (Yes)
+</th>
+<td>
+0.139
+</td>
+<td>
+0.154
+</td>
+<td>
+0.91
+</td>
+<td>
+0.364
+</td>
+</tr>
+<tr>
+<th>
+Hypertensive disorders (Yes)
+</th>
+<td>
+0.469
+</td>
+<td>
+0.359
+</td>
+<td>
+1.31
+</td>
+<td>
+0.191
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Estimated marginal probability on the response scale<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> Confidence level: 0.95
+</p>
+<table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 24%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+OUT_GROUP
+</th>
+<th>
+Probability
+</th>
+<th>
+SE
+</th>
+<th>
+95% CI (Lower)
+</th>
+<th>
+95% CI (Upper)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A
+</th>
+<td>
+0.684
+</td>
+<td>
+0.058
+</td>
+<td>
+0.561
+</td>
+<td>
+0.785
+</td>
+</tr>
+<tr>
+<th>
+B
+</th>
+<td>
+0.681
+</td>
+<td>
+0.062
+</td>
+<td>
+0.550
+</td>
+<td>
+0.788
+</td>
+</tr>
+<tr>
+<th>
+C
+</th>
+<td>
+0.778
+</td>
+<td>
+0.045
+</td>
+<td>
+0.677
+</td>
+<td>
+0.854
+</td>
+</tr>
+<tr>
+<th>
+D
+</th>
+<td>
+0.691
+</td>
+<td>
+0.057
+</td>
+<td>
+0.571
+</td>
+<td>
+0.790
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Pairwise comparisons were adjusted using Tukey’s method<br> Confidence level: 0.95
+</p>
+<table>
+<colgroup>
+<col style="width: 36%">
+<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast (OUT_GROUP)
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+1.015
+</td>
+<td>
+0.176
+</td>
+<td>
+0.08
+</td>
+<td>
+0.9998
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.617
+</td>
+<td>
+0.097
+</td>
+<td>
+-3.07
+</td>
+<td>
+0.0116 (*)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.966
+</td>
+<td>
+0.163
+</td>
+<td>
+-0.20
+</td>
+<td>
+0.9970
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.608
+</td>
+<td>
+0.112
+</td>
+<td>
+-2.69
+</td>
+<td>
+0.0357 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.952
+</td>
+<td>
+0.165
+</td>
+<td>
+-0.28
+</td>
+<td>
+0.9921
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+1.566
+</td>
+<td>
+0.278
+</td>
+<td>
+2.52
+</td>
+<td>
+0.0564
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Conditional model:<br> Number of observations: 1088, groups: PATIENT, 919<br> Dispersion estimate for gaussian family (sigma^2): 0.117
+</p>
+<table>
+<colgroup>
+<col style="width: 37%">
+<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+(Intercept)
+</th>
+<td>
+0.464
+</td>
+<td>
+0.124
+</td>
+<td>
+3.75
+</td>
+<td>
+0.00018 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.072
+</td>
+<td>
+0.048
+</td>
+<td>
+1.51
+</td>
+<td>
+0.131
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.103
+</td>
+<td>
+0.041
+</td>
+<td>
+2.50
+</td>
+<td>
+0.012 (*)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.096
+</td>
+<td>
+0.046
+</td>
+<td>
+2.09
+</td>
+<td>
+0.037 (*)
+</td>
+</tr>
+<tr>
+<th>
+Antibiotic (Yes)
+</th>
+<td>
+0.054
+</td>
+<td>
+0.035
+</td>
+<td>
+1.56
+</td>
+<td>
+0.119
+</td>
+</tr>
+<tr>
+<th>
+Maternal age
+</th>
+<td>
+0.00006
+</td>
+<td>
+0.003
+</td>
+<td>
+0.02
+</td>
+<td>
+0.985
+</td>
+</tr>
+<tr>
+<th>
+BMI
+</th>
+<td>
+0.0035
+</td>
+<td>
+0.0029
+</td>
+<td>
+1.21
+</td>
+<td>
+0.225
+</td>
+</tr>
+<tr>
+<th>
+Cervical cerclage (Yes)
+</th>
+<td>
+-0.009
+</td>
+<td>
+0.059
+</td>
+<td>
+-0.15
+</td>
+<td>
+0.879
+</td>
+</tr>
+<tr>
+<th>
+IUGR (Yes)
+</th>
+<td>
+0.074
+</td>
+<td>
+0.064
+</td>
+<td>
+1.16
+</td>
+<td>
+0.246
+</td>
+</tr>
+<tr>
+<th>
+Gestational diabetes (Yes)
+</th>
+<td>
+-0.025
+</td>
+<td>
+0.040
+</td>
+<td>
+-0.63
+</td>
+<td>
+0.532
+</td>
+</tr>
+<tr>
+<th>
+Hypertensive disorders (Yes)
+</th>
+<td>
+0.024
+</td>
+<td>
+0.083
+</td>
+<td>
+0.29
+</td>
+<td>
+0.775
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Pairwise comparisons were adjusted using Tukey’s method:
+</p>
+<table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.072
+</td>
+<td>
+0.048
+</td>
+<td>
+-1.51
+</td>
+<td>
+0.432
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.103
+</td>
+<td>
+0.041
+</td>
+<td>
+-2.50
+</td>
+<td>
+0.061 (.)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.096
+</td>
+<td>
+0.046
+</td>
+<td>
+-2.09
+</td>
+<td>
+0.158
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.031
+</td>
+<td>
+0.048
+</td>
+<td>
+-0.66
+</td>
+<td>
+0.914
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.024
+</td>
+<td>
+0.047
+</td>
+<td>
+-0.51
+</td>
+<td>
+0.956
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.007
+</td>
+<td>
+0.045
+</td>
+<td>
+0.16
+</td>
+<td>
+0.998
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<u>Data: Phenotypic Resistance Diversity Index (PRDI) by pregnancy outcome groups (A-D)</u><br> Part I. Family: binomial<br> Number of observations: 1943, groups: PATIENT, 1533<br> Dispersion estimate for gaussian family (sigma^2): 0.167
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+-0.348
+</td>
+<td>
+0.483
+</td>
+<td>
+-0.72
+</td>
+<td>
+0.471
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+-0.015
+</td>
+<td>
+0.174
+</td>
+<td>
+-0.08
+</td>
+<td>
+0.933
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.483
+</td>
+<td>
+0.157
+</td>
+<td>
+3.07
+</td>
+<td>
+0.002 (**)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.034
+</td>
+<td>
+0.168
+</td>
+<td>
+0.20
+</td>
+<td>
+0.838
+</td>
+</tr>
+<tr>
+<th>
+Antibiotic (Yes)
+</th>
+<td>
+0.239
+</td>
+<td>
+0.132
+</td>
+<td>
+1.81
+</td>
+<td>
+0.070 (.)
+</td>
+</tr>
+<tr>
+<th>
+Maternal age
+</th>
+<td>
+-0.035
+</td>
+<td>
+0.012
+</td>
+<td>
+-2.97
+</td>
+<td>
+0.003 (**)
+</td>
+</tr>
+<tr>
+<th>
+BMI
+</th>
+<td>
+0.061
+</td>
+<td>
+0.012
+</td>
+<td>
+5.04
+</td>
+<td>
+&lt; 1e-6 (***)
+</td>
+</tr>
+<tr>
+<th>
+Cervical cerclage (Yes)
+</th>
+<td>
+0.713
+</td>
+<td>
+0.264
+</td>
+<td>
+2.70
+</td>
+<td>
+0.007 (**)
+</td>
+</tr>
+<tr>
+<th>
+IUGR (Yes)
+</th>
+<td>
+-0.024
+</td>
+<td>
+0.244
+</td>
+<td>
+-0.10
+</td>
+<td>
+0.923
+</td>
+</tr>
+<tr>
+<th>
+Gestational diabetes (Yes)
+</th>
+<td>
+0.139
+</td>
+<td>
+0.154
+</td>
+<td>
+0.91
+</td>
+<td>
+0.364
+</td>
+</tr>
+<tr>
+<th>
+Hypertensive disorders (Yes)
+</th>
+<td>
+0.469
+</td>
+<td>
+0.359
+</td>
+<td>
+1.31
+</td>
+<td>
+0.191
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> Pairwise comparisons were adjusted using Tukey’s method:
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 18%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast (OUT_GROUP)
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+1.015
+</td>
+<td>
+0.176
+</td>
+<td>
+0.08
+</td>
+<td>
+0.9998
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.617
+</td>
+<td>
+0.097
+</td>
+<td>
+-3.07
+</td>
+<td>
+0.0116 (*)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.966
+</td>
+<td>
+0.163
+</td>
+<td>
+-0.20
+</td>
+<td>
+0.9970
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.608
+</td>
+<td>
+0.112
+</td>
+<td>
+-2.69
+</td>
+<td>
+0.0357 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.952
+</td>
+<td>
+0.165
+</td>
+<td>
+-0.28
+</td>
+<td>
+0.9921
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+1.566
+</td>
+<td>
+0.278
+</td>
+<td>
+2.52
+</td>
+<td>
+0.0564
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Conditional model:<br> Number of observations: 1088, groups: PATIENT, 919
+</p>
+<table>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+Pr(&gt;|z|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+(Intercept)
+</td>
+<td>
+1.0619720
+</td>
+<td>
+0.1300571
+</td>
+<td>
+8.165
+</td>
+<td>
+3.2e-16 (***)
+</td>
+</tr>
+<tr>
+<td>
+Group B
+</td>
+<td>
+0.1157758
+</td>
+<td>
+0.0501680
+</td>
+<td>
+2.308
+</td>
+<td>
+0.021012 (*)
+</td>
+</tr>
+<tr>
+<td>
+Group C
+</td>
+<td>
+0.1595884
+</td>
+<td>
+0.0432822
+</td>
+<td>
+3.687
+</td>
+<td>
+0.000227 (***)
+</td>
+</tr>
+<tr>
+<td>
+Group D
+</td>
+<td>
+0.1388234
+</td>
+<td>
+0.0482995
+</td>
+<td>
+2.874
+</td>
+<td>
+0.004050 (**)
+</td>
+</tr>
+<tr>
+<td>
+Antibiotic (Yes)
+</td>
+<td>
+0.0400751
+</td>
+<td>
+0.0364133
+</td>
+<td>
+1.101
+</td>
+<td>
+0.271087
+</td>
+</tr>
+<tr>
+<td>
+Maternal age
+</td>
+<td>
+-0.0007221
+</td>
+<td>
+0.0031796
+</td>
+<td>
+-0.227
+</td>
+<td>
+0.820339
+</td>
+</tr>
+<tr>
+<td>
+BMI
+</td>
+<td>
+0.0035036
+</td>
+<td>
+0.0030298
+</td>
+<td>
+1.156
+</td>
+<td>
+0.247530
+</td>
+</tr>
+<tr>
+<td>
+Cervical cerclage (Yes)
+</td>
+<td>
+-0.0244801
+</td>
+<td>
+0.0615801
+</td>
+<td>
+-0.398
+</td>
+<td>
+0.690975
+</td>
+</tr>
+<tr>
+<td>
+IUGR (Yes)
+</td>
+<td>
+0.0480600
+</td>
+<td>
+0.0669054
+</td>
+<td>
+0.718
+</td>
+<td>
+0.472556
+</td>
+</tr>
+<tr>
+<td>
+Gestational diabetes (Yes)
+</td>
+<td>
+-0.0215854
+</td>
+<td>
+0.0422513
+</td>
+<td>
+-0.511
+</td>
+<td>
+0.609434
+</td>
+</tr>
+<tr>
+<td>
+Hypertensive disorders (Yes)
+</td>
+<td>
+0.0444680
+</td>
+<td>
+0.0868610
+</td>
+<td>
+0.512
+</td>
+<td>
+0.608690
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> Pairwise comparisons were adjusted using Tukey’s method:
+</p>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.116
+</td>
+<td>
+0.050
+</td>
+<td>
+-2.31
+</td>
+<td>
+0.0969 (.)
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.160
+</td>
+<td>
+0.043
+</td>
+<td>
+-3.69
+</td>
+<td>
+0.0014 (**)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+-0.139
+</td>
+<td>
+0.048
+</td>
+<td>
+-2.87
+</td>
+<td>
+0.0215 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.044
+</td>
+<td>
+0.050
+</td>
+<td>
+-0.87
+</td>
+<td>
+0.8211
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+-0.023
+</td>
+<td>
+0.049
+</td>
+<td>
+-0.47
+</td>
+<td>
+0.9664
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.021
+</td>
+<td>
+0.048
+</td>
+<td>
+0.44
+</td>
+<td>
+0.9720
+</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<li>
+<p>
+<strong><span class="label-color">Mobile Genetic Element (MGE)</span></strong>
+</p>
+</li>
+<p>
+<u>Data: Shannon by pregnancy outcome groups (A-D)</u><strong><br> </strong>Part I. Family: binomial<br> Number of observations: 1943, groups: PATIENT, 1533
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+-0.906
+</td>
+<td>
+0.504
+</td>
+<td>
+-1.80
+</td>
+<td>
+0.072 (.)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+-0.186
+</td>
+<td>
+0.180
+</td>
+<td>
+-1.04
+</td>
+<td>
+0.300
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.390
+</td>
+<td>
+0.163
+</td>
+<td>
+2.40
+</td>
+<td>
+0.016
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+0.281
+</td>
+<td>
+0.176
+</td>
+<td>
+1.59
+</td>
+<td>
+0.111 (*)
+</td>
+</tr>
+<tr>
+<th>
+Antibiotic (Yes)
+</th>
+<td>
+0.226
+</td>
+<td>
+0.137
+</td>
+<td>
+1.65
+</td>
+<td>
+0.099
+</td>
+</tr>
+<tr>
+<th>
+Maternal age
+</th>
+<td>
+-0.014
+</td>
+<td>
+0.012
+</td>
+<td>
+-1.18
+</td>
+<td>
+0.239
+</td>
+</tr>
+<tr>
+<th>
+BMI
+</th>
+<td>
+0.063
+</td>
+<td>
+0.013
+</td>
+<td>
+5.04
+</td>
+<td>
+&lt; 1e-6 (***)
+</td>
+</tr>
+<tr>
+<th>
+Cervical cerclage (Yes)
+</th>
+<td>
+0.837
+</td>
+<td>
+0.283
+</td>
+<td>
+2.96
+</td>
+<td>
+0.003 (**)
+</td>
+</tr>
+<tr>
+<th>
+IUGR (Yes)
+</th>
+<td>
+-0.031
+</td>
+<td>
+0.254
+</td>
+<td>
+-0.12
+</td>
+<td>
+0.904
+</td>
+</tr>
+<tr>
+<th>
+Gestational diabetes (Yes)
+</th>
+<td>
+-0.167
+</td>
+<td>
+0.159
+</td>
+<td>
+-1.05
+</td>
+<td>
+0.293
+</td>
+</tr>
+<tr>
+<th>
+Hypertensive disorders (Yes)
+</th>
+<td>
+0.144
+</td>
+<td>
+0.363
+</td>
+<td>
+0.40
+</td>
+<td>
+0.692
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Estimated marginal probability on the response scale<br> Confidence level: 0.95
+</p>
+<table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 19%">
+<col style="width: 10%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr>
+<th>
+OUT_GROUP
+</th>
+<th>
+Probability
+</th>
+<th>
+SE
+</th>
+<th>
+Lower 95% CI
+</th>
+<th>
+Upper 95% CI
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A
+</th>
+<td>
+0.663
+</td>
+<td>
+0.062
+</td>
+<td>
+0.534
+</td>
+<td>
+0.772
+</td>
+</tr>
+<tr>
+<th>
+B
+</th>
+<td>
+0.620
+</td>
+<td>
+0.068
+</td>
+<td>
+0.480
+</td>
+<td>
+0.743
+</td>
+</tr>
+<tr>
+<th>
+C
+</th>
+<td>
+0.744
+</td>
+<td>
+0.051
+</td>
+<td>
+0.632
+</td>
+<td>
+0.831
+</td>
+</tr>
+<tr>
+<th>
+D
+</th>
+<td>
+0.723
+</td>
+<td>
+0.056
+</td>
+<td>
+0.602
+</td>
+<td>
+0.818
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> Pairwise comparisons were adjusted using Tukey’s method:
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 18%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast (OUT_GROUP)
+</th>
+<th>
+Odds ratio
+</th>
+<th>
+SE
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+1.205
+</td>
+<td>
+0.217
+</td>
+<td>
+1.04
+</td>
+<td>
+0.7285
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+0.677
+</td>
+<td>
+0.110
+</td>
+<td>
+-2.40
+</td>
+<td>
+0.0771 (.)
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.755
+</td>
+<td>
+0.133
+</td>
+<td>
+-1.59
+</td>
+<td>
+0.3819
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+0.562
+</td>
+<td>
+0.108
+</td>
+<td>
+-3.00
+</td>
+<td>
+0.0143 (*)
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.627
+</td>
+<td>
+0.114
+</td>
+<td>
+-2.57
+</td>
+<td>
+0.0505 (.)
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+1.115
+</td>
+<td>
+0.205
+</td>
+<td>
+0.59
+</td>
+<td>
+0.9342
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Part II. Family: gaussian<br> Conditional model:<br> Number of observations: 1123, groups: PATIENT, 949<br> Dispersion estimate for gaussian family (sigma^2): 0.165
+</p>
+<table>
+<colgroup>
+<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 12%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Variable
+</th>
+<th>
+Estimate
+</th>
+<th>
+Std. Error
+</th>
+<th>
+z value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+Intercept
+</th>
+<td>
+1.033
+</td>
+<td>
+0.157
+</td>
+<td>
+6.60
+</td>
+<td>
+&lt; 1e-10 (***)
+</td>
+</tr>
+<tr>
+<th>
+Group B
+</th>
+<td>
+0.027
+</td>
+<td>
+0.060
+</td>
+<td>
+0.44
+</td>
+<td>
+0.661
+</td>
+</tr>
+<tr>
+<th>
+Group C
+</th>
+<td>
+0.109
+</td>
+<td>
+0.052
+</td>
+<td>
+2.10
+</td>
+<td>
+0.036 (*)
+</td>
+</tr>
+<tr>
+<th>
+Group D
+</th>
+<td>
+-0.095
+</td>
+<td>
+0.057
+</td>
+<td>
+-1.67
+</td>
+<td>
+0.096 (.)
+</td>
+</tr>
+<tr>
+<th>
+Antibiotic (Yes)
+</th>
+<td>
+0.048
+</td>
+<td>
+0.044
+</td>
+<td>
+1.09
+</td>
+<td>
+0.274
+</td>
+</tr>
+<tr>
+<th>
+Maternal age
+</th>
+<td>
+-0.008
+</td>
+<td>
+0.004
+</td>
+<td>
+-2.17
+</td>
+<td>
+0.030 (*)
+</td>
+</tr>
+<tr>
+<th>
+BMI
+</th>
+<td>
+0.010
+</td>
+<td>
+0.004
+</td>
+<td>
+2.66
+</td>
+<td>
+0.0078 (**)
+</td>
+</tr>
+<tr>
+<th>
+Cervical cerclage (Yes)
+</th>
+<td>
+-0.074
+</td>
+<td>
+0.074
+</td>
+<td>
+-1.00
+</td>
+<td>
+0.316
+</td>
+</tr>
+<tr>
+<th>
+IUGR (Yes)
+</th>
+<td>
+-0.017
+</td>
+<td>
+0.078
+</td>
+<td>
+-0.22
+</td>
+<td>
+0.823
+</td>
+</tr>
+<tr>
+<th>
+Gestational diabetes (Yes)
+</th>
+<td>
+0.040
+</td>
+<td>
+0.052
+</td>
+<td>
+0.78
+</td>
+<td>
+0.434
+</td>
+</tr>
+<tr>
+<th>
+Hypertensive disorders (Yes)
+</th>
+<td>
+0.270
+</td>
+<td>
+0.109
+</td>
+<td>
+2.48
+</td>
+<td>
+0.013 (*)
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Confidence level: 0.95<br> Results are averaged over the levels of antibiotic treatment during pregnancy; maternal age; BMI; cervical cerclage; IUGR; gestational diabetes; hypertensive disorders.<br> Pairwise comparisons were adjusted using Tukey’s method:
+</p>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 22%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Contrast
+</th>
+<th>
+Estimate
+</th>
+<th>
+SE
+</th>
+<th>
+t value
+</th>
+<th>
+p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+A vs B
+</th>
+<td>
+-0.027
+</td>
+<td>
+0.060
+</td>
+<td>
+-0.44
+</td>
+<td>
+0.972
+</td>
+</tr>
+<tr>
+<th>
+A vs C
+</th>
+<td>
+-0.109
+</td>
+<td>
+0.052
+</td>
+<td>
+-2.10
+</td>
+<td>
+0.155
+</td>
+</tr>
+<tr>
+<th>
+A vs D
+</th>
+<td>
+0.095
+</td>
+<td>
+0.057
+</td>
+<td>
+1.67
+</td>
+<td>
+0.342
+</td>
+</tr>
+<tr>
+<th>
+B vs C
+</th>
+<td>
+-0.083
+</td>
+<td>
+0.061
+</td>
+<td>
+-1.36
+</td>
+<td>
+0.528
+</td>
+</tr>
+<tr>
+<th>
+B vs D
+</th>
+<td>
+0.122
+</td>
+<td>
+0.059
+</td>
+<td>
+2.07
+</td>
+<td>
+0.163
+</td>
+</tr>
+<tr>
+<th>
+C vs D
+</th>
+<td>
+0.204
+</td>
+<td>
+0.056
+</td>
+<td>
+3.63
+</td>
+<td>
+<ol start="17">
+<li>
+<p>
+(**)
+</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+<strong>GLMMs Diagnostics</strong>
+</summary>
+<br><br> <strong>Model Diagnostic</strong>
+<p></p>
+<p>
+<img src="Fig_R6R7.png" style="width:15in; height:10in;" data-lightbox="">
+</p></details>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
