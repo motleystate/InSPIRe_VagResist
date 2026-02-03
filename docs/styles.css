@@ -85,3 +85,27 @@ figcaption + p em {
   font-size: 0.1em;
   color: #555;
 }
+
+/* itables / DataTables on dark themes (DT v2) */
+.dt-container,
+.dt-container label,
+.dt-container .dt-info,
+.dt-container .dt-length,
+.dt-container .dt-search {
+  color: #e6e6e6 !important;
+}
+
+.dt-container select,
+.dt-container input,
+.dt-container .dt-length select,
+.dt-container .dt-search input {
+  color: #e6e6e6 !important;
+  background-color: #1f1f1f !important;
+  border: 1px solid #f7c31a !important;
+}
+
+/* Ensure dropdown options are readable too */
+.dt-container select option {
+  color: #e6e6e6 !important;
+  background-color: #1f1f1f !important;
+}
