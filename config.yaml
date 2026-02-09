@@ -1,0 +1,10 @@
+# Config file for the MoonCrater workflow.
+paths:
+  source_dir: "path/to/trimmed_NoHost_fastq"
+  output_dir: "path/to/ResFinder_mapping_out"
+  db_resfinder: "path/to/db_resfinder"
+  count_outdir: "path/to/output/"
+
+kma_count:
+  coverage: 60
+  identity: 80
