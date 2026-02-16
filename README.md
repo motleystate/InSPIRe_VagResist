@@ -1,24 +1,20 @@
 # InSPIRe Vaginal Resistome Paper 
 
-
-Included in this repository are all of the code used for bioinformatics processing, statistical analysis and figure preparation for "Bacterial Community Structure Shapes the Vaginal Resistome During Pregnancy", authored by : Nassim Boutouchent, Agnes Baud,Asmaa Tazi, Luce Landraud, <em>InSPIRe Consortium</em>,Laurent Mandelbrot, Claire Poyart and Sean P. Kennedy.
-
-**Note**: Taxonomical assignment workflow and species level count table has been previously reported in Baud et al., 2023,https://doi.org/10.1038/s41598-023-36126-z.
-
+Included in this repository are all of the code used for bioinformatics processing, statistical analysis and figure preparation for "Bacterial Community Structure Shapes the Vaginal Resistome During Pregnancy", authored by : Nassim Boutouchent, Agnes Baud,Asmaa Tazi, Luce Landraud, InSPIRe Consortium,Laurent Mandelbrot, Claire Poyart and Sean P. Kennedy.
 
 ## Repository content
 
 This repository is divided into two main components:
 
-1. **Scripts and workflow for functional gene detection and quantification (MoonCrater)**  
-   A Snakemake workflow used for the detection and quantification of functional genes, including antibiotic resistance genes (ARGs), from shotgun metagenomic data. MooCrater uses the KMA-indexed ResFinder database for ARG detection. 
-   This workflow also includes an independent script (`KMA_kraken2_link.py`) used to link functional genes annotations to taxonomic assignments produced by Kraken2.
+1. **Scripts and workflow for functional gene detection and quantification (MoonCrater)**
+   A Snakemake workflow used for the detection and quantification of functional genes, including antibiotic resistance genes (ARGs), from shotgun metagenomic data using the ResFinder database. 
+   this workflow also includes an independent script (`KMA_kraken2_link.py`) used to link functional genes annotations to taxonomic assignments produced by Kraken2.
    
    files:
 
 | File | information |
 |----------|----------|
-| `Snakefile.smk`   | MoonCrater workflow (functional gene detection and counting)  |
+| `snakefile`   | MoonCrater workflow (functional gene detection and counting)  |
 | `config.yml` | MoonCrater config file  |
 | `KMA_count.py`   | Script used to generate ARG count tables from KMA output |
 | `KMA_kraken2_link.py`  | Script linking functional gene annotations to taxonomic annotations produced by Kraken2  |
@@ -26,8 +22,10 @@ This repository is divided into two main components:
 
 2. **Downstream analyses and data used for the Vaginal Resistome paper**  
    `InSPIRe_VaginalResistome_paper/` : This folder includes all analysis notebooks and datasets required to reproduce the results presented in the main manuscript. 
+
+***Note**: Taxonomical assignment and species level count table has been previously reported by Baud et al., 2023,https://doi.org/10.1038/s41598-023-36126-z.*
    
-Supplementary data are provided as rendered HTML pages via the `Quarto_site` branch, allowing interactive exploration of figures, tables, and statistical reports: https://motleystate.github.io/InSPIRe_VagResist/
+Supplementary data of the study are provided as rendered HTML pages via the `Quarto_site` branch, allowing interactive exploration of figures, tables, and statistical reports: https://motleystate.github.io/InSPIRe_VagResist/
 
 
 ## MoonCrater: a metagenomic shotgun read-count workflow for antibiotic resistance gene  
@@ -41,29 +39,41 @@ This workflow relies on mapping reads against the KMA-indexed ResFinder database
 - KMA (https://bitbucket.org/genomicepidemiology/kma/src/master/)
 
 ### Usage 
-Clone repository: 
+**Clone repository:** 
 ```bash
 git clone https://github.com/motleystate/inspire_VagResist.git
 ```
-config before running MoonCrater: 
 
+Before running MoonCrater, change the `config.yml` file to fit your data
 ```
-The `config.yml` file specifies:
-  source_dir: "path/to/trimmed_NoHost_fastq" # input FASTQ directory 
-  output_dir: "path/to/ResFinder_mapping_out" # ResFinder/outputs
-  db_resfinder: "path/to/db_resfinder" # ResFinder database (KMA-indexed)
-  count_outdir: "path/to/output" # output directory for count tables and reports
+paths:
+  output_dir: "path/to/output_directory"  # output directory for mooncrater's results
+  db_resfinder: "path/to/db_resfinder"    # ResFinder database (KMA-indexed)
+
+# NB: to be detected the samples must follow the pattern: 
+#		* if paired: {sample_name}{pair_prefix}{read}{suffix}
+#		* if single: {sample_name}{suffix}
+input_data:
+  source_dir: "path/to/reads_files"       # input directory with reads files
+  paired: True                            # set to False, if the samples aren't paired
+  pair_prefix: "_R"
+  suffix: "_trimmed_nohost.fastq.gz"
+  format: "fastq"                         # format of the input file. Formats allowed: "fasta" and "fastq" (even in their compress version)
+
+kma_count:
+  coverage: 60
+  identity: 80
 ```
-to run MoonCrater:
+
+**Run MoonCrater:**
 ```bash
 snakemake -c N -j J
 ```
-`N`: the number of threads 
-`J`: the number of jobs that can be executed in parallel.
+where `N` is the number of threads and `J` is the number of jobs that can be executed in parallel.
 MoonCrater requires a minimum of 12 threads to run.
-Note:`run_resfinder.py` is provided as part of the ResFinder tool  
+*NB: `run_resfinder.py` is provided as part of the ResFinder tool*  
 
-**Output:**  
+**Output:**
 gene_abundance_table_Cov_ID.csv:  read-count table for antibiotic resistance genes.
 read_mapping_report.csv: Per-sample read processing summary report. 
 
@@ -75,12 +85,12 @@ read_mapping_report.csv: Per-sample read processing summary report.
 | `Multi_Hit_Same_Score` | Number of read pairs for which multiple genes had identical KMA scores. |
 
 ### Species-resolved associations with antibiotic resistance
-`KMA_kraken2_link.py` script allows linking the functional annotations produced by MoonCrater to the taxonomic assignments generated by Kraken2
+`KMA_kraken2_link.py` script allows linking the functional annotations produced by MoonCrater to the taxonomic assignments generated by Kraken2.
 
 ```bash
 python3 KMA_kraken2_link.py \
   --resfinder_dir path/to/ResFinder_mapping_out \
-  --kraken_dir path/to/kraken_reports \
+  --kraken_dir path/to/kraken_mapping_files \
   --output_dir path/to/output \
   --coverage 60 \
   --identity 80
@@ -89,8 +99,8 @@ python3 KMA_kraken2_link.py \
 ```
 `--resfinder_dir`   Directory containing KMA mapping outputs.
 
-`--kraken_dir`      Directory containing Kraken2 report files used for taxonomic assignment. 
-                    Input reports are expected to follow this naming format *trimmed.nohost.kraken2.report*
+`--kraken_dir`      Directory containing Kraken2 mapping output files used for taxonomic assignment. 
+                    Input mapping file names are expected to start with the name of the sample and end with the extension '.kraken': {sample_name}*.kraken
 
 `--output_dir`      Output directory for species–ARG association table.
 
@@ -99,7 +109,7 @@ python3 KMA_kraken2_link.py \
 `--identity`        Minimum identity threshold (%) applied to resistance gene detection.
 ```
 
-### Citation 
+
 
 ### References 
 1. Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. BLAST+: architecture and applications. BMC Bioinformatics 2009; 10:421.

@@ -1,9 +1,22 @@
 # Config file for the MoonCrater workflow.
 paths:
-  source_dir: "path/to/trimmed_NoHost_fastq"
-  output_dir: "path/to/ResFinder_mapping_out"
+  output_dir: "path/to/output"
   db_resfinder: "path/to/db_resfinder"
-  count_outdir: "path/to/output/"
+
+# `source_dir`: input reads directory
+# `paired`: whether the reads are paired (True) or not (False)
+# `pair_prefix`: for paired samples only, expression following sample_name and preceeding the read number. Ignored for single samples
+# `suffix`: expression following the read number (1/2) for paired samples or the sample_name for single samples, which usually translates to the extension "." included
+# NB: to be detected the samples must follow the pattern: 
+#		* if paired: {sample_name}{pair_prefix}{read}{suffix}
+#		* if single: {sample_name}{suffix}
+# `format`: format of the input file. Formats allowed: "fasta" and "fastq" (even in their compress version)
+input_data:
+  source_dir: "path/to/trimmed_NoHost_fastq"
+  paired: True
+  pair_prefix: "_R"
+  suffix: "_trimmed_nohost.fastq.gz"
+  format: "fastq"
 
 kma_count:
   coverage: 60
