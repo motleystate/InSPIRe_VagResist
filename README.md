@@ -1,51 +1,50 @@
 # InSPIRe Vaginal Resistome Paper 
 
-**Author : Nassim Boutouchent**
-
-Included in this repository are all of the code used for bioinformatics processing, statistical analysis and figure preparation for "The Vaginal Microbiome in Pregnancy as a Structured and Dynamic Reservoir of Antibiotic Resistance Genes Linked to Pregnancy Outcomes".
-
-**Note** Taxonomical assignment and species level count table has been previously reported by Baud et al., 2023,https://doi.org/10.1038/s41598-023-36126-z.
-
+Included in this repository are all of the code used for bioinformatics processing, statistical analysis and figure preparation for "Bacterial Community Structure Shapes the Vaginal Resistome During Pregnancy", authored by : Nassim Boutouchent, Agnes Baud,Asmaa Tazi, Luce Landraud, InSPIRe Consortium,Laurent Mandelbrot, Claire Poyart and Sean P. Kennedy.
 
 ## Repository content
 
 This repository is divided into two main components:
 
 1. **Scripts and workflow for functional gene detection and quantification (MoonCrater)**
-   A Snakemake workflow used for the detection and quantification of functional genes, including antibiotic resistance genes (ARGs) and mobile genetic elements, from shotgun metagenomic data using the ResFinder database. 
-   It also includes an independent script (`KMA_kraken2_link.py`) used to link functional genes annotations to taxonomic assignments produced by Kraken2.
+   A Snakemake workflow used for the detection and quantification of functional genes, including antibiotic resistance genes (ARGs), from shotgun metagenomic data using the ResFinder database. 
+   this workflow also includes an independent script (`KMA_kraken2_link.py`) used to link functional genes annotations to taxonomic assignments produced by Kraken2.
    
    files:
 
 | File | information |
 |----------|----------|
 | `snakefile`   | MoonCrater workflow (functional gene detection and counting)  |
-| `config.yml` | MoonCrater configuration file  |
+| `config.yml` | MoonCrater config file  |
 | `KMA_count.py`   | Script used to generate ARG count tables from KMA output |
 | `KMA_kraken2_link.py`  | Script linking functional gene annotations to taxonomic annotations produced by Kraken2  |
 
 
-2. **Resistome paper downstream analyses and supplementary**
-   `InSPIRe_VaginalResistome_paper/` : This component includes all analysis notebooks and datasets required to reproduce the results presented in the manuscript. It also includes the source files and rendered HTML pages for an interactive supplementary data view for figures, tables, and statistical reports.
+2. **Downstream analyses and data used for the Vaginal Resistome paper**  
+   `InSPIRe_VaginalResistome_paper/` : This folder includes all analysis notebooks and datasets required to reproduce the results presented in the main manuscript. 
+
+***Note**: Taxonomical assignment and species level count table has been previously reported by Baud et al., 2023,https://doi.org/10.1038/s41598-023-36126-z.*
+   
+Supplementary data of the study are provided as rendered HTML pages via the `Quarto_site` branch, allowing interactive exploration of figures, tables, and statistical reports: https://motleystate.github.io/InSPIRe_VagResist/
 
 
 ## MoonCrater: a metagenomic shotgun read-count workflow for antibiotic resistance gene  
-MoonCrater is a snakemake-based workflow used in this study to identify and quantify antibiotic resistance genes from metagenomic data using the ResFinder database. 
-The workflow relies on mapping reads against the ResFinder database using KMA and produces gene count tables.
+MoonCrater is a snakemake-based workflow used in our study to identify and quantify antibiotic resistance genes from metagenomic data using the ResFinder database. 
+This workflow relies on mapping reads against the KMA-indexed ResFinder database and produces gene count tables for resistome analysis.
 
 ### Environnement 
 - ResFinder database indexed with KMA (https://github.com/cadms/resfinder)
 - Python
 - Snakemake
-- KMA
+- KMA (https://bitbucket.org/genomicepidemiology/kma/src/master/)
 
 ### Usage 
-▶️ Clone repository: 
+**Clone repository:** 
 ```bash
 git clone https://github.com/motleystate/inspire_VagResist.git
 ```
 
-▶️ Before running MoonCrater, change the config.yml file to fit your data
+Before running MoonCrater, change the `config.yml` file to fit your data
 ```
 paths:
   output_dir: "path/to/output_directory"  # output directory for mooncrater's results
@@ -66,14 +65,15 @@ kma_count:
   identity: 80
 ```
 
-▶️ Run MoonCrater:
+**Run MoonCrater:**
 ```bash
 snakemake -c N -j J
 ```
 where `N` is the number of threads and `J` is the number of jobs that can be executed in parallel.
 MoonCrater requires a minimum of 12 threads to run.
+*NB: `run_resfinder.py` is provided as part of the ResFinder tool*  
 
-**output:**
+**Output:**
 gene_abundance_table_Cov_ID.csv:  read-count table for antibiotic resistance genes.
 read_mapping_report.csv: Per-sample read processing summary report. 
 
@@ -85,7 +85,7 @@ read_mapping_report.csv: Per-sample read processing summary report.
 | `Multi_Hit_Same_Score` | Number of read pairs for which multiple genes had identical KMA scores. |
 
 ### Species-resolved associations with antibiotic resistance
-`KMA_kraken2_link.py` script allows linking the functional annotations produced by MoonCrater to the taxonomic assignments generated by Kraken2
+`KMA_kraken2_link.py` script allows linking the functional annotations produced by MoonCrater to the taxonomic assignments generated by Kraken2.
 
 ```bash
 python3 KMA_kraken2_link.py \
@@ -109,8 +109,9 @@ python3 KMA_kraken2_link.py \
 `--identity`        Minimum identity threshold (%) applied to resistance gene detection.
 ```
 
-### Citation 
+
 
 ### References 
 1. Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. BLAST+: architecture and applications. BMC Bioinformatics 2009; 10:421.
 2. Clausen PTLC, Aarestrup FM, Lund O. Rapid and precise alignment of raw reads against redundant databases with KMA. BMC Bioinformatics 2018; 19:307.
+3. Wood, D.E., Lu, J. & Langmead, B. Improved metagenomic analysis with Kraken 2. Genome Biol 20, 257 (2019). https://doi.org/10.1186/s13059-019-1891-0
