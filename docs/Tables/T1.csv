@@ -1,0 +1,8 @@
+﻿Individuals (n);Samples (n);Timepoint handling;Additional information 
+1,547;1,957;Pooled;-
+1,547;1,547;One sample per individual;to preserve independence of observations
+-;"Species: 1,957; ARGs: 1,097; MGEs: 1,133";Stratified by timepoint;compositional differences restricted to ARGs and MGEs positive samples
+1,547;1,957;"Timepoint included as fixed effect; patient as random intercept";-
+1,533;1,943;"Timepoint included as fixed effect; patient as random intercept";"Complete metadata only (14 individuals excluded; <1%)"
+-;"Species: 1,957; ARGs: 1,097; MGEs: 1,133";Stratified by timepoint;compositional differences restricted to ARGs and MGEs positive samples
+-;1,134 high-quality MAGs recovered from 1,957 samples;Not applicable;-

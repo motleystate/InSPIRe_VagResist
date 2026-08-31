@@ -1,0 +1,372 @@
+/* =========================================================
+   HOMEPAGE
+   ========================================================= */
+
+.vr-home {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.vr-introduction {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 3rem 2rem 1.5rem;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   Same layout = same centering
+   ========================================================= */
+
+.vr-section-title {
+  width: 100%;
+  margin: 0 auto 2rem;
+  text-align: center;
+
+  font-size: 2rem;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: 0.10em;
+}
+
+
+/* InSPIRe title */
+
+.vr-title-inspire {
+  color: #bde0f6;
+  font-size: 2.8rem;
+}
+
+
+/* Resources title */
+
+.vr-title-resources {
+  color: #00a3a9;
+}
+
+
+/* Introduction text */
+
+.vr-intro {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  font-size: 1.08rem;
+  line-height: 1.7;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   RESOURCES
+   ========================================================= */
+
+.vr-resources {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+/* =========================================================
+   RESOURCE CARDS
+   ========================================================= */
+
+.vr-card-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 2rem;
+
+  text-align: left;
+}
+
+
+.vr-card {
+  min-height: 350px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(128, 128, 128, 0.30);
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.vr-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #6dc5fb;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Card header */
+
+.vr-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2.5rem;
+}
+
+
+.vr-card-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  color: #6dc5fb;
+}
+
+
+.vr-card-type {
+  padding: 0.35rem 0.7rem;
+
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 100px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+}
+
+
+/* Card content */
+
+.vr-card h3 {
+  margin: 0 0 1rem;
+
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+.vr-card-description {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.65;
+
+  opacity: 0.72;
+}
+
+
+/* Card footer */
+
+.vr-card-footer {
+  margin-top: auto;
+  padding-top: 1.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ASSOCIATED PUBLICATION
+   ========================================================= */
+
+.vr-publication-panel {
+  width: calc(100% - 4rem);
+  max-width: 1050px;
+
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1.8rem;
+
+  border: 1px solid rgba(128, 128, 128, 0.30);
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.vr-publication-header {
+  margin-bottom: 1rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.vr-publication-citation {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.vr-publication-citation a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.vr-publication-citation a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .vr-publication-panel {
+    width: calc(100% - 3rem);
+  }
+}
+
+
+.vr-license-block {
+  margin-bottom: 4rem;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .vr-introduction {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+
+  .vr-section-title {
+    font-size: 1.6rem;
+  }
+
+  .vr-intro {
+    font-size: 1rem;
+  }
+
+  .vr-resources {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .vr-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .vr-card {
+    min-height: 300px;
+  }
+
+  .vr-card-top {
+    margin-bottom: 2rem;
+  }
+
+  .vr-info-block {
+    padding: 0 1.5rem;
+  }
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+table th,
+table td {
+  padding: 6px 10px;
+  text-align: center;
+}
+
+table thead th {
+  border-bottom: 1.5px solid #333;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.label-color {
+  color: #00a3a9;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FIGURES
+   ========================================================= */
+
+figcaption {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+figcaption + p em {
+  font-size: 0.1em;
+  color: #555;
+}
+
+
+/* =========================================================
+   ITABLES / DATATABLES
+   ========================================================= */
+
+.dt-container,
+.dt-container label,
+.dt-container .dt-info,
+.dt-container .dt-length,
+.dt-container .dt-search {
+  color: #e6e6e6 !important;
+}
+
+.dt-container select,
+.dt-container input,
+.dt-container .dt-length select,
+.dt-container .dt-search input {
+  color: #e6e6e6 !important;
+  background-color: #1f1f1f !important;
+  border: 1px solid #f7c31a !important;
+}
+
+.dt-container select option {
+  color: #e6e6e6 !important;
+  background-color: #1f1f1f !important;
+}
+

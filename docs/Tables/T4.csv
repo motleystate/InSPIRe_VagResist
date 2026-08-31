@@ -1,0 +1,31 @@
+﻿species;class;gene name;MAGs (detected);MAGs (total);percentage (%)
+L. crispatus;LINCOSAMIDE;lnu(C);1;332;0.3%
+L. crispatus;MACROLIDE;erm(B);6;332;1.8%
+L. iners;MACROLIDE;erm(B);94;421;22.3%
+L. iners;TETRACYCLINE;tet(M);245;421;58.2%
+L.gasseri;ND;ND;0;120;0.0%
+L.jensenii;ND;ND;0;103;0.0%
+E. coli;AMINOGLYCOSIDE;aac(3)-IIe;3;47;6.4%
+E. coli;AMINOGLYCOSIDE;aac(6')-Ib;1;47;2.1%
+E. coli;AMINOGLYCOSIDE;aadA1;4;47;8.5%
+E. coli;AMINOGLYCOSIDE;aadA5;6;47;12.8%
+E. coli;AMINOGLYCOSIDE;aph(3'')-Ib;23;47;48.9%
+E. coli;AMINOGLYCOSIDE;aph(3')-Ia;4;47;8.5%
+E. coli;AMINOGLYCOSIDE;aph(6)-Id;23;47;48.9%
+E. coli;BETA-LACTAM;blaEC;47;47;100.0%
+E. coli;BETA-LACTAM;blaOXY-5-3;3;47;6.4%
+E. coli;BETA-LACTAM;blaTEM-116;33;47;70.2%
+E. coli;EFFLUX;acrF;46;47;97.9%
+E. coli;EFFLUX;emrD;47;47;100.0%
+E. coli;EFFLUX;mdtM;20;47;42.6%
+E. coli;MACROLIDE;mph(A);8;47;17.0%
+E. coli;PHENICOL;catA1;4;47;8.5%
+E. coli;SULFONAMIDE;sul1;13;47;27.7%
+E. coli;SULFONAMIDE;sul2;23;47;48.9%
+E. coli;TETRACYCLINE;tet(B);4;47;8.5%
+E. coli;TRIMETHOPRIM;dfrA17;8;47;17.0%
+E. coli;TRIMETHOPRIM;dfrA5;2;47;4.3%
+G. vaginalis;MACROLIDE;mef(A);15;111;13.5%
+G. vaginalis;MACROLIDE;msr(D);15;111;13.5%
+G. vaginalis;TETRACYCLINE;tet(L);3;111;2.7%
+G. vaginalis;TETRACYCLINE;tet(M);39;111;35.1%
